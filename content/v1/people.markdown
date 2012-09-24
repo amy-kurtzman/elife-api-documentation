@@ -22,6 +22,18 @@ information](/v3/#authentication) with your request).
 <%= headers 200 %>
 <%= json :full_user %>
 
+
+## Get elife person
+
+    GET /users/:user
+
+### Response
+
+<%= headers 200 %>
+<%= json :elife_person %>
+
+
+
 ## Get the authenticated user
 
     GET /user

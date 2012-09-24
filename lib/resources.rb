@@ -100,6 +100,31 @@ module GitHub
       "contributions" => 32
     })
 
+    ELIFE_PERSON = USER.merge({
+     "elife_profile_id"  =>   "uid of elife person",         
+     "last_updated"  =>     "last date this person was updated",   
+     "ORCID"  =>       2342,       
+     "first_nm"  =>       "Jim",    
+     "middle_nm"  =>      "Badielle",   
+     "profile_text"  =>     "description of the researcher",
+     "profile_image"  =>    "binary blob containing encoded image",
+     "current_editorial_role"  =>   "current editorial role of the researcher",
+     "editorial_tenure_history"  =>  "editorial roles held in the past", 
+     "is_named_reviewer"  =>  "whehter person has signed a review, defaults the FALSE", 
+     "is_author"  =>      true,  
+     "current_affiliation"  =>    "current value held for author affiliation",   
+     "past_affilitations"  =>   "record of previous affiliations for a person",  
+     "profile_subjects"  =>   "subjects listed against a persons profile in EJP",  
+     "published_subjects"  =>   "subjects held against a persons publications in EJP", 
+     "funding_sources"  =>  "names of institutions funding this person", 
+     "authored_papers"  =>  "doi records of papers authored by this person", 
+     "co_authors"  =>   "elife_profile_id records of other pepople who have authord with this person, and papers they have coauthored", 
+     "named_reviewer_on"  =>  "dois of papers that this person has signed a review for", 
+     "handling_editor_on"  =>  "dois of papers that this person was the handling editor for",
+     "is_alive"  =>   true  
+    })
+
+
     FULL_USER = USER.merge({
       "name"         => "monalisa octocat",
       "company"      => "GitHub",
