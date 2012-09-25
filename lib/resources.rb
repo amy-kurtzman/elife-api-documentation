@@ -17,6 +17,7 @@ module GitHub
         403 => '403 Forbidden',
         404 => '404 Not Found',
         409 => '409 Conflict',
+        418 => '418 Im a teapot',
         422 => '422 Unprocessable Entity',
         500 => '500 Server Error'
       }
@@ -124,6 +125,7 @@ module GitHub
      "is_alive"  =>   true  
     })
 
+    FLUIDINFO_NULL = USER.merge({"results"=>{"id"=>{"3300de84-bb5e-4523-b722-a28e8062eeff"=>{"ianmulvany/elifepeople/elife_profile_id"=>{"value"=>"1464", "username"=>"ianmulvany", "updated-at"=>"2012-09-20T16:48:47.003319"}}, "b7738355-6f88-4308-84c9-ac3f7d9b14fb"=>{"ianmulvany/elifepeople/elife_profile_id"=>{"value"=>"1015", "username"=>"ianmulvany", "updated-at"=>"2012-09-20T16:48:49.956051"}}, "fd2ce06c-f6f0-4b0d-9c24-ff01160f5443"=>{"ianmulvany/elifepeople/elife_profile_id"=>{"value"=>"1001", "username"=>"ianmulvany", "updated-at"=>"2012-09-20T10:29:45.645736"}}}}})
 
     FULL_USER = USER.merge({
       "name"         => "monalisa octocat",
