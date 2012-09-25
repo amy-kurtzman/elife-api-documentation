@@ -43,6 +43,20 @@ information](/v3/#authentication) with your request).
 <%= headers 200 %>
 <%= json :private_user %>
 
+
+## Get the null response
+
+    GET /null
+
+### Response
+
+<%= headers 418 %>
+<%= json :fluidinfo_null %>
+
+
+FLUIDINDO_NULL
+
+
 ## Update the authenticated user
 
     PATCH /user
