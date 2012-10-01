@@ -1,111 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta http-equiv="Content-Language" content="en-us" />
-  <meta http-equiv="imagetoolbar" content="false" />
-  <meta name="MSSmartTagsPreventParsing" content="true" />
-  <title>API version</title>
-  <link rel="alternate" type="application/atom+xml" title="API Changes" href="/changes.atom" />
-  <link href="/css/reset.css" rel="stylesheet" type="text/css" />
-  <link href="/css/960.css" rel="stylesheet" type="text/css" />
-  <link href="/css/uv_active4d.css" rel="stylesheet" type="text/css" />
-  <link href="/shared/css/documentation.css" media="screen" rel="stylesheet" type="text/css">
-  <link href="/shared/css/pygments.css" media="screen" rel="stylesheet" type="text/css">
-  <script src="/shared/js/jquery.js" type="text/javascript"></script>
-  <script src="/shared/js/documentation.js" type="text/javascript"></script>
-</head>
-<body class="api">
-    <div id="header-wrapper">
-      <div id="header">
-        <div>
-          <ul class="nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/v1/">API v1</a></li>
-          </ul>
-        </div>
-      </div><!-- #header -->
-    </div><!-- #header-wrapper -->
+	<head>
+    <title>API version</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<meta name="robots" content="index,follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <link href="/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="/shared/css/documentation.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/shared/css/pygments.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="/shared/js/jquery.js" type="text/javascript"></script>
+    <script src="/shared/js/documentation.js" type="text/javascript"></script>
+	</head>
 
-    <div id="wrapper">
-      <div class="content">
-    # API Version.
+	<body>
+		<div id="wrapper">
+			<header id="header">
+        <a href="/"><img src="/images/header-logo.png" width="198" height="84" alt="eLife" id="logo" /></a>
 
-This is the first version of the eLife API.
-      </div>
-
-    <div id="js-sidebar" class="sidebar-shell">
-      <div class="js-toggle-list sidebar-module expandable">
-        <ul>
-          <li class="js-topic">
-            <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/">Summary</a></h3>
-            <ul class="js-guides">
-              <li><a href="/v1/version/">Version</a></li>
-            </ul>
-          </li>
-          <li class="js-topic">
-            <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/gists/">Gists</a></h3>
-            <ul class="js-guides">
-              <li><a href="/v1/gists/comments/">Comments</a></li>
-            </ul>
-          </li>
-          <li class="js-topic">
-            <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/git/">Git Data</a></h3>
-            <ul class="js-guides">
-              <li><a href="/v1/git/blobs/">Blobs</a></li>
-              <li><a href="/v1/git/commits/">Commits</a></li>
-              <li><a href="/v1/git/refs/">References</a></li>
-              <li><a href="/v1/git/tags/">Tags</a></li>
-              <li><a href="/v1/git/trees/">Trees</a></li>
-            </ul>
-          </li>
-          <li class="js-topic">
-            <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/issues/">Issues</a></h3>
-            <ul class="js-guides">
-              <li><a href="/v1/issues/assignees/">Assignees</a></li>
-              <li><a href="/v1/issues/comments/">Comments</a></li>
-              <li><a href="/v1/issues/events/">Events</a></li>
-              <li><a href="/v1/issues/labels/">Labels</a></li>
-              <li><a href="/v1/issues/milestones/">Milestones</a></li>
-            </ul>
-          </li>
-          <li class="js-topic">
-            <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/orgs/">Orgs</a></h3>
-            <ul class="js-guides">
-              <li><a href="/v1/orgs/members/">Members</a></li>
-              <li><a href="/v1/orgs/teams/">Teams</a></li>
-            </ul>
-          </li>
-          <li class="js-topic">
-            <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/pulls/">Pull Requests</a></h3>
-            <ul class="js-guides">
-              <li><a href="/v1/pulls/comments/">Review Comments</a></li>
-            </ul>
-          </li>
-          <li class="js-topic">
-            <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/users/">Users</a></h3>
-            <ul class="js-guides">
-              <li><a href="/v1/users/emails/">Emails</a></li>
-              <li><a href="/v1/users/followers/">Followers</a></li>
-              <li><a href="/v1/users/keys/">Keys</a></li>
-            </ul>
-          </li>
-          <li class="js-topic">
-            <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/events/">Events</a></h3>
-            <ul class="js-guides">
-              <li><a href="/v1/events/types/">Types</a></li>
-            </ul>
-          </li>
-          
-          <li class="js-guides"><h3><a href="/v1/markdown/">Markdown</a></h3></li>
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/v1/">API v1</a></li>
         </ul>
-      </div> <!-- /sidebar-module -->
-      <div class="sidebar-module">
-        <p>This website is a <a href="https://github.com/github/developer.github.com" target="_blank">public GitHub repository</a>. Please help us by forking the project and adding to it.</p>
-      </div>
-    </div><!-- /sidebar-shell -->
 
-    </div><!-- #wrapper -->
+			</header>
+    </div>
+    
+		<div id="content">
+      <div class="left">
+        <h1 id="api-version">API Version.</h1>
+
+<p>This is the first version of the eLife API.</p>
+
+        
+      </div>
+
+      <div id="js-sidebar" class="sidebar-shell">
+        <div class="js-toggle-list sidebar-module expandable">
+          <ul>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/">Summary</a></h3>
+              <ul class="js-guides">
+                <li><a href="/v1/version/">Version</a></li>
+              </ul>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/people/">People</a></h3>
+              <ul class="js-guides">
+                <li><a href="/v1/users/emails/">Emails</a></li>
+                <li><a href="/v1/users/followers/">Followers</a></li>
+                <li><a href="/v1/users/keys/">Keys</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div> <!-- /sidebar-module -->
+        <div class="sidebar-module">
+          <p>This website is a <a href="https://github.com/github/developer.github.com" target="_blank">public GitHub repository</a>. Please help us by forking the project and adding to it.</p>
+        </div>
+      </div><!-- /sidebar-shell -->
+
+      &nbsp;<br style="clear: both;">
+
+    </div><!-- .wrappter -->
 
     <div id="footer" ></div><!-- /#footer -->
 </body>
