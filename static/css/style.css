@@ -1,0 +1,112 @@
+/* eLife specific styles and documentation.css overrides */
+
+html, body
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	color: #6d6e70;
+	background-color: #dbd8d7;
+	font-size: 12px;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	line-height: 1.5em;
+	-webkit-text-size-adjust: none;
+}
+
+header
+{
+	width: 950px !important;
+	height: 125px;
+	margin: 0px auto;
+	background: #fff;
+	-webkit-box-shadow: 0px 0px 5px 0px #aca9a6;
+	-moz-box-shadow: 0px 0px 5px 0px #aca9a6;
+	box-shadow: 0px 0px 5px 0px #aca9a6; 
+}
+
+#logo
+{
+	width: 198px;
+	height: 84px;
+	margin: 0 0 0 25px;
+	padding-top: 20px;
+}
+
+#header ul.nav
+{
+	margin-top: 48px;
+	margin-right: 24px;
+}
+
+#content {
+	width: 900px;
+	margin: 10px auto 0 auto;
+	padding: 25px;
+	background: #fff;
+	-webkit-box-shadow: 0px 0px 5px 0px #aca9a6;
+	-moz-box-shadow: 0px 0px 5px 0px #aca9a6;
+	box-shadow: 0px 0px 5px 0px #aca9a6; 
+}
+
+.left {
+	width: 670px;
+	float: left;
+}
+
+div.sidebar-shell
+{
+	margin-top: 0 !important;
+}
+
+div.sidebar-module
+{
+	width: 200px;
+}
+
+a, a:link
+{
+	color: #d51d5a;
+	text-decoration: none;
+	-webkit-transition:color .25s ease-in;  
+	-moz-transition:color .25s ease-in;  
+	-o-transition:color .25s ease-in;  
+	transition:color .25s ease-in;
+}
+
+a:visited
+{
+	color: #e95e8c;
+}
+
+a:hover
+{
+	
+}
+
+pre
+{
+  background: #222;
+  padding: 5px;
+  color: #fff;
+  margin-bottom: 1em;
+  max-width: 100%;
+  overflow-y: auto;
+}
+
+pre.highlight
+{
+	color: black;
+}
+
+ul, ol
+{
+	margin-left: 24px;
+}
+div.sidebar-module ul,
+div.sidebar-module ol
+{
+	margin: 0;
+}

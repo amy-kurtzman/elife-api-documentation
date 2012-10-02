@@ -1,0 +1,230 @@
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 1em 0;
+	font-family: 'Avenir LT W01 35 Light', Helvetica, Arial, Verdana, sans-serif;
+	font-weight: lighter;
+	line-height: 1em;
+}
+
+address {
+	font-style: normal;
+}
+
+footer ul,
+footer ol
+{
+	margin: 0 0 1em 0 !important;
+}
+
+footer#pageFooter {
+	width: 100%;
+	min-height: 200px;
+	margin: 60px 0 0 0;
+	
+	background: #6d6e70 url(/images/footer-background-gradient.png) repeat-x;
+	border-top: 1px solid #e3e1e0;
+	border-bottom: 1px solid #e3e1e0;
+	color: #fff;
+}
+	footer#pageFooter #footer-content {
+		width: 950px;
+		margin: 0px auto;
+		padding: 20px 0 15px 0;
+		
+		overflow: auto;
+	}
+		
+		footer#pageFooter .colOne {
+			width: 220px; /* 255 - 10 - 25 */
+			padding: 0 10px 0 25px;
+			float: left;
+			
+			/* background: cyan; */
+		}
+			footer#pageFooter .logoLink {
+				margin: 0 0 1.5em 0;
+				display: block;
+			}
+			footer#pageFooter .colOne h6 {
+				margin: 0 0 .2em 0;
+			}
+		
+		footer#pageFooter .colTwo {
+			width: 145px; /* 185 - 20 - 20 */
+			padding: 0 20px 0 20px;
+			float: left;
+			
+			/* background: magenta; */
+		}
+			footer#pageFooter .colTwo ul {
+				padding: 10px 0 1.2em 0;
+				display: block;
+				
+				list-style: none;
+				overflow: auto;
+			}
+			footer#pageFooter .colTwo li {
+				display: inline;
+				margin: 0 8px 0 0;
+			}
+				footer#pageFooter .colTwo li.last {
+					margin: 0;
+				}
+			footer#pageFooter .colTwo span.phoneLink {
+				min-height: 18px;
+				padding: 0 0 0 25px;
+				display: block;
+				
+				background: url(/images/footer-icon-phone.png) no-repeat 0 0;
+				color: #fff;
+			}
+			footer#pageFooter .colTwo a.emailLink {
+				min-height: 12px;
+				margin: 10px 0 0 0;
+				padding: 0 0 0 27px;
+				display: block;
+				
+				background: url(/images/footer-icon-email.png) no-repeat 0 0;
+				color: #fff;
+			}
+		
+		footer#pageFooter .colThree {
+			width: 220px; /* 230 - 10 */
+			padding: 10px 0 10px 10px;
+			float: left;
+			
+			/* background: yellow; */
+		}
+			footer#pageFooter .colThree h5.twitter {
+				min-height: 21px;
+				padding: 5px 0 0 40px;
+				display: block;
+				
+				background: url(/images/footer-icon-twitter.png) no-repeat 0 0;
+				font-size: 1.4em;
+			}
+				footer#pageFooter .colThree h5.twitter a {
+					
+					color: #fff;
+				}
+			footer#pageFooter .colThree .tweet {
+				padding: 1em 0 0 40px;
+			}
+				footer#pageFooter .colThree .tweet ul {
+					margin: 0;
+					padding: 0;
+					
+					list-style: none;
+				}
+				footer#pageFooter .colThree .tweet a {
+					color: #acaeb0;
+				}
+					footer#pageFooter .colThree .tweet a:hover {
+						color: #fff;
+					}
+				footer#pageFooter .colThree .tweet .tweet_time, footer#pageFooter .colThree .tweet .tweet_join {
+					font-weight: bold;
+				}
+				footer#pageFooter .colThree .tweet .tweet_text {
+				}
+		
+		footer#pageFooter .colFour {
+			width: 235px; /* 260 - 25 */
+			padding: 15px 0 0 25px;
+			float: left;
+			}
+			footer#pageFooter .colFour h5 {
+				
+				font-size: 1.4em;
+				line-height: 1.2em;
+			}
+			footer#pageFooter .colFour form {
+				margin: 0;
+				padding: 0;
+			}
+			footer#pageFooter .colFour input[type=text] {
+				width: 223px; /* 233 - */
+				margin: 0 0 5px 0;
+				padding: 4px 5px 5px 5px;
+				
+				background: #86878a;
+				border: 1px solid #4b4c4e;
+				color: #4b4c4e;
+				
+				-webkit-transition:color,border-color .25s ease-in;  
+				-moz-transition:color,border-color .25s ease-in;  
+				-o-transition:color,border-color .25s ease-in;  
+				transition:color,border-color .25s ease-in;
+			}
+				footer#pageFooter .colFour input[type=text]:focus {
+					border-color: #fff;
+					color: #000;
+				}
+				footer#pageFooter .colFour input[type=text]#first_name {
+					width: 90px;
+					margin-right: 5px;
+					float: left;
+				}
+				footer#pageFooter .colFour input[type=text]#last_name {
+					width: 116px;
+					margin-right: 0;
+					float: left;
+				}
+				footer#pageFooter .colFour input[type=text]#email-Primary {
+					clear: both;
+				}
+			footer#pageFooter .colFour input[type=submit] {
+				padding: 4px 10px 5px 10px;
+				display: block;
+				float: right;
+				
+				background: #d4d4d5;
+				border: 0px;
+				color: #4b4c4e;
+				cursor: pointer;
+				
+				-webkit-transition:color,background-color .25s ease-in;  
+				-moz-transition:color,background-color .25s ease-in;  
+				-o-transition:color,background-color .25s ease-in;  
+				transition:color,background-color .25s ease-in;
+			}
+				footer#pageFooter .colFour input[type=submit]:hover {
+					background: #fff;
+					color: #000;
+				}
+#subFooter {
+	width: 900px; /* 950 - 25 - 25 */
+	margin: 0px auto;
+	padding: 10px 25px 10px 25px;
+	
+	color: #929497;
+}
+	#subFooter p {
+		margin: 0;
+		padding: 0 0 10px 0;
+	}
+	#subFooter a {
+		color: #6d6e70;
+	}
+		#subFooter ul {
+			padding: 18px 0 0 0;
+			
+			list-style: none;
+		}
+			#subFooter li {
+				display: inline;
+				padding: 0 0 0 10px;
+			}
+	#subFooter .left {
+		width: 45% !important;
+		margin: 0 !important;
+	}
+	#subFooter .right {
+		width: auto;
+				
+		text-align: right;
+	}
+	#subFooter .cc {
+		margin: 0 5px 0 5px;
+		position: relative;
+		top: 3px;
+	}
