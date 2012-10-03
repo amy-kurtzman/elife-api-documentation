@@ -59,8 +59,8 @@ module GitHub
           end
         end
 
-        lines << "X-RateLimit-Limit: 5000"
-        lines << "X-RateLimit-Remaining: 4999"
+        #lines << "X-RateLimit-Limit: 5000"
+        #lines << "X-RateLimit-Remaining: 4999"
 
         %(<pre class="#{css_class}"><code>#{lines * "\n"}</code></pre>\n)
       end
@@ -157,6 +157,27 @@ module GitHub
         "private_repos" => 20
       }
     })
+
+    FLUIDINFO_GET_OBJECTS_BY_ARTICLE_DOI = {
+      "ids" => ["6a55ee82-1e86-4cf7-be0b-02ccbf6b77fc", "df97444e-9579-49f1-8302-2dce51c0bd95"]
+    }
+    
+    FLUIDINFO_GET_VALUES_BY_FLUIDDB_ID = {
+      "results" =>
+        {"id" => {"6a55ee82-1e86-4cf7-be0b-02ccbf6b77fc" =>
+              {"elifesciences.org/api_v1/article/article_title" =>
+                  {"username" => "elifesciences.org", "updated-at" => "2012-10-02T23:00:16.556985", "value" => "A bacterial sulfonolipid triggers multicellular development in the closest living relatives of animals"}}}}}
+
+    FLUIDINFO_GET_NAMESPACE_ARTICLE = {
+        "tagNames" => ["doi_url", "publisher", "subject_area", "keywords", "received_date_day", "pmid", "abstract", "pub_date_day", "received_date_year", "accepted_date_timestamp", "copyright_holder", "journal_issn_ppub", "pub_date_timestamp", "accepted_date_day", "award_group_award_id", "license", "conflict", "article_institution", "correspondence", "received_date_date", "accepted_date_month", "copyright_year", "license_type", "refs", "journal_id", "pub_date_month", "received_date_timestamp", "ack", "journal_title", "article_type", "authors", "pub_date_year", "accepted_date_date", "copyright_statement", "article_title", "research_organism", "pub_date_date", "received_date_month", "funding_statement", "license_url", "doi", "journal_issn_epub", "article_country", "author_notes", "accepted_date_year", "award_group_funding_source", "award_group_principle_award_recipient", "xml", "components"],
+        "id" => "e6ee161d-6dbc-4209-86bb-677431be0ac8"
+}
+
+    FLUIDINFO_GET_OBJECTS_6A55EE82 = {
+      "tagPaths" => ["elifesciences.org/api_v1/article/copyright_year", "elifesciences.org/api_v1/article/accepted_date_day", "elifesciences.org/api_v1/article/received_date_day", "elifesciences.org/api_v1/article/pub_date_day", "elifesciences.org/api_v1/article/journal_issn_epub", "elifesciences.org/api_v1/article/subject_area", "elifesciences.org/api_v1/article/journal_title", "elifesciences.org/api_v1/article/abstract", "elifesciences.org/api_v1/article/pub_date_timestamp", "elifesciences.org/api_v1/article/pub_date_month", "elifesciences.org/api_v1/article/received_date_month", "elifesciences.org/api_v1/article/received_date_timestamp", "elifesciences.org/api_v1/article/received_date_date", "elifesciences.org/api_v1/article/refs", "elifesciences.org/api_v1/article/accepted_date_date", "elifesciences.org/api_v1/article/pub_date_date", "elifesciences.org/api_v1/article/award_group_funding_source", "elifesciences.org/api_v1/article/funding_statement", "elifesciences.org/api_v1/article/doi_url", "elifesciences.org/api_v1/article/keywords", "elifesciences.org/api_v1/article/research_organism", "elifesciences.org/api_v1/article/components", "elifesciences.org/api_v1/article/award_group_principle_award_recipient", "elifesciences.org/api_v1/article/accepted_date_year", "elifesciences.org/api_v1/article/award_group_award_id", "elifesciences.org/api_v1/article/copyright_holder", "elifesciences.org/api_v1/article/article_type", "elifesciences.org/api_v1/article/ack", "elifesciences.org/api_v1/article/copyright_statement", "elifesciences.org/api_v1/article/accepted_date_month", "elifesciences.org/api_v1/article/accepted_date_timestamp", "elifesciences.org/api_v1/article/conflict", "elifesciences.org/api_v1/article/received_date_year", "elifesciences.org/api_v1/article/author_notes", "elifesciences.org/api_v1/article/license_type", "elifesciences.org/api_v1/article/license", "elifesciences.org/api_v1/article/license_url", "elifesciences.org/api_v1/article/pub_date_year", "elifesciences.org/api_v1/article/correspondence", "elifesciences.org/api_v1/article/article_title", "elifesciences.org/api_v1/article/publisher", "elifesciences.org/api_v1/article/authors", "elifesciences.org/api_v1/article/doi"]
+      }
+
+
 
     PUBLIC_KEY = {
       "url"   => "https://api.github.com/user/keys/1",
