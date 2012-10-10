@@ -56,6 +56,23 @@ header
 	float: left;
 }
 
+h1
+{
+	color: #0560AB;
+	font-size: 24px;
+}
+
+h2
+{
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+h3
+{
+	font-size: 16px;
+}
+
 div.sidebar-shell
 {
 	margin-top: 0 !important;
@@ -109,4 +126,38 @@ div.sidebar-module ul,
 div.sidebar-module ol
 {
 	margin: 0;
+}
+
+/* Code tag tweak, based on style in documentation.css */
+.left > code,
+.left ul li > code
+{
+  font: 12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  color: #52595d;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  padding: 0px 3px;
+  display: inline-block;
+}
+
+.left table
+{
+	border: solid 1px black;
+	border-collapse: collapse;
+}
+.left table td,
+.left table th
+{
+	border: solid 1px black;
+	padding: 2px;
+}
+.left table th
+{
+	font-weight: bold;
 }

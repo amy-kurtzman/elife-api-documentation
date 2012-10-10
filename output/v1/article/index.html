@@ -36,20 +36,20 @@
   <li><a href="#get-article-objects">Get article objects</a></li>
   <li><a href="#get-article-values">Get article values</a></li>
   <li><a href="#get-all-tag-names-from-the-article-namespace">Get all tag names from the article namespace</a></li>
-  <li><a href="#get-all-tags-on-a-particular-article-object">Get all tags on a particular article object</a></li>
+  <li><a href="#get-all-tags-with-values-for-a-particular-article-object">Get all tags with values for a particular article object</a></li>
 </ul>
 
 <p>An article is perhaps the most important object in the eLife API; each article in the journal will have one article object in the API. Its unique key is the article DOI value, stored in the <code>article/doi</code> tag. Tags in the <code>article</code> namespace hold values that are directly linked with an article, such as the article title, date of publication, subject area categories and many others. The article schema page lists all the tags found in the <code>article</code> namespace.</p>
 
-<p>As an eLife API user, below are some API calls you are likely to use. If you do not know how the fluidinfo API works, be sure to review the general information to understand how to use these example in practice.</p>
+<p>As an eLife API user, below are some API calls you are likely to use. If you do not know how the Fluidinfo API works, be sure to review the general information to understand how to use these examples in practice.</p>
 
 <h2 id="get-article-objects">Get article objects</h2>
 
-<p>Each eLife article has a unique DOI. A simple way to find article objects in fluidinfo is to query for the presence of an <code>article/doi</code> tag. The result will be a list of fluidinfo object id values.</p>
+<p>Each eLife article has a unique DOI. A simple way to find article objects in Fluidinfo is to query for the presence of an <code>article/doi</code> tag. The result will be a list of Fluidinfo object id values.</p>
 
 <h3 id="request">Request</h3>
 
-<pre><code>GET /objects?query=has%20elifesciences.org/api_v1/article/doi
+<pre><code>GET /objects?query=has elifesciences.org/api_v1/article/doi
 </code></pre>
 
 <h3 id="response">Response</h3>
@@ -59,8 +59,12 @@ Content-type: application/json</code></pre>
 
 <pre class="highlight"><code class="language-javascript">{
   "ids": [
-    "6a55ee82-1e86-4cf7-be0b-02ccbf6b77fc",
-    "df97444e-9579-49f1-8302-2dce51c0bd95"
+    "71e9f5be-56a1-4e5a-a04a-35d2cfc75145",
+    "55decf52-a0d9-42d2-8db9-d5924a40a57a",
+    "337aa9e5-0c48-422b-945a-be12353f6fe2",
+    "eb275979-d99d-4e44-a84f-15ce912ca888",
+    "b55573b5-d12a-4604-b7eb-5f06ff1a94ef",
+    "fd6804e2-70be-4ced-a896-9e153bacada7"
   ]
 }</code></pre>
 
@@ -70,11 +74,11 @@ Content-type: application/json</code></pre>
 
 <p>You could query for all articles, and return all values of all tags, though it will return an increasingly large amount of data. It is recommended to constrain the number of article objects (by the query string) and constrain the tag values returned (by the tag list) if you only want a subset of data.</p>
 
-<p>The example below finds an article by fluidinfo object id and returns the article title. More query examples are to be found on the Use Cases page.</p>
+<p>The example below finds an article by Fluidinfo object id and returns the article title. More query examples are to be found on the Use Cases page.</p>
 
 <h3 id="request-1">Request</h3>
 
-<pre><code>GET /values?query=fluiddb/id=%226a55ee82-1e86-4cf7-be0b-02ccbf6b77fc%22&amp;tag=elifesciences.org/api_v1/article/article_title
+<pre><code>GET /values?query=fluiddb/id="eb275979-d99d-4e44-a84f-15ce912ca888"&amp;tag=elifesciences.org/api_v1/article/article_title
 </code></pre>
 
 <h3 id="response-1">Response</h3>
@@ -85,10 +89,10 @@ Content-type: application/json</code></pre>
 <pre class="highlight"><code class="language-javascript">{
   "results": {
     "id": {
-      "6a55ee82-1e86-4cf7-be0b-02ccbf6b77fc": {
+      "eb275979-d99d-4e44-a84f-15ce912ca888": {
         "elifesciences.org/api_v1/article/article_title": {
           "username": "elifesciences.org",
-          "updated-at": "2012-10-02T23:00:16.556985",
+          "updated-at": "2012-10-08T22:43:26.470758",
           "value": "A bacterial sulfonolipid triggers multicellular development in the closest living relatives of animals"
         }
       }
@@ -98,7 +102,7 @@ Content-type: application/json</code></pre>
 
 <h2 id="get-all-tag-names-from-the-article-namespace">Get all tag names from the article namespace</h2>
 
-<p>To get a list of all the tags specified in the <code>article</code> namespace directly from fluidinfo, you can issue a GET on the namespaces endpoint. The id returned is the object for the namespace itself (of little importance in this context). </p>
+<p>To get a list of all the tags specified in the <code>article</code> namespace directly from Fluidinfo, you can issue a GET on the namespaces endpoint. The id returned is the object for the namespace itself (of little importance in this context). </p>
 
 <h3 id="request-2">Request</h3>
 
@@ -159,19 +163,18 @@ Content-type: application/json</code></pre>
     "accepted_date_year",
     "award_group_funding_source",
     "award_group_principle_award_recipient",
-    "xml",
     "components"
   ],
   "id": "e6ee161d-6dbc-4209-86bb-677431be0ac8"
 }</code></pre>
 
-<h2 id="get-all-tags-on-a-particular-article-object">Get all tags on a particular article object</h2>
+<h2 id="get-all-tags-with-values-for-a-particular-article-object">Get all tags with values for a particular article object</h2>
 
-<p>If you have an article object id, and you want a list of all tags (in all namespaces) for the object, you can query the object itself using a GET. This may return <code>tagPaths</code> for tags outside of the eLife API namespaces, created by other fluidinfo users.</p>
+<p>If you have an article object id, and you want a list of all tags (in all namespaces) for the object, you can query the object itself using a GET. This may return <code>tagPaths</code> for tags outside of the eLife API namespaces, created by other Fluidinfo users.</p>
 
 <h3 id="request-3">Request</h3>
 
-<pre><code>GET /objects/6a55ee82-1e86-4cf7-be0b-02ccbf6b77fc
+<pre><code>GET /objects/eb275979-d99d-4e44-a84f-15ce912ca888
 </code></pre>
 
 <h3 id="response-3">Response</h3>
@@ -223,7 +226,8 @@ Content-type: application/json</code></pre>
     "elifesciences.org/api_v1/article/article_title",
     "elifesciences.org/api_v1/article/publisher",
     "elifesciences.org/api_v1/article/authors",
-    "elifesciences.org/api_v1/article/doi"
+    "elifesciences.org/api_v1/article/doi",
+    "fluiddb/about"
   ]
 }</code></pre>
 
@@ -271,7 +275,7 @@ Content-type: application/json</code></pre>
     
         <div class="colOne">
           <a href="http://www.elifesciences.org" title="eLife" class="logoLink">
-            <img src="http://www.elifesciences.org/wp-content/themes/elife-0.1/images/footer-logo.png" alt="eLife">
+            <img src="/images/footer-logo.png" alt="eLife">
           </a>
     
           <address>
@@ -284,22 +288,22 @@ Content-type: application/json</code></pre>
           <ul class="sm">
             <li class="first">
               <a href="http://www.facebook.com/elifesciences" title="eLife on Facebook" target="_blank">
-                <img src="http://www.elifesciences.org/wp-content/themes/elife-0.1/images/footer-sm-facebook.png" alt="eLife on Facebook">
+                <img src="/images/footer-sm-facebook.png" alt="eLife on Facebook">
               </a>
             </li>
             <li>
               <a href="http://twitter.com/elife_sciences" title="eLife on Twitter" target="_blank">
-                <img src="http://www.elifesciences.org/wp-content/themes/elife-0.1/images/footer-sm-twitter.png" alt="eLife on Twitter">
+                <img src="/images/footer-sm-twitter.png" alt="eLife on Twitter">
               </a>
             </li>
             <li>
               <a href="http://www.linkedin.com/company/elife-sciences-publications-ltd" title="eLife on LinkedIn" target="_blank">
-                <img src="http://www.elifesciences.org/wp-content/themes/elife-0.1/images/footer-sm-linkedin.png" alt="eLife on LinkedIn">
+                <img src="/images/footer-sm-linkedin.png" alt="eLife on LinkedIn">
               </a>
             </li>
             <li class="last">
               <a href="https://plus.google.com/102129675554093758550/posts" title="eLife on Google+" target="_blank">
-                <img src="http://www.elifesciences.org/wp-content/themes/elife-0.1/images/footer-sm-google.png" alt="eLife on Google+">
+                <img src="/images/footer-sm-google.png" alt="eLife on Google+">
               </a>
             </li>
           </ul>
@@ -352,7 +356,7 @@ Content-type: application/json</code></pre>
     </div>
 
     <!-- Tweets -->
-    <script type="text/javascript" src="http://www.elifesciences.org/wp-content/themes/elife-0.1/js/jquery.tweet.js"></script>
+    <script type="text/javascript" src="/js/jquery.tweet.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
         $(".tweet").tweet({
