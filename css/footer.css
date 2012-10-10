@@ -1,11 +1,21 @@
-h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 1em 0;
+h1, h2, h3, h4, h5, h6
+{
 	font-family: 'Avenir LT W01 35 Light', Helvetica, Arial, Verdana, sans-serif;
 	font-weight: lighter;
 	line-height: 1em;
 }
 
-address {
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6
+{
+	margin: 0 0 1em 0;
+}
+
+footer address {
 	font-style: normal;
 }
 

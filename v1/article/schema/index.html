@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Article Schema | eLife API</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="robots" content="index,follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="/shared/css/documentation.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/shared/css/pygments.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/css/footer.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://fast.fonts.com/cssapi/c10f70b9-7e7a-4f33-9361-d43022ae343e.css">
+    <script src="/shared/js/jquery.js" type="text/javascript"></script>
+    <script src="/shared/js/documentation.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+
+    <header id="header">
+      <a href="/"><img src="/images/header-logo.png" width="198" height="84" alt="eLife" id="logo"></a>
+
+      <ul class="nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/v1/">API v1</a></li>
+      </ul>
+
+    </header>
+
+    
+    <div id="content">
+      <div class="left">
+        <h1 id="article-schema">Article Schema</h1>
+
+<ul id="markdown-toc">
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#article-schema-1">Article schema</a></li>
+</ul>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>_</p>
+
+<h2 id="article-schema-1">Article schema</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Tag</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#about">about</a></td>
+      <td>fluiddb/about</td>
+    </tr>
+    <tr>
+      <td><a href="#abstract">abstract</a></td>
+      <td>/article/abstract</td>
+    </tr>
+    <tr>
+      <td><a href="#accepteddatedate">accepted_date_date</a></td>
+      <td>/article/accepted_date_date</td>
+    </tr>
+    <tr>
+      <td><a href="#accepteddateday">accepted_date_day</a></td>
+      <td>/article/accepted_date_day</td>
+    </tr>
+    <tr>
+      <td><a href="#accepteddatemonth">accepted_date_month</a></td>
+      <td>/article/accepted_date_month</td>
+    </tr>
+    <tr>
+      <td><a href="#accepteddatetimestamp">accepted_date_timestamp</a></td>
+      <td>/article/accepted_date_timestamp</td>
+    </tr>
+    <tr>
+      <td><a href="#accepteddateyear">accepted_date_year</a></td>
+      <td>/article/accepted_date_year</td>
+    </tr>
+    <tr>
+      <td><a href="#ack">ack</a></td>
+      <td>/article/ack</td>
+    </tr>
+    <tr>
+      <td><a href="#articlecountry">article_country</a></td>
+      <td>/article/article_country</td>
+    </tr>
+    <tr>
+      <td><a href="#articleinstitution">article_institution</a></td>
+      <td>/article/article_institution</td>
+    </tr>
+    <tr>
+      <td><a href="#articletitle">article_title</a></td>
+      <td>/article/article_title</td>
+    </tr>
+    <tr>
+      <td><a href="#articletype">article_type</a></td>
+      <td>/article/article_type</td>
+    </tr>
+    <tr>
+      <td><a href="#authornotes">author_notes</a></td>
+      <td>/article/author_notes</td>
+    </tr>
+    <tr>
+      <td><a href="#authors">authors</a></td>
+      <td>/article/authors</td>
+    </tr>
+    <tr>
+      <td><a href="#awardgroupawardid">award_group_award_id</a></td>
+      <td>/article/award_group_award_id</td>
+    </tr>
+    <tr>
+      <td><a href="#awardgroupfundingsource">award_group_funding_source</a></td>
+      <td>/article/award_group_funding_source</td>
+    </tr>
+    <tr>
+      <td><a href="#awardgroupprincipleawardrecipient">award_group_principle_award_recipient</a>   </td>
+      <td>/article/award_group_principle_award_recipient</td>
+    </tr>
+    <tr>
+      <td><a href="#components">components</a></td>
+      <td>/article/components</td>
+    </tr>
+    <tr>
+      <td><a href="#conflict">conflict</a></td>
+      <td>/article/conflict</td>
+    </tr>
+    <tr>
+      <td><a href="#copyrightholder">copyright_holder</a></td>
+      <td>/article/copyright_holder</td>
+    </tr>
+    <tr>
+      <td><a href="#copyrightstatement">copyright_statement</a></td>
+      <td>/article/copyright_statement</td>
+    </tr>
+    <tr>
+      <td><a href="#copyrightyear">copyright_year</a></td>
+      <td>/article/copyright_year</td>
+    </tr>
+    <tr>
+      <td><a href="#correspondence">correspondence</a></td>
+      <td>/article/correspondence</td>
+    </tr>
+    <tr>
+      <td><a href="#doi">doi</a></td>
+      <td>/article/doi</td>
+    </tr>
+    <tr>
+      <td><a href="#doiurl">doi_url</a></td>
+      <td>/article/doi_url</td>
+    </tr>
+    <tr>
+      <td><a href="#fundingstatement">funding_statement</a></td>
+      <td>/article/funding_statement</td>
+    </tr>
+    <tr>
+      <td><a href="#journalid">journal_id</a></td>
+      <td>/article/journal_id</td>
+    </tr>
+    <tr>
+      <td><a href="#journalissnepub">journal_issn_epub</a></td>
+      <td>/article/journal_issn_epub</td>
+    </tr>
+    <tr>
+      <td><a href="#journalissnppub">journal_issn_ppub</a></td>
+      <td>/article/journal_issn_ppub</td>
+    </tr>
+    <tr>
+      <td><a href="#journaltitle">journal_title</a></td>
+      <td>/article/journal_title</td>
+    </tr>
+    <tr>
+      <td><a href="#keywords">keywords</a></td>
+      <td>/article/keywords</td>
+    </tr>
+    <tr>
+      <td><a href="#license">license</a></td>
+      <td>/article/license</td>
+    </tr>
+    <tr>
+      <td><a href="#licensetype">license_type</a></td>
+      <td>/article/license_type</td>
+    </tr>
+    <tr>
+      <td><a href="#licenseurl">license_url</a></td>
+      <td>/article/license_url</td>
+    </tr>
+    <tr>
+      <td><a href="#pmid">pmid</a></td>
+      <td>/article/pmid</td>
+    </tr>
+    <tr>
+      <td><a href="#pubdatedate">pub_date_date</a></td>
+      <td>/article/pub_date_date</td>
+    </tr>
+    <tr>
+      <td><a href="#pubdateday">pub_date_day</a></td>
+      <td>/article/pub_date_day</td>
+    </tr>
+    <tr>
+      <td><a href="#pubdatemonth">pub_date_month</a></td>
+      <td>/article/pub_date_month</td>
+    </tr>
+    <tr>
+      <td><a href="#pubdatetimestamp">pub_date_timestamp</a></td>
+      <td>/article/pub_date_timestamp</td>
+    </tr>
+    <tr>
+      <td><a href="#pubdateyear">pub_date_year</a></td>
+      <td>/article/pub_date_year</td>
+    </tr>
+    <tr>
+      <td><a href="#publisher">publisher</a></td>
+      <td>/article/publisher</td>
+    </tr>
+    <tr>
+      <td><a href="#receiveddatedate">received_date_date</a></td>
+      <td>/article/received_date_date</td>
+    </tr>
+    <tr>
+      <td><a href="#receiveddateday">received_date_day</a></td>
+      <td>/article/received_date_day</td>
+    </tr>
+    <tr>
+      <td><a href="#receiveddatemonth">received_date_month</a></td>
+      <td>/article/received_date_month</td>
+    </tr>
+    <tr>
+      <td><a href="#receiveddatetimestamp">received_date_timestamp</a></td>
+      <td>/article/received_date_timestamp</td>
+    </tr>
+    <tr>
+      <td><a href="#receiveddateyear">received_date_year</a></td>
+      <td>/article/received_date_year</td>
+    </tr>
+    <tr>
+      <td><a href="#refs">refs</a></td>
+      <td>/article/refs</td>
+    </tr>
+    <tr>
+      <td><a href="#researchorganism">research_organism</a></td>
+      <td>/article/research_organism</td>
+    </tr>
+    <tr>
+      <td><a href="#subjectarea">subject_area</a></td>
+      <td>/article/subject_area</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="about">about</h3>
+
+<h4 id="detail">Detail</h4>
+
+<p>Fluidinfo about tag. A unique value for each object in fluidinfo. For eLife article objects, the about tag is the article DOI in its URL compatible format.</p>
+
+<h4 id="example">Example</h4>
+
+<p>http://dx.doi.org/10.7554/eLife.00013</p>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="accepteddatedate">accepted_date_date</h3>
+
+<h4 id="detail-1">Detail</h4>
+
+<h4 id="example-1">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="accepteddateday">accepted_date_day</h3>
+
+<h4 id="detail-2">Detail</h4>
+
+<h4 id="example-2">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="accepteddatemonth">accepted_date_month</h3>
+
+<h4 id="detail-3">Detail</h4>
+
+<h4 id="example-3">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="accepteddatetimestamp">accepted_date_timestamp</h3>
+
+<h4 id="detail-4">Detail</h4>
+
+<h4 id="example-4">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="accepteddateyear">accepted_date_year</h3>
+
+<h4 id="detail-5">Detail</h4>
+
+<h4 id="example-5">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="ack">ack</h3>
+
+<h4 id="detail-6">Detail</h4>
+
+<h4 id="example-6">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="articlecountry">article_country</h3>
+
+<h4 id="detail-7">Detail</h4>
+
+<h4 id="example-7">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="articleinstitution">article_institution</h3>
+
+<h4 id="detail-8">Detail</h4>
+
+<h4 id="example-8">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="articletitle">article_title</h3>
+
+<h4 id="detail-9">Detail</h4>
+
+<h4 id="example-9">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="articletype">article_type</h3>
+
+<h4 id="detail-10">Detail</h4>
+
+<h4 id="example-10">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="authornotes">author_notes</h3>
+
+<h4 id="detail-11">Detail</h4>
+
+<h4 id="example-11">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="authors">authors</h3>
+
+<h4 id="detail-12">Detail</h4>
+
+<h4 id="example-12">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="awardgroupawardid">award_group_award_id</h3>
+
+<h4 id="detail-13">Detail</h4>
+
+<h4 id="example-13">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="awardgroupfundingsource">award_group_funding_source</h3>
+
+<h4 id="detail-14">Detail</h4>
+
+<h4 id="example-14">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="awardgroupprincipleawardrecipient">award_group_principle_award_recipient</h3>
+
+<h4 id="detail-15">Detail</h4>
+
+<h4 id="example-15">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="components">components</h3>
+
+<h4 id="detail-16">Detail</h4>
+
+<h4 id="example-16">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="conflict">conflict</h3>
+
+<h4 id="detail-17">Detail</h4>
+
+<h4 id="example-17">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="copyrightholder">copyright_holder</h3>
+
+<h4 id="detail-18">Detail</h4>
+
+<h4 id="example-18">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="copyrightstatement">copyright_statement</h3>
+
+<h4 id="detail-19">Detail</h4>
+
+<h4 id="example-19">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="copyrightyear">copyright_year</h3>
+
+<h4 id="detail-20">Detail</h4>
+
+<h4 id="example-20">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="correspondence">correspondence</h3>
+
+<h4 id="detail-21">Detail</h4>
+
+<h4 id="example-21">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="doi">doi</h3>
+
+<h4 id="detail-22">Detail</h4>
+
+<h4 id="example-22">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="doiurl">doi_url</h3>
+
+<h4 id="detail-23">Detail</h4>
+
+<h4 id="example-23">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="fundingstatement">funding_statement</h3>
+
+<h4 id="detail-24">Detail</h4>
+
+<h4 id="example-24">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="journalid">journal_id</h3>
+
+<h4 id="detail-25">Detail</h4>
+
+<h4 id="example-25">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="journalissnepub">journal_issn_epub</h3>
+
+<h4 id="detail-26">Detail</h4>
+
+<h4 id="example-26">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="journalissnppub">journal_issn_ppub</h3>
+
+<h4 id="detail-27">Detail</h4>
+
+<h4 id="example-27">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="journaltitle">journal_title</h3>
+
+<h4 id="detail-28">Detail</h4>
+
+<h4 id="example-28">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="keywords">keywords</h3>
+
+<h4 id="detail-29">Detail</h4>
+
+<h4 id="example-29">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="license">license</h3>
+
+<h4 id="detail-30">Detail</h4>
+
+<h4 id="example-30">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="licensetype">license_type</h3>
+
+<h4 id="detail-31">Detail</h4>
+
+<h4 id="example-31">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="licenseurl">license_url</h3>
+
+<h4 id="detail-32">Detail</h4>
+
+<h4 id="example-32">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="pmid">pmid</h3>
+
+<h4 id="detail-33">Detail</h4>
+
+<h4 id="example-33">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="pubdatedate">pub_date_date</h3>
+
+<h4 id="detail-34">Detail</h4>
+
+<h4 id="example-34">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="pubdateday">pub_date_day</h3>
+
+<h4 id="detail-35">Detail</h4>
+
+<h4 id="example-35">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="pubdatemonth">pub_date_month</h3>
+
+<h4 id="detail-36">Detail</h4>
+
+<h4 id="example-36">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="pubdatetimestamp">pub_date_timestamp</h3>
+
+<h4 id="detail-37">Detail</h4>
+
+<h4 id="example-37">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="pubdateyear">pub_date_year</h3>
+
+<h4 id="detail-38">Detail</h4>
+
+<h4 id="example-38">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="publisher">publisher</h3>
+
+<h4 id="detail-39">Detail</h4>
+
+<h4 id="example-39">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="receiveddatedate">received_date_date</h3>
+
+<h4 id="detail-40">Detail</h4>
+
+<h4 id="example-40">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="receiveddateday">received_date_day</h3>
+
+<h4 id="detail-41">Detail</h4>
+
+<h4 id="example-41">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="receiveddatemonth">received_date_month</h3>
+
+<h4 id="detail-42">Detail</h4>
+
+<h4 id="example-42">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="receiveddatetimestamp">received_date_timestamp</h3>
+
+<h4 id="detail-43">Detail</h4>
+
+<h4 id="example-43">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="receiveddateyear">received_date_year</h3>
+
+<h4 id="detail-44">Detail</h4>
+
+<h4 id="example-44">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="refs">refs</h3>
+
+<h4 id="detail-45">Detail</h4>
+
+<h4 id="example-45">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="researchorganism">research_organism</h3>
+
+<h4 id="detail-46">Detail</h4>
+
+<h4 id="example-46">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+<h3 id="subjectarea">subject_area</h3>
+
+<h4 id="detail-47">Detail</h4>
+
+<h4 id="example-47">Example</h4>
+
+<p><a href="#article-schema-1">Back to schema</a></p>
+
+        
+      </div>
+
+      <div id="js-sidebar" class="sidebar-shell">
+        <div class="js-toggle-list sidebar-module expandable">
+          <ul>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/">Summary</a></h3>
+              <ul class="js-guides">
+                <li><a href="/v1/version/">Version</a></li>
+                <li><a href="/v1/glossary/">Glossary</a></li>
+              </ul>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/article/">Article</a></h3>
+              <ul class="js-guides">
+                <li><a href="/v1/article/usecases/">Use Cases</a></li>
+                <li><a href="/v1/article/schema/">Schema</a></li>
+              </ul>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/people/">People</a></h3>
+              <ul class="js-guides">
+                <li><a href="/v1/users/emails/">Emails</a></li>
+                <li><a href="/v1/users/followers/">Followers</a></li>
+                <li><a href="/v1/users/keys/">Keys</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div> <!-- /sidebar-module -->
+        <div class="sidebar-module">
+          <p>This website is a <a href="https://github.com/github/developer.github.com" target="_blank">public GitHub repository</a>. Please help us by forking the project and adding to it.</p>
+        </div>
+      </div><!-- /sidebar-shell -->
+
+      &nbsp;<br style="clear: both;">
+
+    </div><!-- wrapper -->
+
+    <footer id="pageFooter">
+      <div id="footer-content">
+    
+        <div class="colOne">
+          <a href="http://www.elifesciences.org" title="eLife" class="logoLink">
+            <img src="/images/footer-logo.png" alt="eLife">
+          </a>
+    
+          <address>
+            Sheraton House, Castle Park,<br>
+            Cambridge, CB3 0AX, UK
+          </address>
+        </div> <!-- colOne -->
+    
+        <div class="colTwo">
+          <ul class="sm">
+            <li class="first">
+              <a href="http://www.facebook.com/elifesciences" title="eLife on Facebook" target="_blank">
+                <img src="/images/footer-sm-facebook.png" alt="eLife on Facebook">
+              </a>
+            </li>
+            <li>
+              <a href="http://twitter.com/elife_sciences" title="eLife on Twitter" target="_blank">
+                <img src="/images/footer-sm-twitter.png" alt="eLife on Twitter">
+              </a>
+            </li>
+            <li>
+              <a href="http://www.linkedin.com/company/elife-sciences-publications-ltd" title="eLife on LinkedIn" target="_blank">
+                <img src="/images/footer-sm-linkedin.png" alt="eLife on LinkedIn">
+              </a>
+            </li>
+            <li class="last">
+              <a href="https://plus.google.com/102129675554093758550/posts" title="eLife on Google+" target="_blank">
+                <img src="/images/footer-sm-google.png" alt="eLife on Google+">
+              </a>
+            </li>
+          </ul>
+    
+          <!-- <span class="phoneLink">+44 (0)1223 370155</span> -->
+          <a href="mailto:staff@elifesciences.org" class="emailLink">staff@elifesciences.org</a>
+        </div> <!-- colTwo -->
+    
+        <div class="colThree">
+          <h5 class="twitter">
+            <a href="http://twitter.com/elife_sciences">Follow eLife on Twitter</a>
+          </h5>
+          <div class="tweet"></div>
+        </div> <!-- colThree -->
+    
+        <div class="colFour">
+    
+          <h5>Sign up for News and Updates on the Launch</h5>
+    
+          <form action="http://www.elifesciences.org/crm/civicrm/profile/create?reset=1&amp;gid=11" method="post" id="subscribeForm">
+            <input type="hidden" name="reset" value="1">
+            <input type="hidden" name="gid" value="11">
+    
+            <input type="text" name="first_name" id="first_name" class="first_name" placeholder="First Name">
+            <input type="text" name="last_name" id="last_name" class="last_name" placeholder="Last Name"><br>
+            <input type="text" name="email-Primary" id="email-Primary" class="email-Primary" placeholder="Email Address"><br>
+    
+            <input type="submit" name="submit" value=" Subscribe! ">
+          </form>
+    
+        </div> <!-- colFour -->
+
+      </div><!--#footer-content-->
+    </footer>
+    
+    <div id="subFooter">
+      <div class="left">
+        <p>&copy; 2012 <a href="http://www.elifesciences.org/" title="The new funder-researcher collaboration and top-tier open-access journal for the life and biomedical sciences">eLife Sciences Publications, Ltd</a><br>Subject to a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution license</a>, except where otherwise noted.</p>
+      </div>
+    
+      <div class="right">
+        <div class="menu-footer-navigation-container"><ul id="menu-footer-navigation" class="menu"><li id="menu-item-713" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5 current_page_item menu-item-713"><a href="http://www.elifesciences.org/">Home</a></li>
+    <li id="menu-item-714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-714"><a href="http://www.elifesciences.org/about/">About</a></li>
+    <li id="menu-item-715" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-715"><a href="http://www.elifesciences.org/the-journal/">The Journal</a></li>
+    <li id="menu-item-718" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-718"><a href="http://www.elifesciences.org/category/elife-news/">News</a></li>
+    <li id="menu-item-719" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-719"><a href="http://www.elifesciences.org/category/elife-labs/">eLife Labs</a></li>
+    <li id="menu-item-716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-716"><a href="http://www.elifesciences.org/contact/">Contact</a></li>
+    <li id="menu-item-717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-717"><a href="http://www.elifesciences.org/privacy-policy/">Privacy policy</a></li>
+    </ul></div>  </div>
+    </div>
+
+    <!-- Tweets -->
+    <script type="text/javascript" src="/js/jquery.tweet.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $(".tweet").tweet({
+            join_text: "auto",
+            username: "elife_sciences",
+            avatar_size: 0,
+            count: 1,
+            auto_join_text_default: "eLife said,",
+            auto_join_text_ed: "eLife said,",
+            auto_join_text_ing: "eLife said,",
+            auto_join_text_reply: "eLife said,",
+            auto_join_text_url: "eLife said,",
+            loading_text: "Loading @eLife tweets..."
+          });
+        });
+    </script>
+
+  <!-- eLife Brand Bar -->
+  <script type="text/javascript" src="http://www.elifesciences.org/elife-bar/eb.js"></script>
+  <!-- /eLife Brand Bar -->
+  
+  </body>
+</html>
