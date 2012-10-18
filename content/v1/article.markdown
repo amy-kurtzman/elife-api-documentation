@@ -7,7 +7,11 @@ title: Article | eLife API
 * TOC
 {:toc}
 
-An article is perhaps the most important object in the eLife API; each article in the journal will have one article object in the API. Its unique key is the article DOI value, stored in the `article/doi` tag. Tags in the `article` namespace hold values that are directly linked with an article, such as the article title, date of publication, subject area categories and many others. The article schema page lists all the tags found in the `article` namespace.
+An article is an important object in the eLife API, since many other objects are derived from its parts. Each journal article is represented by one article object in Fluidinfo. Its unique key is the article's DOI, stored in the `article/doi` tag, and is also used to set the `fluiddb/about` tag value.
+
+Tags in the `article` namespace hold values directly attributed to an article such as the article title, date of publication, subject area categories, and other attributes of an article. The article schema page lists all the tags used in the `article` namespace.
+
+The `authors`, `components` and `references` tags hold single dimensional lists, and are intended to only provide a quick reference. More detailed information for those Fluidinfo objects can be found in the `article`, `component` and `ref` namespaces, respectively.
 
 As an eLife API user, below are some API calls you are likely to use. If you do not know how the Fluidinfo API works, be sure to review the general information to understand how to use these examples in practice.
 

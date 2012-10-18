@@ -148,16 +148,31 @@ div.sidebar-module ol
 
 .left table
 {
-	border: solid 1px black;
+	border-top: solid 1px #DFDDDD;
 	border-collapse: collapse;
+	border-bottom: solid 2px #DFDDDD;
 }
 .left table td,
 .left table th
 {
-	border: solid 1px black;
-	padding: 2px;
+	border-bottom: solid 1px #DFDDDD;
+	padding: 4px 8px;
 }
 .left table th
 {
 	font-weight: bold;
+	border-bottom: solid 2px #DFDDDD;
+	font-size: 120%;
+}
+/* Schema pages */
+.schema h3
+{
+	border-top: solid 1px #DFDDDD;
+	background-color: #EEE;
+	padding: 5px;
+}
+#js-sidebar h3
+{
+	border-top: none;
+	padding: 0;
 }

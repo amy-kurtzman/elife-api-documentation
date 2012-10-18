@@ -29,16 +29,16 @@ For optimal readability, the samples provided in this documentation show space c
   
 ### Case sensitive
 
-String equality in Fluidinfo queries are case sensitive. As a result,
+String equality in Fluidinfo queries uses case sensitive comparisons. As a result,
 
-* `?query=elifesciences.org/api_v1/article/doi="http://dx.doi.org/10.7554/eLife.00013"` will find an article object
-* `?query=elifesciences.org/api_v1/article/doi="http://dx.doi.org/10.7554/elife.00013"` <b>will not</b> find an article object (lowercase 'L' in eLife)
+* `?query=elifesciences.org/api_v1/article/doi="10.7554/eLife.00013"` will find an article object
+* `?query=elifesciences.org/api_v1/article/doi="10.7554/elife.00013"` <b>will not</b> find an article object (lowercase 'L' in eLife)
 
 To query with case insensitivity, you can use the `matches` query operator instead of the `=` sign. More detail can be found on the Fluidinfo [Query Language](http://doc.fluidinfo.com/fluidDB/queries.html) page.
 
 ### Date value formats
 
-Date values - such as an article's accepted date or published date - are specified in multiple Fluidinfo tags. These tag values allows you to write Fluidinfo queries for a particular month or day in a month without having to parse timestamp values. For example, for an article accepted date:
+Date values &#8211; such as an article's accepted date or published date &#8211; are specified in multiple Fluidinfo tags. These tag values allows you to write Fluidinfo queries for a particular month or day in a month without having to parse timestamp values. For example, for an article accepted date:
 
 * `accepted_date_date` : A human readable date string, i.e. "July 18, 2012"
 * `accepted_date_day`: The day of the month, i.e. "18"

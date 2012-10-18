@@ -159,7 +159,7 @@ module GitHub
     })
 
     FLUIDINFO_GET_OBJECTS_BY_ARTICLE_DOI = {
-      "ids" => ["71e9f5be-56a1-4e5a-a04a-35d2cfc75145", "55decf52-a0d9-42d2-8db9-d5924a40a57a", "337aa9e5-0c48-422b-945a-be12353f6fe2", "eb275979-d99d-4e44-a84f-15ce912ca888", "b55573b5-d12a-4604-b7eb-5f06ff1a94ef", "fd6804e2-70be-4ced-a896-9e153bacada7"]
+      "ids" => ["71e9f5be-56a1-4e5a-a04a-35d2cfc75145", "0c0e0ea4-1530-441a-bb97-9d26ebf65647", "749f6115-0848-4f59-9b52-adbc461c8ced", "82aba95e-100e-468a-b5c4-4457ae69d215", "55decf52-a0d9-42d2-8db9-d5924a40a57a", "337aa9e5-0c48-422b-945a-be12353f6fe2", "eb275979-d99d-4e44-a84f-15ce912ca888", "b55573b5-d12a-4604-b7eb-5f06ff1a94ef", "fd6804e2-70be-4ced-a896-9e153bacada7"]
     }
     
     FLUIDINFO_GET_VALUES_BY_FLUIDDB_ID = {

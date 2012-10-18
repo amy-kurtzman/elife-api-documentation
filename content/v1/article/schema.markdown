@@ -1,5 +1,6 @@
 ---
 title: Article Schema | eLife API
+class: class="schema"
 ---
 
 # Article Schema
@@ -13,58 +14,60 @@ _
 
 ## Article schema
 
-|---------------------------------------------------------------------------------------------------+--------------------------------------------------+
-| Name                                                                                              | Tag                                              |
-|---------------------------------------------------------------------------------------------------|--------------------------------------------------|
-| [about](#about)                                                                                   | fluiddb/about                                    |
-| [abstract](#abstract)                                                                             | /article/abstract                                |
-| [accepted_date_date](#accepteddatedate)                                                           | /article/accepted_date_date                      |
-| [accepted_date_day](#accepteddateday)                                                             | /article/accepted_date_day                       |
-| [accepted_date_month](#accepteddatemonth)                                                         | /article/accepted_date_month                     |
-| [accepted_date_timestamp](#accepteddatetimestamp)                                                 | /article/accepted_date_timestamp                 |
-| [accepted_date_year](#accepteddateyear)                                                           | /article/accepted_date_year                      |
-| [ack](#ack)                                                                                       | /article/ack                                     |
-| [article_country](#articlecountry)                                                                | /article/article_country                         |
-| [article_institution](#articleinstitution)                                                        | /article/article_institution                     |
-| [article_title](#articletitle)                                                                    | /article/article_title                           |
-| [article_type](#articletype)                                                                      | /article/article_type                            |
-| [author_notes](#authornotes)                                                                      | /article/author_notes                            |
-| [authors](#authors)                                                                               | /article/authors                                 |
-| [award_group_award_id](#awardgroupawardid)                                                        | /article/award_group_award_id                    |
-| [award_group_funding_source](#awardgroupfundingsource)                                            | /article/award_group_funding_source              |
-| [award_group_principle_award_recipient](#awardgroupprincipleawardrecipient)&nbsp;&nbsp;&nbsp;     | /article/award_group_principle_award_recipient   |
-| [components](#components)                                                                         | /article/components                              |
-| [conflict](#conflict)                                                                             | /article/conflict                                |
-| [copyright_holder](#copyrightholder)                                                              | /article/copyright_holder                        |
-| [copyright_statement](#copyrightstatement)                                                        | /article/copyright_statement                     |
-| [copyright_year](#copyrightyear)                                                                  | /article/copyright_year                          |
-| [correspondence](#correspondence)                                                                 | /article/correspondence                          |
-| [doi](#doi)                                                                                       | /article/doi                                     |
-| [doi_url](#doiurl)                                                                                | /article/doi_url                                 |
-| [funding_statement](#fundingstatement)                                                            | /article/funding_statement                       |
-| [journal_id](#journalid)                                                                          | /article/journal_id                              |
-| [journal_issn_epub](#journalissnepub)                                                             | /article/journal_issn_epub                       |
-| [journal_issn_ppub](#journalissnppub)                                                             | /article/journal_issn_ppub                       |
-| [journal_title](#journaltitle)                                                                    | /article/journal_title                           |
-| [keywords](#keywords)                                                                             | /article/keywords                                |
-| [license](#license)                                                                               | /article/license                                 |
-| [license_type](#licensetype)                                                                      | /article/license_type                            |
-| [license_url](#licenseurl)                                                                        | /article/license_url                             |
-| [pmid](#pmid)                                                                                     | /article/pmid                                    |
-| [pub_date_date](#pubdatedate)                                                                     | /article/pub_date_date                           |
-| [pub_date_day](#pubdateday)                                                                       | /article/pub_date_day                            |
-| [pub_date_month](#pubdatemonth)                                                                   | /article/pub_date_month                          |
-| [pub_date_timestamp](#pubdatetimestamp)                                                           | /article/pub_date_timestamp                      |
-| [pub_date_year](#pubdateyear)                                                                     | /article/pub_date_year                           |
-| [publisher](#publisher)                                                                           | /article/publisher                               |
-| [received_date_date](#receiveddatedate)                                                           | /article/received_date_date                      |
-| [received_date_day](#receiveddateday)                                                             | /article/received_date_day                       |
-| [received_date_month](#receiveddatemonth)                                                         | /article/received_date_month                     |
-| [received_date_timestamp](#receiveddatetimestamp)                                                 | /article/received_date_timestamp                 |
-| [received_date_year](#receiveddateyear)                                                           | /article/received_date_year                      |
-| [refs](#refs)                                                                                     | /article/refs                                    |
-| [research_organism](#researchorganism)                                                            | /article/research_organism                       |
-| [subject_area](#subjectarea)                                                                      | /article/subject_area                            |
+|---------------------------------------------------------------------------------------------------+--------------------------------------------------+---------+-------|
+| Name                                                                                              | Tag                                              | Type    | List |
+|---------------------------------------------------------------------------------------------------|--------------------------------------------------|---------|-------+
+| [about](#about)                                                                                   | fluiddb/about                                    | string  |       |
+| [abstract](#abstract)                                                                             | /article/abstract                                | string  |       |
+| [accepted_date_date](#accepteddatedate)                                                           | /article/accepted_date_date                      | string  |       |
+| [accepted_date_day](#accepteddateday)                                                             | /article/accepted_date_day                       | int     |       |
+| [accepted_date_month](#accepteddatemonth)                                                         | /article/accepted_date_month                     | int     |       |
+| [accepted_date_timestamp](#accepteddatetimestamp)                                                 | /article/accepted_date_timestamp                 | int     |       |
+| [accepted_date_year](#accepteddateyear)                                                           | /article/accepted_date_year                      | int     |       |
+| [ack](#ack)                                                                                       | /article/ack                                     | string  |       |
+| [article_country](#articlecountry)                                                                | /article/article_country                         | string  |       |
+| [article_institution](#articleinstitution)                                                        | /article/article_institution                     | string  |       |
+| [article_title](#articletitle)                                                                    | /article/article_title                           | string  |       |
+| [article_type](#articletype)                                                                      | /article/article_type                            | string  |       |
+| [author_notes](#authornotes)                                                                      | /article/author_notes                            | string  | Yes*  |
+| [authors](#authors)                                                                               | /article/authors                                 | string  | Yes   |
+| [award_group_award_id](#awardgroupawardid)                                                        | /article/award_group_award_id                    | string  | Yes*  |
+| [award_group_funding_source](#awardgroupfundingsource)                                            | /article/award_group_funding_source              | string  | Yes*  |
+| [award_group_principle_award_recipient](#awardgroupprincipleawardrecipient)&nbsp;&nbsp;&nbsp;     | /article/award_group_principle_award_recipient   | string  | Yes*  |
+| [components](#components)                                                                         | /article/components                              | string  | Yes   |
+| [conflict](#conflict)                                                                             | /article/conflict                                | string  |       |
+| [copyright_holder](#copyrightholder)                                                              | /article/copyright_holder                        | string  |       |
+| [copyright_statement](#copyrightstatement)                                                        | /article/copyright_statement                     | string  |       |
+| [copyright_year](#copyrightyear)                                                                  | /article/copyright_year                          | string  |       |
+| [correspondence](#correspondence)                                                                 | /article/correspondence                          | string  |       |
+| [doi](#doi)                                                                                       | /article/doi                                     | string  |       |
+| [doi_url](#doiurl)                                                                                | /article/doi_url                                 | string  |       |
+| [funding_statement](#fundingstatement)                                                            | /article/funding_statement                       | string  |       |
+| [journal_id](#journalid)                                                                          | /article/journal_id                              | string  |       |
+| [journal_issn_epub](#journalissnepub)                                                             | /article/journal_issn_epub                       | string  |       |
+| [journal_issn_ppub](#journalissnppub)                                                             | /article/journal_issn_ppub                       | string  |       |
+| [journal_title](#journaltitle)                                                                    | /article/journal_title                           | string  |       |
+| [keywords](#keywords)                                                                             | /article/keywords                                | string  | Yes*  |
+| [license](#license)                                                                               | /article/license                                 | string  |       |
+| [license_type](#licensetype)                                                                      | /article/license_type                            | string  |       |
+| [license_url](#licenseurl)                                                                        | /article/license_url                             | string  |       |
+| [pmid](#pmid)                                                                                     | /article/pmid                                    | string  |       |
+| [pub_date_date](#pubdatedate)                                                                     | /article/pub_date_date                           | string  |       |
+| [pub_date_day](#pubdateday)                                                                       | /article/pub_date_day                            | int     |       |
+| [pub_date_month](#pubdatemonth)                                                                   | /article/pub_date_month                          | int     |       |
+| [pub_date_timestamp](#pubdatetimestamp)                                                           | /article/pub_date_timestamp                      | int     |       |
+| [pub_date_year](#pubdateyear)                                                                     | /article/pub_date_year                           | int     |       |
+| [publisher](#publisher)                                                                           | /article/publisher                               | string  |       |
+| [received_date_date](#receiveddatedate)                                                           | /article/received_date_date                      | string  |       |
+| [received_date_day](#receiveddateday)                                                             | /article/received_date_day                       | int     |       |
+| [received_date_month](#receiveddatemonth)                                                         | /article/received_date_month                     | int     |       |
+| [received_date_timestamp](#receiveddatetimestamp)                                                 | /article/received_date_timestamp                 | int     |       |
+| [received_date_year](#receiveddateyear)                                                           | /article/received_date_year                      | int     |       |
+| [refs](#refs)                                                                                     | /article/refs                                    | string  | Yes   |
+| [research_organism](#researchorganism)                                                            | /article/research_organism                       | string  | Yes*   |
+| [subject_area](#subjectarea)                                                                      | /article/subject_area                            | string  | Yes*   |
+
+\* Lists are only used when two or more values are present in the article
 
 
 ### about
@@ -84,11 +87,11 @@ http://dx.doi.org/10.7554/eLife.00013
 
 #### Detail
 
-
+Human readable date for when the article was accepted.
 
 #### Example
 
-
+July 18, 2012
 
 [Back to schema](#article-schema-1)
 
@@ -97,11 +100,11 @@ http://dx.doi.org/10.7554/eLife.00013
 
 #### Detail
 
-
+Day of the month when the article was accepted, in 2 digits with leading zeros.
 
 #### Example
 
-
+18
 
 [Back to schema](#article-schema-1)
 
@@ -110,11 +113,11 @@ http://dx.doi.org/10.7554/eLife.00013
 
 #### Detail
 
-
+Numeric value for the month when the article was accepted, in 2 digits with leading zeros.
 
 #### Example
 
-
+07
 
 [Back to schema](#article-schema-1)
 
@@ -123,11 +126,11 @@ http://dx.doi.org/10.7554/eLife.00013
 
 #### Detail
 
-
+Seconds since the Unix Epoch (January 1 1970 00:00:00 GMT) when the article was accepted, in UTC timezone.
 
 #### Example
 
-
+1342569600
 
 [Back to schema](#article-schema-1)
 
@@ -136,11 +139,11 @@ http://dx.doi.org/10.7554/eLife.00013
 
 #### Detail
 
-
+Year when the article was accepted, 4 digit format.
 
 #### Example
 
-
+2012
 
 [Back to schema](#article-schema-1)
 
@@ -149,11 +152,11 @@ http://dx.doi.org/10.7554/eLife.00013
 
 #### Detail
 
-
+Acknowledgements.
 
 #### Example
 
-
+AcknowledgementsWe thank Michael Fischbach, Richard Losick, and Russell Vance for critical reading of the manuscript. NK is a Fellow in the Integrated Microbial Biodiversity Program of the Canadian Institute for Advanced Research.
 
 [Back to schema](#article-schema-1)
 
@@ -162,7 +165,7 @@ http://dx.doi.org/10.7554/eLife.00013
 
 #### Detail
 
-
+Country for the article as a whole, if present. If not present, each author's country may provide more detail.
 
 #### Example
 
@@ -175,7 +178,7 @@ http://dx.doi.org/10.7554/eLife.00013
 
 #### Detail
 
-
+Institution for the article as a whole, if present. If not present, each author's institution may provide more detail.
 
 #### Example
 
@@ -188,11 +191,11 @@ http://dx.doi.org/10.7554/eLife.00013
 
 #### Detail
 
-
+Title of the article.
 
 #### Example
 
-
+A bacterial sulfonolipid triggers multicellular development in the closest living relatives of animals
 
 [Back to schema](#article-schema-1)
 
@@ -201,11 +204,11 @@ http://dx.doi.org/10.7554/eLife.00013
 
 #### Detail
 
-
+Type of article. Values may include "research-article", "editorial", "article-commentary".
 
 #### Example
 
-
+research-article
 
 [Back to schema](#article-schema-1)
 
@@ -214,11 +217,11 @@ http://dx.doi.org/10.7554/eLife.00013
 
 #### Detail
 
-
+Author notes for the article as whole. Individual author objects may contain more detail about notes pertaining to a particular author.
 
 #### Example
 
-
+†These authors contributed equally to this work.
 
 [Back to schema](#article-schema-1)
 
@@ -227,11 +230,20 @@ http://dx.doi.org/10.7554/eLife.00013
 
 #### Detail
 
-
+A list of authors by name, in the order listed in the article XML. More detail about each author is stored in the `author` namespace.
 
 #### Example
 
-
+[
+  "Rosanna A Alegado",
+  "Laura W Brown",
+  "Shugeng Cao",
+  "Renee K Dermenjian",
+  "Richard Zuzow",
+  "Stephen R Fairclough",
+  "Jon Clardy",
+  "Nicole King"
+]
 
 [Back to schema](#article-schema-1)
 
