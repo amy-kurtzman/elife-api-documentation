@@ -18,7 +18,7 @@
   <body class="schema">
 
     <header id="header">
-      <a href="/"><img src="/images/header-logo.png" width="198" height="84" alt="eLife" id="logo"></a>
+      <a href="/"><img src="/images/header-logo.png" width="198" height="84" alt="eLife" id="logo"> <span class="header">Developers</span></a>
 
       <ul class="nav">
         <li><a href="/">Home</a></li>
@@ -34,14 +34,258 @@
 
 <ul id="markdown-toc">
   <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#author-schema-1">Author schema</a></li>
+  <li><a href="#schema">Schema</a></li>
 </ul>
 
 <h2 id="introduction">Introduction</h2>
 
 <p>_</p>
 
-<h2 id="author-schema-1">Author schema</h2>
+<h2 id="schema">Schema</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Tag</th>
+      <th>Type</th>
+      <th>List</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#about">about</a></td>
+      <td>fluiddb/about</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="#articledoi">article_doi</a></td>
+      <td>/author/article_doi</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="#author">author</a></td>
+      <td>/author/author</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="#city">city</a></td>
+      <td>/author/city</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="#corresponding">corresponding</a></td>
+      <td>/author/corresponding</td>
+      <td>boolean</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="#accepteddatetimestamp">country</a></td>
+      <td>/author/country</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="#accepteddatetimestamp">department</a></td>
+      <td>/author/department</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="#equalcontrib">equal_contrib</a></td>
+      <td>/author/equal_contrib</td>
+      <td>boolean</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="#givennames">given_names</a></td>
+      <td>/author/given_names</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="#institution">institution</a></td>
+      <td>/author/institution</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="#notescorrespondence">notes_correspondence</a></td>
+      <td>/author/notes_correspondence</td>
+      <td>string</td>
+      <td>List*</td>
+    </tr>
+    <tr>
+      <td><a href="#notesfootnotes">notes_footnotes</a></td>
+      <td>/author/notes_footnotes</td>
+      <td>string</td>
+      <td>List*</td>
+    </tr>
+    <tr>
+      <td><a href="#notesother">notes_other</a></td>
+      <td>/author/notes_other</td>
+      <td>string</td>
+      <td>List*</td>
+    </tr>
+    <tr>
+      <td><a href="#personid">person_id</a></td>
+      <td>/author/person_id</td>
+      <td>int</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="#position">position</a></td>
+      <td>/author/position</td>
+      <td>int</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="#surname">surname</a></td>
+      <td>/author/surname</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>* Lists are only used when two or more values are present in the author data</p>
+
+<h3 id="about">about</h3>
+
+<h4 id="detail">Detail</h4>
+
+<p>Fluidinfo about tag. A unique value for each object in fluidinfo. For eLife author objects, the about tag includes the corresponding article DOI and the position in which the author was listed.</p>
+
+<h4 id="example">Example</h4>
+
+<pre><code>"author_1_10.7554/eLife.00013"
+</code></pre>
+
+<p><a href="#schema">Back to schema</a></p>
+
+<h3 id="articledoi">article_doi</h3>
+
+<h4 id="detail-1">Detail</h4>
+
+<h4 id="example-1">Example</h4>
+
+<p><a href="#schema">Back to schema</a></p>
+
+<h3 id="author">author</h3>
+
+<h4 id="detail-2">Detail</h4>
+
+<h4 id="example-2">Example</h4>
+
+<p><a href="#schema">Back to schema</a></p>
+
+<h3 id="city">city</h3>
+
+<h4 id="detail-3">Detail</h4>
+
+<h4 id="example-3">Example</h4>
+
+<p><a href="#schema">Back to schema</a></p>
+
+<h3 id="corresponding">corresponding</h3>
+
+<h4 id="detail-4">Detail</h4>
+
+<h4 id="example-4">Example</h4>
+
+<p><a href="#schema">Back to schema</a></p>
+
+<h3 id="country">country</h3>
+
+<h4 id="detail-5">Detail</h4>
+
+<h4 id="example-5">Example</h4>
+
+<p><a href="#schema">Back to schema</a></p>
+
+<h3 id="department">department</h3>
+
+<h4 id="detail-6">Detail</h4>
+
+<h4 id="example-6">Example</h4>
+
+<p><a href="#schema">Back to schema</a></p>
+
+<h3 id="equalcontrib">equal_contrib</h3>
+
+<h4 id="detail-7">Detail</h4>
+
+<h4 id="example-7">Example</h4>
+
+<p><a href="#schema">Back to schema</a></p>
+
+<h3 id="givennames">given_names</h3>
+
+<h4 id="detail-8">Detail</h4>
+
+<h4 id="example-8">Example</h4>
+
+<p><a href="#schema">Back to schema</a></p>
+
+<h3 id="institution">institution</h3>
+
+<h4 id="detail-9">Detail</h4>
+
+<h4 id="example-9">Example</h4>
+
+<p><a href="#schema">Back to schema</a></p>
+
+<h3 id="notescorrespondence">notes_correspondence</h3>
+
+<h4 id="detail-10">Detail</h4>
+
+<h4 id="example-10">Example</h4>
+
+<p><a href="#schema">Back to schema</a></p>
+
+<h3 id="notesfootnotes">notes_footnotes</h3>
+
+<h4 id="detail-11">Detail</h4>
+
+<h4 id="example-11">Example</h4>
+
+<p><a href="#schema">Back to schema</a></p>
+
+<h3 id="notesother">notes_other</h3>
+
+<h4 id="detail-12">Detail</h4>
+
+<h4 id="example-12">Example</h4>
+
+<p><a href="#schema">Back to schema</a></p>
+
+<h3 id="personid">person_id</h3>
+
+<h4 id="detail-13">Detail</h4>
+
+<h4 id="example-13">Example</h4>
+
+<p><a href="#schema">Back to schema</a></p>
+
+<h3 id="position">position</h3>
+
+<h4 id="detail-14">Detail</h4>
+
+<h4 id="example-14">Example</h4>
+
+<p><a href="#schema">Back to schema</a></p>
+
+<h3 id="surname">surname</h3>
+
+<h4 id="detail-15">Detail</h4>
+
+<h4 id="example-15">Example</h4>
+
+<p><a href="#schema">Back to schema</a></p>
 
         
       </div>

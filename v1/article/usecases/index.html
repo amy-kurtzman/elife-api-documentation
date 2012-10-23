@@ -18,7 +18,7 @@
   <body >
 
     <header id="header">
-      <a href="/"><img src="/images/header-logo.png" width="198" height="84" alt="eLife" id="logo"></a>
+      <a href="/"><img src="/images/header-logo.png" width="198" height="84" alt="eLife" id="logo"> <span class="header">Developers</span></a>
 
       <ul class="nav">
         <li><a href="/">Home</a></li>
@@ -35,6 +35,9 @@
 <ul id="markdown-toc">
   <li><a href="#introduction">Introduction</a></li>
   <li><a href="#given-a-doi-get-all-article-values">Given a DOI, get all article values</a></li>
+  <li><a href="#given-a-month-get-all-articles-published-that-month">Given a month, get all articles published that month</a></li>
+  <li><a href="#given-a-subject-area-get-all-articles-in-that-subject-area">Given a subject area, get all articles in that subject area</a></li>
+  <li><a href="#given-a-keyword-search-articles-with-matching-title-or-abstract">Given a keyword, search articles with matching title or abstract</a></li>
 </ul>
 
 <h2 id="introduction">Introduction</h2>
@@ -43,7 +46,7 @@
 
 <h2 id="given-a-doi-get-all-article-values">Given a DOI, get all article values</h2>
 
-<p>Using the <code>*</code> wildcard for <code>tag</code> in a fluidinfo query, you can get all values for an article object. The article object is located by a query on <code>article/doi</code>. In the example below, the DOI <code>10.7554/eLife.00013</code> is used.</p>
+<p>Using the <code>*</code> wildcard for <code>tag</code> in a fluidinfo query will get all values for an article object. The article object is located by a query on <code>article/doi</code>. In the example below, the DOI <code>10.7554/eLife.00013</code> is used.</p>
 
 <h3 id="request">Request</h3>
 
@@ -432,6 +435,174 @@ Content-type: application/json</code></pre>
           "username": "elifesciences.org",
           "updated-at": "2012-10-08T22:43:26.470758",
           "value": "2012"
+        }
+      }
+    }
+  }
+}</code></pre>
+
+<h2 id="given-a-month-get-all-articles-published-that-month">Given a month, get all articles published that month</h2>
+
+<p>In this example, instead of a <code>*</code> wildcard for <code>tag</code>, it will only get the article DOI. To filter objects by date of publication, and specifically for the month of October 2012, the query string will search by <code>article/pub_date_month</code> = 10 and <code>article/pub_date_year</code> = 2012. Numeric value matching is possible on these tags, since the data stored is integer type.</p>
+
+<h3 id="request-1">Request</h3>
+
+<pre><code>GET /values?query=elifesciences.org/api_v1/article/pub_date_month=10 and elifesciences.org/api_v1/article/pub_date_year=2012&amp;tag=elifesciences.org/api_v1/article/doi
+</code></pre>
+
+<h3 id="response-1">Response</h3>
+
+<pre class="headers"><code>Status: 200 OK
+Content-type: application/json</code></pre>
+
+<pre class="highlight"><code class="language-javascript">{
+  "results": {
+    "id": {
+      "eb275979-d99d-4e44-a84f-15ce912ca888": {
+        "elifesciences.org/api_v1/article/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-23T23:10:22.321767",
+          "value": "10.7554/eLife.00013"
+        }
+      },
+      "82aba95e-100e-468a-b5c4-4457ae69d215": {
+        "elifesciences.org/api_v1/article/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-23T23:12:04.696060",
+          "value": "10.7554/eLife.00048"
+        }
+      },
+      "fd6804e2-70be-4ced-a896-9e153bacada7": {
+        "elifesciences.org/api_v1/article/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-23T23:08:30.035787",
+          "value": "10.7554/eLife.00007"
+        }
+      },
+      "55decf52-a0d9-42d2-8db9-d5924a40a57a": {
+        "elifesciences.org/api_v1/article/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-23T23:19:30.156722",
+          "value": "10.7554/eLife.00243"
+        }
+      },
+      "71e9f5be-56a1-4e5a-a04a-35d2cfc75145": {
+        "elifesciences.org/api_v1/article/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-23T23:18:11.840778",
+          "value": "10.7554/eLife.00240"
+        }
+      },
+      "b55573b5-d12a-4604-b7eb-5f06ff1a94ef": {
+        "elifesciences.org/api_v1/article/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-23T23:19:03.118978",
+          "value": "10.7554/eLife.00242"
+        }
+      },
+      "749f6115-0848-4f59-9b52-adbc461c8ced": {
+        "elifesciences.org/api_v1/article/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-23T23:21:07.267530",
+          "value": "10.7554/eLife.00286"
+        }
+      },
+      "337aa9e5-0c48-422b-945a-be12353f6fe2": {
+        "elifesciences.org/api_v1/article/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-23T23:12:52.581687",
+          "value": "10.7554/eLife.00065"
+        }
+      },
+      "0c0e0ea4-1530-441a-bb97-9d26ebf65647": {
+        "elifesciences.org/api_v1/article/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-23T23:20:58.570089",
+          "value": "10.7554/eLife.00270"
+        }
+      }
+    }
+  }
+}</code></pre>
+
+<h2 id="given-a-subject-area-get-all-articles-in-that-subject-area">Given a subject area, get all articles in that subject area</h2>
+
+<p>This example uses the “contains” operator in the Fluidinfo query to case sensitive match a list value. In this case, it is matching “Cell biology” in an <code>article/subject_area</code> list.</p>
+
+<h3 id="request-2">Request</h3>
+
+<pre><code>GET /values?query=elifesciences.org/api_v1/article/subject_area contains "Cell biology"&amp;tag=elifesciences.org/api_v1/article/doi
+</code></pre>
+
+<h3 id="response-2">Response</h3>
+
+<pre class="headers"><code>Status: 200 OK
+Content-type: application/json</code></pre>
+
+<pre class="highlight"><code class="language-javascript">{
+  "results": {
+    "id": {
+      "eb275979-d99d-4e44-a84f-15ce912ca888": {
+        "elifesciences.org/api_v1/article/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-23T23:10:22.321767",
+          "value": "10.7554/eLife.00013"
+        }
+      },
+      "55decf52-a0d9-42d2-8db9-d5924a40a57a": {
+        "elifesciences.org/api_v1/article/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-23T23:19:30.156722",
+          "value": "10.7554/eLife.00243"
+        }
+      },
+      "b55573b5-d12a-4604-b7eb-5f06ff1a94ef": {
+        "elifesciences.org/api_v1/article/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-23T23:19:03.118978",
+          "value": "10.7554/eLife.00242"
+        }
+      },
+      "82aba95e-100e-468a-b5c4-4457ae69d215": {
+        "elifesciences.org/api_v1/article/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-23T23:12:04.696060",
+          "value": "10.7554/eLife.00048"
+        }
+      }
+    }
+  }
+}</code></pre>
+
+<h2 id="given-a-keyword-search-articles-with-matching-title-or-abstract">Given a keyword, search articles with matching title or abstract</h2>
+
+<p>This example uses the “matches” operator in the Fluidinfo query to case insensitive match full words. In this case, the keyword can match in the <code>article/article_title</code> or the <code>article/abstract</code>.</p>
+
+<h3 id="request-3">Request</h3>
+
+<pre><code>GET /values?query=elifesciences.org/api_v1/article/article_title matches "hormone" or elifesciences.org/api_v1/article/abstract matches "hormone"&amp;tag=elifesciences.org/api_v1/article/doi
+</code></pre>
+
+<h3 id="response-3">Response</h3>
+
+<pre class="headers"><code>Status: 200 OK
+Content-type: application/json</code></pre>
+
+<pre class="highlight"><code class="language-javascript">{
+  "results": {
+    "id": {
+      "749f6115-0848-4f59-9b52-adbc461c8ced": {
+        "elifesciences.org/api_v1/article/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-23T23:21:07.267530",
+          "value": "10.7554/eLife.00286"
+        }
+      },
+      "337aa9e5-0c48-422b-945a-be12353f6fe2": {
+        "elifesciences.org/api_v1/article/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-23T23:12:52.581687",
+          "value": "10.7554/eLife.00065"
         }
       }
     }
