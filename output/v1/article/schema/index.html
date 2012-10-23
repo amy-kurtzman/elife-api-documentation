@@ -18,7 +18,7 @@
   <body class="schema">
 
     <header id="header">
-      <a href="/"><img src="/images/header-logo.png" width="198" height="84" alt="eLife" id="logo"></a>
+      <a href="/"><img src="/images/header-logo.png" width="198" height="84" alt="eLife" id="logo"> <span class="header">Developers</span></a>
 
       <ul class="nav">
         <li><a href="/">Home</a></li>
@@ -34,14 +34,14 @@
 
 <ul id="markdown-toc">
   <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#article-schema-1">Article schema</a></li>
+  <li><a href="#schema">Schema</a></li>
 </ul>
 
 <h2 id="introduction">Introduction</h2>
 
 <p>_</p>
 
-<h2 id="article-schema-1">Article schema</h2>
+<h2 id="schema">Schema</h2>
 
 <table>
   <thead>
@@ -129,37 +129,37 @@
       <td><a href="#authornotes">author_notes</a></td>
       <td>/article/author_notes</td>
       <td>string</td>
-      <td>Yes*</td>
+      <td>List*</td>
     </tr>
     <tr>
       <td><a href="#authors">authors</a></td>
       <td>/article/authors</td>
       <td>string</td>
-      <td>Yes</td>
+      <td>List</td>
     </tr>
     <tr>
       <td><a href="#awardgroupawardid">award_group_award_id</a></td>
       <td>/article/award_group_award_id</td>
       <td>string</td>
-      <td>Yes*</td>
+      <td>List*</td>
     </tr>
     <tr>
       <td><a href="#awardgroupfundingsource">award_group_funding_source</a></td>
       <td>/article/award_group_funding_source</td>
       <td>string</td>
-      <td>Yes*</td>
+      <td>List*</td>
     </tr>
     <tr>
-      <td><a href="#awardgroupprincipleawardrecipient">award_group_principle_award_recipient</a>   </td>
+      <td><a href="#awardgroupprincipleawardrecipient">award_group_principle_award_recipient</a></td>
       <td>/article/award_group_principle_award_recipient</td>
       <td>string</td>
-      <td>Yes*</td>
+      <td>List*</td>
     </tr>
     <tr>
       <td><a href="#components">components</a></td>
       <td>/article/components</td>
       <td>string</td>
-      <td>Yes</td>
+      <td>List</td>
     </tr>
     <tr>
       <td><a href="#conflict">conflict</a></td>
@@ -237,7 +237,7 @@
       <td><a href="#keywords">keywords</a></td>
       <td>/article/keywords</td>
       <td>string</td>
-      <td>Yes*</td>
+      <td>List*</td>
     </tr>
     <tr>
       <td><a href="#license">license</a></td>
@@ -333,19 +333,19 @@
       <td><a href="#refs">refs</a></td>
       <td>/article/refs</td>
       <td>string</td>
-      <td>Yes</td>
+      <td>List</td>
     </tr>
     <tr>
       <td><a href="#researchorganism">research_organism</a></td>
       <td>/article/research_organism</td>
       <td>string</td>
-      <td>Yes*</td>
+      <td>List*</td>
     </tr>
     <tr>
       <td><a href="#subjectarea">subject_area</a></td>
       <td>/article/subject_area</td>
       <td>string</td>
-      <td>Yes*</td>
+      <td>List*</td>
     </tr>
   </tbody>
 </table>
@@ -360,9 +360,10 @@
 
 <h4 id="example">Example</h4>
 
-<p>http://dx.doi.org/10.7554/eLife.00013</p>
+<pre><code>http://dx.doi.org/10.7554/eLife.00013
+</code></pre>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="accepteddatedate">accepted_date_date</h3>
 
@@ -372,9 +373,10 @@
 
 <h4 id="example-1">Example</h4>
 
-<p>July 18, 2012</p>
+<pre><code>July 18, 2012
+</code></pre>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="accepteddateday">accepted_date_day</h3>
 
@@ -384,9 +386,10 @@
 
 <h4 id="example-2">Example</h4>
 
-<p>18</p>
+<pre><code>18
+</code></pre>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="accepteddatemonth">accepted_date_month</h3>
 
@@ -396,9 +399,10 @@
 
 <h4 id="example-3">Example</h4>
 
-<p>07</p>
+<pre><code>07
+</code></pre>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="accepteddatetimestamp">accepted_date_timestamp</h3>
 
@@ -408,9 +412,10 @@
 
 <h4 id="example-4">Example</h4>
 
-<p>1342569600</p>
+<pre><code>1342569600
+</code></pre>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="accepteddateyear">accepted_date_year</h3>
 
@@ -420,9 +425,10 @@
 
 <h4 id="example-5">Example</h4>
 
-<p>2012</p>
+<pre><code>2012
+</code></pre>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="ack">ack</h3>
 
@@ -432,9 +438,10 @@
 
 <h4 id="example-6">Example</h4>
 
-<p>AcknowledgementsWe thank Michael Fischbach, Richard Losick, and Russell Vance for critical reading of the manuscript. NK is a Fellow in the Integrated Microbial Biodiversity Program of the Canadian Institute for Advanced Research.</p>
+<pre><code>AcknowledgementsWe thank Michael Fischbach, Richard Losick, and Russell Vance for critical reading of the manuscript. NK is a Fellow in the Integrated Microbial Biodiversity Program of the Canadian Institute for Advanced Research.
+</code></pre>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="articlecountry">article_country</h3>
 
@@ -444,7 +451,7 @@
 
 <h4 id="example-7">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="articleinstitution">article_institution</h3>
 
@@ -454,7 +461,7 @@
 
 <h4 id="example-8">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="articletitle">article_title</h3>
 
@@ -464,9 +471,10 @@
 
 <h4 id="example-9">Example</h4>
 
-<p>A bacterial sulfonolipid triggers multicellular development in the closest living relatives of animals</p>
+<pre><code>A bacterial sulfonolipid triggers multicellular development in the closest living relatives of animals
+</code></pre>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="articletype">article_type</h3>
 
@@ -476,9 +484,10 @@
 
 <h4 id="example-10">Example</h4>
 
-<p>research-article</p>
+<pre><code>research-article
+</code></pre>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="authornotes">author_notes</h3>
 
@@ -488,9 +497,10 @@
 
 <h4 id="example-11">Example</h4>
 
-<p>†These authors contributed equally to this work.</p>
+<pre><code>†These authors contributed equally to this work.
+</code></pre>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="authors">authors</h3>
 
@@ -500,18 +510,19 @@
 
 <h4 id="example-12">Example</h4>
 
-<p>[
-  “Rosanna A Alegado”,
-  “Laura W Brown”,
-  “Shugeng Cao”,
-  “Renee K Dermenjian”,
-  “Richard Zuzow”,
-  “Stephen R Fairclough”,
-  “Jon Clardy”,
-  “Nicole King”
-]</p>
+<pre><code>[
+  "Rosanna A Alegado",
+  "Laura W Brown",
+  "Shugeng Cao",
+  "Renee K Dermenjian",
+  "Richard Zuzow",
+  "Stephen R Fairclough",
+  "Jon Clardy",
+  "Nicole King"
+]
+</code></pre>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="awardgroupawardid">award_group_award_id</h3>
 
@@ -519,7 +530,7 @@
 
 <h4 id="example-13">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="awardgroupfundingsource">award_group_funding_source</h3>
 
@@ -527,7 +538,7 @@
 
 <h4 id="example-14">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="awardgroupprincipleawardrecipient">award_group_principle_award_recipient</h3>
 
@@ -535,7 +546,7 @@
 
 <h4 id="example-15">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="components">components</h3>
 
@@ -543,7 +554,7 @@
 
 <h4 id="example-16">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="conflict">conflict</h3>
 
@@ -551,7 +562,7 @@
 
 <h4 id="example-17">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="copyrightholder">copyright_holder</h3>
 
@@ -559,7 +570,7 @@
 
 <h4 id="example-18">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="copyrightstatement">copyright_statement</h3>
 
@@ -567,7 +578,7 @@
 
 <h4 id="example-19">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="copyrightyear">copyright_year</h3>
 
@@ -575,7 +586,7 @@
 
 <h4 id="example-20">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="correspondence">correspondence</h3>
 
@@ -583,7 +594,7 @@
 
 <h4 id="example-21">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="doi">doi</h3>
 
@@ -591,7 +602,7 @@
 
 <h4 id="example-22">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="doiurl">doi_url</h3>
 
@@ -599,7 +610,7 @@
 
 <h4 id="example-23">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="fundingstatement">funding_statement</h3>
 
@@ -607,7 +618,7 @@
 
 <h4 id="example-24">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="journalid">journal_id</h3>
 
@@ -615,7 +626,7 @@
 
 <h4 id="example-25">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="journalissnepub">journal_issn_epub</h3>
 
@@ -623,7 +634,7 @@
 
 <h4 id="example-26">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="journalissnppub">journal_issn_ppub</h3>
 
@@ -631,7 +642,7 @@
 
 <h4 id="example-27">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="journaltitle">journal_title</h3>
 
@@ -639,7 +650,7 @@
 
 <h4 id="example-28">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="keywords">keywords</h3>
 
@@ -647,7 +658,7 @@
 
 <h4 id="example-29">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="license">license</h3>
 
@@ -655,7 +666,7 @@
 
 <h4 id="example-30">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="licensetype">license_type</h3>
 
@@ -663,7 +674,7 @@
 
 <h4 id="example-31">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="licenseurl">license_url</h3>
 
@@ -671,7 +682,7 @@
 
 <h4 id="example-32">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="pmid">pmid</h3>
 
@@ -679,7 +690,7 @@
 
 <h4 id="example-33">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="pubdatedate">pub_date_date</h3>
 
@@ -687,7 +698,7 @@
 
 <h4 id="example-34">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="pubdateday">pub_date_day</h3>
 
@@ -695,7 +706,7 @@
 
 <h4 id="example-35">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="pubdatemonth">pub_date_month</h3>
 
@@ -703,7 +714,7 @@
 
 <h4 id="example-36">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="pubdatetimestamp">pub_date_timestamp</h3>
 
@@ -711,7 +722,7 @@
 
 <h4 id="example-37">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="pubdateyear">pub_date_year</h3>
 
@@ -719,7 +730,7 @@
 
 <h4 id="example-38">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="publisher">publisher</h3>
 
@@ -727,7 +738,7 @@
 
 <h4 id="example-39">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="receiveddatedate">received_date_date</h3>
 
@@ -735,7 +746,7 @@
 
 <h4 id="example-40">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="receiveddateday">received_date_day</h3>
 
@@ -743,7 +754,7 @@
 
 <h4 id="example-41">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="receiveddatemonth">received_date_month</h3>
 
@@ -751,7 +762,7 @@
 
 <h4 id="example-42">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="receiveddatetimestamp">received_date_timestamp</h3>
 
@@ -759,7 +770,7 @@
 
 <h4 id="example-43">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="receiveddateyear">received_date_year</h3>
 
@@ -767,7 +778,7 @@
 
 <h4 id="example-44">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="refs">refs</h3>
 
@@ -775,7 +786,7 @@
 
 <h4 id="example-45">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="researchorganism">research_organism</h3>
 
@@ -783,7 +794,7 @@
 
 <h4 id="example-46">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
 <h3 id="subjectarea">subject_area</h3>
 
@@ -791,7 +802,7 @@
 
 <h4 id="example-47">Example</h4>
 
-<p><a href="#article-schema-1">Back to schema</a></p>
+<p><a href="#schema">Back to schema</a></p>
 
         
       </div>
