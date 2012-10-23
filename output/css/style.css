@@ -197,8 +197,9 @@ div.sidebar-module ol
   color: #52595D;
   display: inline-block;
 	word-wrap: break-word;
+	max-height: 48em;
+	overflow-y: auto;
 }
-
 #js-sidebar h3
 {
 	border-top: none;

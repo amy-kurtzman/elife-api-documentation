@@ -44,7 +44,7 @@ Fluidinfo about tag. A unique value for each object in fluidinfo. For eLife auth
 
 #### Example
 
-    author_1_10.7554/eLife.00013
+    "author_1_10.7554/eLife.00013"
 
 [Back to schema](#schema)
 

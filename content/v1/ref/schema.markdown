@@ -25,8 +25,8 @@ _
 | [doi](#doi)                                   | /ref/doi                     | string  |       |
 | [doi_url](#doiurl)                            | /ref/doi_url                 | string  |       |
 | [etal](#etal)                                 | /ref/etal                    | boolean |       |
-| [fpage](#fpage)                               | /ref/fpage                   | int     |       |
-| [lpage](#lpage)                               | /ref/lpage                   | int     |       |
+| [fpage](#fpage)                               | /ref/fpage                   | string  |       |
+| [lpage](#lpage)                               | /ref/lpage                   | string  |       |
 | [pmid](#pmid)                                 | /ref/pmid                    | string  |       |
 | [position](#position)                         | /ref/position                | int     |       |
 | [publication_type](#publicationtype)          | /ref/publication_type        | string  |       |
@@ -35,7 +35,7 @@ _
 | [ref](#ref)                                   | /ref/ref                     | string  |       |
 | [source](#source)                             | /ref/source                  | string  |       |
 | [volume](#volume)                             | /ref/volume                  | string  |       |
-| [year](#year)                                 | /ref/year                    | int     |       |
+| [year](#year)                                 | /ref/year                    | string  |       |
 
 
 
