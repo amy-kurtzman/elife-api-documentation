@@ -39,7 +39,20 @@
 
 <h2 id="introduction">Introduction</h2>
 
-<p>_</p>
+<p>For each author of an article, a new Fluidinfo object is created. Tag values in the <code>author</code> namespace store individual author details. As such, it is possible for more than one author object to exist for the same person, and these objects are attributed directly to the article they authored.</p>
+
+<p>The <a href="#schema">Schema</a> table contains the tags at a glance, including the following columns:</p>
+
+<dl>
+  <dt>Name</dt>
+  <dd>A short name for the tag in the <code>author</code> namespace.</dd>
+  <dt>Tag</dt>
+  <dd>A partial tag path for the tag in Fluidinfo, omitting the eLife API parent namespace. To get a full Fludinfo tag path (except for the <code>fluiddb/about</code> tag path) for version 1 of the eLife API, prepend <code>elifesciences.org/api_v1/</code> to the tag. For example, the <code>author/article_doi</code> tag becomes <code>elifesciences.org/api_v1/author/article_doi</code> tag path in Fluidinfo.</dd>
+  <dt>Type</dt>
+  <dd>The data type stored in the tag.</dd>
+  <dt>List</dt>
+  <dd>Some tags that may include a lists of values. Those marked with an asterisk may sometimes contain only a single value, or a list. If no asterisk, it will always be a list.</dd>
+</dl>
 
 <h2 id="schema">Schema</h2>
 
@@ -61,91 +74,91 @@
     </tr>
     <tr>
       <td><a href="#articledoi">article_doi</a></td>
-      <td>/author/article_doi</td>
+      <td>author/article_doi</td>
       <td>string</td>
       <td> </td>
     </tr>
     <tr>
       <td><a href="#author">author</a></td>
-      <td>/author/author</td>
+      <td>author/author</td>
       <td>string</td>
       <td> </td>
     </tr>
     <tr>
       <td><a href="#city">city</a></td>
-      <td>/author/city</td>
+      <td>author/city</td>
       <td>string</td>
-      <td> </td>
+      <td>List*</td>
     </tr>
     <tr>
       <td><a href="#corresponding">corresponding</a></td>
-      <td>/author/corresponding</td>
+      <td>author/corresponding</td>
       <td>boolean</td>
       <td> </td>
     </tr>
     <tr>
       <td><a href="#accepteddatetimestamp">country</a></td>
-      <td>/author/country</td>
+      <td>author/country</td>
       <td>string</td>
-      <td> </td>
+      <td>List*</td>
     </tr>
     <tr>
       <td><a href="#accepteddatetimestamp">department</a></td>
-      <td>/author/department</td>
+      <td>author/department</td>
       <td>string</td>
-      <td> </td>
+      <td>List*</td>
     </tr>
     <tr>
       <td><a href="#equalcontrib">equal_contrib</a></td>
-      <td>/author/equal_contrib</td>
+      <td>author/equal_contrib</td>
       <td>boolean</td>
       <td> </td>
     </tr>
     <tr>
       <td><a href="#givennames">given_names</a></td>
-      <td>/author/given_names</td>
+      <td>author/given_names</td>
       <td>string</td>
       <td> </td>
     </tr>
     <tr>
       <td><a href="#institution">institution</a></td>
-      <td>/author/institution</td>
+      <td>author/institution</td>
       <td>string</td>
-      <td> </td>
+      <td>List*</td>
     </tr>
     <tr>
       <td><a href="#notescorrespondence">notes_correspondence</a></td>
-      <td>/author/notes_correspondence</td>
+      <td>author/notes_correspondence</td>
       <td>string</td>
       <td>List*</td>
     </tr>
     <tr>
       <td><a href="#notesfootnotes">notes_footnotes</a></td>
-      <td>/author/notes_footnotes</td>
+      <td>author/notes_footnotes</td>
       <td>string</td>
       <td>List*</td>
     </tr>
     <tr>
       <td><a href="#notesother">notes_other</a></td>
-      <td>/author/notes_other</td>
+      <td>author/notes_other</td>
       <td>string</td>
       <td>List*</td>
     </tr>
     <tr>
       <td><a href="#personid">person_id</a></td>
-      <td>/author/person_id</td>
+      <td>author/person_id</td>
       <td>int</td>
       <td> </td>
     </tr>
     <tr>
       <td><a href="#position">position</a></td>
-      <td>/author/position</td>
+      <td>author/position</td>
       <td>int</td>
       <td> </td>
     </tr>
     <tr>
       <td><a href="#surname">surname</a></td>
-      <td>/author/surname</td>
+      <td>author/surname</td>
       <td>string</td>
       <td> </td>
     </tr>
@@ -171,7 +184,12 @@
 
 <h4 id="detail-1">Detail</h4>
 
+<p>The article DOI for which the author is an author. This tag provides a method to find all authors of a particular article by DOI. <code>author/article_doi</code> value matches <code>article/doi</code>.</p>
+
 <h4 id="example-1">Example</h4>
+
+<pre><code>"10.7554/eLife.00013"
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -179,7 +197,12 @@
 
 <h4 id="detail-2">Detail</h4>
 
+<p>Full name of the author. The value should match one of the list values stored in <code>article/authors</code>.</p>
+
 <h4 id="example-2">Example</h4>
+
+<pre><code>"Rosanna A Alegado"
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -187,7 +210,12 @@
 
 <h4 id="detail-3">Detail</h4>
 
+<p>City or cities of the author, if available. It may contain a list, if the author has more than one affiliated organisation.</p>
+
 <h4 id="example-3">Example</h4>
+
+<pre><code>"Berkeley"
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -195,7 +223,12 @@
 
 <h4 id="detail-4">Detail</h4>
 
+<p>Whether the author is to be contacted with correspondence. If a tag value is not present, assume the value is false.</p>
+
 <h4 id="example-4">Example</h4>
+
+<pre><code>true
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -203,7 +236,12 @@
 
 <h4 id="detail-5">Detail</h4>
 
+<p>Country or countries of the author, if available. It may contain a list, if the author has more than one affiliated organisation.</p>
+
 <h4 id="example-5">Example</h4>
+
+<pre><code>"United States"
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -211,7 +249,12 @@
 
 <h4 id="detail-6">Detail</h4>
 
+<p>Department(s) of the author, if available. It may contain a list, if the author has more than one affiliated organisation.</p>
+
 <h4 id="example-6">Example</h4>
+
+<pre><code>"Department of Molecular and Cell Biology"
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -219,7 +262,12 @@
 
 <h4 id="detail-7">Detail</h4>
 
+<p>Whether the author is identified to have provided equal contribution to the article.</p>
+
 <h4 id="example-7">Example</h4>
+
+<pre><code>true
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -227,7 +275,12 @@
 
 <h4 id="detail-8">Detail</h4>
 
+<p>Given names of the author.</p>
+
 <h4 id="example-8">Example</h4>
+
+<pre><code>"Rosanna A"
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -235,7 +288,12 @@
 
 <h4 id="detail-9">Detail</h4>
 
+<p>Institution(s) of the author, if present. It may contain a list, if the author has more than one affiliated organisation.</p>
+
 <h4 id="example-9">Example</h4>
+
+<pre><code>"University of California, Berkeley"
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -243,7 +301,12 @@
 
 <h4 id="detail-10">Detail</h4>
 
+<p>Article footnotes pertaining to correspondence, for the particular author.</p>
+
 <h4 id="example-10">Example</h4>
+
+<pre><code>"*For correspondence: jon_clardy@hms.harvard.edu (JC); nking@berkeley.edu (NK)"
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -251,7 +314,16 @@
 
 <h4 id="detail-11">Detail</h4>
 
+<p>Article footnotes for the particular author, not including footnotes regarding correspondence or “other” footnotes.</p>
+
 <h4 id="example-11">Example</h4>
+
+<pre><code>[
+    "†These authors contributed equally to this work.",
+    "RA: Conception and design, Acquisition of data, Analysis and interpretation of data, Drafting or revising the article",
+    "The remaining authors have no competing interests to declare."
+]
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -259,7 +331,12 @@
 
 <h4 id="detail-12">Detail</h4>
 
+<p>Footnotes for the author of the type “other”, which tends to hold funding details disclosed for the particular author.</p>
+
 <h4 id="example-12">Example</h4>
+
+<pre><code>"National Institutes of Health F32 GM086054 Alegado Rosanna A."
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -267,7 +344,12 @@
 
 <h4 id="detail-13">Detail</h4>
 
+<p>eLife person ID, unique identifier assigned by eJournalPress software for eLife authors.</p>
+
 <h4 id="example-13">Example</h4>
+
+<pre><code>1668
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -275,7 +357,12 @@
 
 <h4 id="detail-14">Detail</h4>
 
+<p>Position (order) in which the author was listed in the article. Starts at 1.</p>
+
 <h4 id="example-14">Example</h4>
+
+<pre><code>1
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -283,7 +370,12 @@
 
 <h4 id="detail-15">Detail</h4>
 
+<p>Surname of the author.</p>
+
 <h4 id="example-15">Example</h4>
+
+<pre><code>"Alegado"
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
