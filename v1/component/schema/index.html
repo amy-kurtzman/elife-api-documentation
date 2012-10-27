@@ -39,7 +39,20 @@
 
 <h2 id="introduction">Introduction</h2>
 
-<p>_</p>
+<p>A component is part of an article which is assigned its own unique component DOI.</p>
+
+<p>The <a href="#schema">Schema</a> table contains the tags at a glance, including the following columns:</p>
+
+<dl>
+  <dt>Name</dt>
+  <dd>A short name for the tag in the <code>component</code> namespace.</dd>
+  <dt>Tag</dt>
+  <dd>A partial tag path for the tag in Fluidinfo, omitting the eLife API parent namespace. To get a full Fludinfo tag path (except for the <code>fluiddb/about</code> tag path) for version 1 of the eLife API, prepend <code>elifesciences.org/api_v1/</code> to the tag. For example, the <code>component/article_doi</code> tag becomes <code>elifesciences.org/api_v1/component/article_doi</code> tag path in Fluidinfo.</dd>
+  <dt>Type</dt>
+  <dd>The data type stored in the tag.</dd>
+  <dt>List</dt>
+  <dd>Some tags that may include a lists of values. Those marked with an asterisk may sometimes contain only a single value, or a list. If no asterisk, it will always be a list.</dd>
+</dl>
 
 <h2 id="schema">Schema</h2>
 
@@ -61,37 +74,37 @@
     </tr>
     <tr>
       <td><a href="#articledoi">article_doi</a></td>
-      <td>/component/article_doi</td>
+      <td>component/article_doi</td>
       <td>string</td>
       <td> </td>
     </tr>
     <tr>
       <td><a href="#content">content</a></td>
-      <td>/component/content</td>
+      <td>component/content</td>
       <td>string</td>
       <td> </td>
     </tr>
     <tr>
       <td><a href="#doi">doi</a></td>
-      <td>/component/doi</td>
+      <td>component/doi</td>
       <td>string</td>
       <td> </td>
     </tr>
     <tr>
       <td><a href="#doiurl">doi_url</a></td>
-      <td>/component/doi_url</td>
+      <td>component/doi_url</td>
       <td>string</td>
       <td> </td>
     </tr>
     <tr>
       <td><a href="#position">position</a></td>
-      <td>/component/position</td>
+      <td>component/position</td>
       <td>int</td>
       <td> </td>
     </tr>
     <tr>
       <td><a href="#type">type</a></td>
-      <td>/component/type</td>
+      <td>component/type</td>
       <td>string</td>
       <td> </td>
     </tr>
@@ -102,7 +115,12 @@
 
 <h4 id="detail">Detail</h4>
 
+<p>Fluidinfo about tag. A unique value for each object in fluidinfo. For eLife component objects, the about tag is the unique component DOI for the component in URL compatible format. Note: the first portion of a component DOI is the same as the article DOI, until the last ‘.’ dot and zerofill number at the end.</p>
+
 <h4 id="example">Example</h4>
+
+<pre><code>"http://dx.doi.org/10.7554/eLife.00013.009"
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -110,7 +128,12 @@
 
 <h4 id="detail-1">Detail</h4>
 
+<p>The article DOI in which the component is included. This tag provides a method to find all components of a particular article by DOI. <code>component/article_doi</code> value matches <code>article/doi</code>.</p>
+
 <h4 id="example-1">Example</h4>
+
+<pre><code>"10.7554/eLife.00013"
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -118,7 +141,12 @@
 
 <h4 id="detail-2">Detail</h4>
 
+<p>Raw text for the component.</p>
+
 <h4 id="example-2">Example</h4>
+
+<pre><code>"Figure supplement 1. Separation of A. machipongonensis sphingolipids by thin layer chromatography (TLC). Lipids enriched in sphingolipids were separated by TLC after visualization with ammonium molybdate in 10% H 2 SO 4 . Bands (1-12) as well as regions between bands (A-F) were tested for morphogenic activity. Region F possessed activity and was further purified. DOI:  http://dx.doi.org/elife/10.7554/eLife.00013.009"
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -126,7 +154,12 @@
 
 <h4 id="detail-3">Detail</h4>
 
+<p>DOI for the component - the component DOI itself.</p>
+
 <h4 id="example-3">Example</h4>
+
+<pre><code>"10.7554/eLife.00013.009"
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -134,7 +167,12 @@
 
 <h4 id="detail-4">Detail</h4>
 
+<p>DOI in URL compatible form.</p>
+
 <h4 id="example-4">Example</h4>
+
+<pre><code>"http://dx.doi.org/10.7554/eLife.00013.009"
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -142,7 +180,12 @@
 
 <h4 id="detail-5">Detail</h4>
 
+<p>Position (order) in which the component was listed in the article. Starts at 1.</p>
+
 <h4 id="example-5">Example</h4>
+
+<pre><code>9
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
@@ -150,7 +193,12 @@
 
 <h4 id="detail-6">Detail</h4>
 
+<p>Component type, extracted from the article XML. Common values include “abstract”, “fig”, “sub-article”, “table-wrap”.</p>
+
 <h4 id="example-6">Example</h4>
+
+<pre><code>"fig"
+</code></pre>
 
 <p><a href="#schema">Back to schema</a></p>
 
