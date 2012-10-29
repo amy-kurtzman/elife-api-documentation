@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>eLife API version 1</title>
+    <title>ALM Source Use Cases | eLife API</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <meta name="robots" content="index,follow">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -30,56 +30,93 @@
     
     <div id="content">
       <div class="left">
-        <h1 id="cover-page-for-the-api">Cover page for the API</h1>
+        <h1 id="alm-source-use-cases">ALM Source Use Cases</h1>
 
 <ul id="markdown-toc">
   <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#gotchas">Gotchas</a></li>
+  <li><a href="#given-a-source-get-all-alm-source-values">Given a source, get all ALM source values</a></li>
+  <li><a href="#get-all-alm-sources">Get all ALM sources</a></li>
 </ul>
 
 <h2 id="introduction">Introduction</h2>
 
-<p>This is a cover page.</p>
+<p>Below are sample use cases for the ALM Source objects found in the Fluidinfo eLife API.</p>
 
-<h2 id="gotchas">Gotchas</h2>
+<h2 id="given-a-source-get-all-alm-source-values">Given a source, get all ALM source values</h2>
 
-<p>A short list of gotchas:</p>
+<p>Using the <code>*</code> wildcard for <code>tag</code> in a fluidinfo query will get all values for an ALM Source object. The ALM Source object is located by a query on <code>alm_source/source</code>. In the example below, the source <code>fake</code> is searched.</p>
 
-<h3 id="character-encoding">Character encoding</h3>
+<h3 id="request">Request</h3>
 
-<p>UTF-8 unicode encoding of content should be expected throughout the API. This includes the input XML, and the resulting Fluidinfo data values. Expect to find unicode characters.</p>
+<pre><code>GET /values?query=elifesciences.org/api_v1/alm_source/source="fake"&amp;tag=*
+</code></pre>
 
-<h3 id="encoding-special-characters-query-url">Encoding special characters query URL</h3>
+<h3 id="response">Response</h3>
 
-<p>For optimal readability, the samples provided in this documentation show space characters and quotation mark characters in query URLs. Depending on the method you use to issue the queries, these characters may be converted automatically to their URL encoded equivalents. If they are not, you will have to encode these characters. Common characters used that may require encoding:</p>
+<pre class="headers"><code>Status: 200 OK
+Content-type: application/json</code></pre>
 
-<ul>
-  <li>space encoded as %20</li>
-  <li>” encoded as %22</li>
-</ul>
+<pre class="highlight"><code class="language-javascript">{
+  "results": {
+    "id": {
+      "1e8e09bb-1c93-4f1e-89b1-83d067383511": {
+        "elifesciences.org/api_v1/alm_source/url": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T20:22:18.534296",
+          "value": "http://www.elifesciences.org/"
+        },
+        "elifesciences.org/api_v1/alm_source/trusted": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T20:22:18.534296",
+          "value": false
+        },
+        "elifesciences.org/api_v1/alm_source/name": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T20:22:18.534296",
+          "value": "fake"
+        },
+        "elifesciences.org/api_v1/alm_source/source": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T20:22:18.534296",
+          "value": "fake"
+        },
+        "fluiddb/about": {
+          "username": "fluiddb",
+          "updated-at": "2012-10-29T16:19:48.137420",
+          "value": "elife_alm_source_fake"
+        }
+      }
+    }
+  }
+}</code></pre>
 
-<h3 id="case-sensitive">Case sensitive</h3>
+<h2 id="get-all-alm-sources">Get all ALM sources</h2>
 
-<p>String equality in Fluidinfo queries uses case sensitive comparisons. As a result,</p>
+<p>To find all ALM sources in the eLife API, a “has” query will find all objects where the <code>alm_source/source</code> tag is present. Specifying a single tag in the query will return only one tag’s values.</p>
 
-<ul>
-  <li><code>?query=elifesciences.org/api_v1/article/doi="10.7554/eLife.00013"</code> will find an article object</li>
-  <li><code>?query=elifesciences.org/api_v1/article/doi="10.7554/elife.00013"</code> <b>will not</b> find an article object (lowercase ‘L’ in eLife)</li>
-</ul>
+<h3 id="request-1">Request</h3>
 
-<p>To query with case insensitivity, you can use the <code>matches</code> query operator instead of the <code>=</code> sign. More detail can be found on the Fluidinfo <a href="http://doc.fluidinfo.com/fluidDB/queries.html">Query Language</a> page.</p>
+<pre><code>GET /values?query=has elifesciences.org/api_v1/alm_source/source&amp;tag=elifesciences.org/api_v1/alm_source/source
+</code></pre>
 
-<h3 id="date-value-formats">Date value formats</h3>
+<h3 id="response-1">Response</h3>
 
-<p>Date values – such as an article’s accepted date or published date – are specified in multiple Fluidinfo tags. These tag values allows you to write Fluidinfo queries for a particular month or day in a month without having to parse timestamp values. For example, for an article accepted date:</p>
+<pre class="headers"><code>Status: 200 OK
+Content-type: application/json</code></pre>
 
-<ul>
-  <li><code>accepted_date_date</code> : A human readable date string, i.e. “July 18, 2012”</li>
-  <li><code>accepted_date_day</code>: The day of the month, i.e. “18”</li>
-  <li><code>accepted_date_month</code>: The month, i.e. “07”</li>
-  <li><code>accepted_date_year</code>: The year, i.e. “2012”</li>
-  <li><code>accepted_date_timestamp</code>: Unix timestamp seconds since epoch in the UTC timezone, i.e. 1342569600</li>
-</ul>
+<pre class="highlight"><code class="language-javascript">{
+  "results": {
+    "id": {
+      "1e8e09bb-1c93-4f1e-89b1-83d067383511": {
+        "elifesciences.org/api_v1/alm_source/source": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T20:22:18.534296",
+          "value": "fake"
+        }
+      }
+    }
+  }
+}</code></pre>
 
         
       </div>

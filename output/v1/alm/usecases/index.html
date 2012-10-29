@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ALM Use Cases | eLife API</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="robots" content="index,follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="/shared/css/documentation.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/shared/css/pygments.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/css/footer.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://fast.fonts.com/cssapi/c10f70b9-7e7a-4f33-9361-d43022ae343e.css">
+    <script src="/shared/js/jquery.js" type="text/javascript"></script>
+    <script src="/shared/js/documentation.js" type="text/javascript"></script>
+  </head>
+
+  <body >
+
+    <header id="header">
+      <a href="/"><img src="/images/dev_header.png" width="235" height="84" alt="eLife Developer&apos;s Resource" id="logo"></a>
+
+      <ul class="nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/v1/">API v1</a></li>
+      </ul>
+
+    </header>
+
+    
+    <div id="content">
+      <div class="left">
+        <h1 id="alm-use-cases">ALM Use Cases</h1>
+
+<ul id="markdown-toc">
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#given-an-article-doi-get-all-daily-alm-data">Given an article DOI, get all daily ALM data</a></li>
+  <li><a href="#given-an-article-doi-source-type-and-timespan-get-alm-values-and-timestamp">Given an article DOI, source, type, and timespan, get ALM values and timestamp</a></li>
+</ul>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Below are sample use cases for the ALM objects found in the Fluidinfo eLife API.</p>
+
+<h2 id="given-an-article-doi-get-all-daily-alm-data">Given an article DOI, get all daily ALM data</h2>
+
+<p>Using the <code>*</code> wildcard for <code>tag</code> in a fluidinfo query will get all values for each ALM object. The ALM objects are located by a query including the article DOI <code>10.7554/eLife.00013</code> and specifying only to return daily ALM data points by the <code>elifesciences.org/api_v1/alm/timespan</code> tag.</p>
+
+<h3 id="request">Request</h3>
+
+<pre><code>GET /values?query=elifesciences.org/api_v1/alm/doi="10.7554/eLife.00013" and elifesciences.org/api_v1/alm/timespan="day"&amp;tag=*
+</code></pre>
+
+<h3 id="response">Response</h3>
+
+<pre class="headers"><code>Status: 200 OK
+Content-type: application/json</code></pre>
+
+<pre class="highlight"><code class="language-javascript">{
+  "results": {
+    "id": {
+      "5b1fc1f8-5b12-477b-9c03-e01fac4afe3c": {
+        "elifesciences.org/api_v1/alm/value": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.856008",
+          "value": 48
+        },
+        "fluiddb/about": {
+          "username": "fluiddb",
+          "updated-at": "2012-10-29T16:40:22.078762",
+          "value": "elife_alm_fake_web_day_October_19_2012_10.7554/eLife.00013"
+        },
+        "elifesciences.org/api_v1/alm/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.856008",
+          "value": "10.7554/eLife.00013"
+        },
+        "elifesciences.org/api_v1/alm/date_year": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.856008",
+          "value": 2012
+        },
+        "elifesciences.org/api_v1/alm/date_date": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.856008",
+          "value": "October 19, 2012"
+        },
+        "elifesciences.org/api_v1/alm/date_day": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.856008",
+          "value": 19
+        },
+        "elifesciences.org/api_v1/alm/timespan": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.856008",
+          "value": "day"
+        },
+        "elifesciences.org/api_v1/alm/complete": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.856008",
+          "value": true
+        },
+        "elifesciences.org/api_v1/alm/date_timestamp": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.856008",
+          "value": 1350604800
+        },
+        "elifesciences.org/api_v1/alm/type": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.856008",
+          "value": "web"
+        },
+        "elifesciences.org/api_v1/alm/alm_source": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.856008",
+          "value": "fake"
+        },
+        "elifesciences.org/api_v1/alm/date_month": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.856008",
+          "value": 10
+        }
+      },
+      "a8a06d87-ccbb-404a-97fe-d85b0f63c409": {
+        "elifesciences.org/api_v1/alm/value": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.492617",
+          "value": 8
+        },
+        "fluiddb/about": {
+          "username": "fluiddb",
+          "updated-at": "2012-10-29T16:40:20.326790",
+          "value": "elife_alm_fake_web_day_October_15_2012_10.7554/eLife.00013"
+        },
+        "elifesciences.org/api_v1/alm/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.492617",
+          "value": "10.7554/eLife.00013"
+        },
+        "elifesciences.org/api_v1/alm/date_year": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.492617",
+          "value": 2012
+        },
+        "elifesciences.org/api_v1/alm/date_date": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.492617",
+          "value": "October 15, 2012"
+        },
+        "elifesciences.org/api_v1/alm/date_day": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.492617",
+          "value": 15
+        },
+        "elifesciences.org/api_v1/alm/timespan": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.492617",
+          "value": "day"
+        },
+        "elifesciences.org/api_v1/alm/complete": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.492617",
+          "value": true
+        },
+        "elifesciences.org/api_v1/alm/date_timestamp": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.492617",
+          "value": 1350259200
+        },
+        "elifesciences.org/api_v1/alm/type": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.492617",
+          "value": "web"
+        },
+        "elifesciences.org/api_v1/alm/alm_source": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.492617",
+          "value": "fake"
+        },
+        "elifesciences.org/api_v1/alm/date_month": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.492617",
+          "value": 10
+        }
+      },
+      "3972c248-22af-47eb-be68-fc6cf802a13b": {
+        "elifesciences.org/api_v1/alm/value": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.924023",
+          "value": 13
+        },
+        "fluiddb/about": {
+          "username": "fluiddb",
+          "updated-at": "2012-10-29T16:40:20.885298",
+          "value": "elife_alm_fake_web_day_October_16_2012_10.7554/eLife.00013"
+        },
+        "elifesciences.org/api_v1/alm/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.924023",
+          "value": "10.7554/eLife.00013"
+        },
+        "elifesciences.org/api_v1/alm/date_year": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.924023",
+          "value": 2012
+        },
+        "elifesciences.org/api_v1/alm/date_date": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.924023",
+          "value": "October 16, 2012"
+        },
+        "elifesciences.org/api_v1/alm/date_day": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.924023",
+          "value": 16
+        },
+        "elifesciences.org/api_v1/alm/timespan": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.924023",
+          "value": "day"
+        },
+        "elifesciences.org/api_v1/alm/complete": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.924023",
+          "value": true
+        },
+        "elifesciences.org/api_v1/alm/date_timestamp": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.924023",
+          "value": 1350345600
+        },
+        "elifesciences.org/api_v1/alm/type": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.924023",
+          "value": "web"
+        },
+        "elifesciences.org/api_v1/alm/alm_source": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.924023",
+          "value": "fake"
+        },
+        "elifesciences.org/api_v1/alm/date_month": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.924023",
+          "value": 10
+        }
+      },
+      "eb59921f-e1cc-4c63-8bba-5bf4e2960966": {
+        "elifesciences.org/api_v1/alm/value": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.551060",
+          "value": 43
+        },
+        "fluiddb/about": {
+          "username": "fluiddb",
+          "updated-at": "2012-10-29T16:40:21.656427",
+          "value": "elife_alm_fake_web_day_October_18_2012_10.7554/eLife.00013"
+        },
+        "elifesciences.org/api_v1/alm/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.551060",
+          "value": "10.7554/eLife.00013"
+        },
+        "elifesciences.org/api_v1/alm/date_year": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.551060",
+          "value": 2012
+        },
+        "elifesciences.org/api_v1/alm/date_date": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.551060",
+          "value": "October 18, 2012"
+        },
+        "elifesciences.org/api_v1/alm/date_day": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.551060",
+          "value": 18
+        },
+        "elifesciences.org/api_v1/alm/timespan": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.551060",
+          "value": "day"
+        },
+        "elifesciences.org/api_v1/alm/complete": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.551060",
+          "value": true
+        },
+        "elifesciences.org/api_v1/alm/date_timestamp": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.551060",
+          "value": 1350518400
+        },
+        "elifesciences.org/api_v1/alm/type": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.551060",
+          "value": "web"
+        },
+        "elifesciences.org/api_v1/alm/alm_source": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.551060",
+          "value": "fake"
+        },
+        "elifesciences.org/api_v1/alm/date_month": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.551060",
+          "value": 10
+        }
+      },
+      "663a7dc4-8cd4-4029-8807-f9fa2040686c": {
+        "elifesciences.org/api_v1/alm/value": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.166377",
+          "value": 52
+        },
+        "fluiddb/about": {
+          "username": "fluiddb",
+          "updated-at": "2012-10-29T16:40:22.452739",
+          "value": "elife_alm_fake_web_day_October_20_2012_10.7554/eLife.00013"
+        },
+        "elifesciences.org/api_v1/alm/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.166377",
+          "value": "10.7554/eLife.00013"
+        },
+        "elifesciences.org/api_v1/alm/date_year": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.166377",
+          "value": 2012
+        },
+        "elifesciences.org/api_v1/alm/date_date": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.166377",
+          "value": "October 20, 2012"
+        },
+        "elifesciences.org/api_v1/alm/date_day": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.166377",
+          "value": 20
+        },
+        "elifesciences.org/api_v1/alm/timespan": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.166377",
+          "value": "day"
+        },
+        "elifesciences.org/api_v1/alm/complete": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.166377",
+          "value": true
+        },
+        "elifesciences.org/api_v1/alm/date_timestamp": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.166377",
+          "value": 1350691200
+        },
+        "elifesciences.org/api_v1/alm/type": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.166377",
+          "value": "web"
+        },
+        "elifesciences.org/api_v1/alm/alm_source": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.166377",
+          "value": "fake"
+        },
+        "elifesciences.org/api_v1/alm/date_month": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.166377",
+          "value": 10
+        }
+      },
+      "29272e63-f02d-4dad-80c6-a3bd586fbd59": {
+        "elifesciences.org/api_v1/alm/value": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.244531",
+          "value": 18
+        },
+        "fluiddb/about": {
+          "username": "fluiddb",
+          "updated-at": "2012-10-29T16:40:21.289619",
+          "value": "elife_alm_fake_web_day_October_17_2012_10.7554/eLife.00013"
+        },
+        "elifesciences.org/api_v1/alm/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.244531",
+          "value": "10.7554/eLife.00013"
+        },
+        "elifesciences.org/api_v1/alm/date_year": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.244531",
+          "value": 2012
+        },
+        "elifesciences.org/api_v1/alm/date_date": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.244531",
+          "value": "October 17, 2012"
+        },
+        "elifesciences.org/api_v1/alm/date_day": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.244531",
+          "value": 17
+        },
+        "elifesciences.org/api_v1/alm/timespan": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.244531",
+          "value": "day"
+        },
+        "elifesciences.org/api_v1/alm/complete": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.244531",
+          "value": true
+        },
+        "elifesciences.org/api_v1/alm/date_timestamp": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.244531",
+          "value": 1350432000
+        },
+        "elifesciences.org/api_v1/alm/type": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.244531",
+          "value": "web"
+        },
+        "elifesciences.org/api_v1/alm/alm_source": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.244531",
+          "value": "fake"
+        },
+        "elifesciences.org/api_v1/alm/date_month": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.244531",
+          "value": 10
+        }
+      },
+      "803ed718-05c2-49ea-8780-a502070ff002": {
+        "elifesciences.org/api_v1/alm/value": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.473731",
+          "value": 36
+        },
+        "fluiddb/about": {
+          "username": "fluiddb",
+          "updated-at": "2012-10-29T16:40:22.803270",
+          "value": "elife_alm_fake_web_day_October_21_2012_10.7554/eLife.00013"
+        },
+        "elifesciences.org/api_v1/alm/doi": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.473731",
+          "value": "10.7554/eLife.00013"
+        },
+        "elifesciences.org/api_v1/alm/date_year": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.473731",
+          "value": 2012
+        },
+        "elifesciences.org/api_v1/alm/date_date": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.473731",
+          "value": "October 21, 2012"
+        },
+        "elifesciences.org/api_v1/alm/date_day": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.473731",
+          "value": 21
+        },
+        "elifesciences.org/api_v1/alm/timespan": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.473731",
+          "value": "day"
+        },
+        "elifesciences.org/api_v1/alm/complete": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.473731",
+          "value": true
+        },
+        "elifesciences.org/api_v1/alm/date_timestamp": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.473731",
+          "value": 1350777600
+        },
+        "elifesciences.org/api_v1/alm/type": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.473731",
+          "value": "web"
+        },
+        "elifesciences.org/api_v1/alm/alm_source": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.473731",
+          "value": "fake"
+        },
+        "elifesciences.org/api_v1/alm/date_month": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.473731",
+          "value": 10
+        }
+      }
+    }
+  }
+}</code></pre>
+
+<h2 id="given-an-article-doi-source-type-and-timespan-get-alm-values-and-timestamp">Given an article DOI, source, type, and timespan, get ALM values and timestamp</h2>
+
+<p>As ALM data accumulates in the eLife API, it will be more efficient to constrain the objects matched and the tag values returned from a Fluidinfo query. In this example, the ALM objects must match the specified DOI, type, and source. Only the ALM value and timestamp for the value are returned by Fluidinfo in the response.</p>
+
+<h3 id="request-1">Request</h3>
+
+<pre><code>GET /values?query=elifesciences.org/api_v1/alm/doi="10.7554/eLife.00013" and elifesciences.org/api_v1/alm/alm_source="fake"  and elifesciences.org/api_v1/alm/type="web" and elifesciences.org/api_v1/alm/timespan="day"&amp;tag=elifesciences.org/api_v1/alm/value&amp;tag=elifesciences.org/api_v1/alm/date_timestamp
+</code></pre>
+
+<h3 id="response-1">Response</h3>
+
+<pre class="headers"><code>Status: 200 OK
+Content-type: application/json</code></pre>
+
+<pre class="highlight"><code class="language-javascript">{
+  "results": {
+    "id": {
+      "5b1fc1f8-5b12-477b-9c03-e01fac4afe3c": {
+        "elifesciences.org/api_v1/alm/value": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.856008",
+          "value": 48
+        },
+        "elifesciences.org/api_v1/alm/date_timestamp": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.856008",
+          "value": 1350604800
+        }
+      },
+      "a8a06d87-ccbb-404a-97fe-d85b0f63c409": {
+        "elifesciences.org/api_v1/alm/value": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.492617",
+          "value": 8
+        },
+        "elifesciences.org/api_v1/alm/date_timestamp": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.492617",
+          "value": 1350259200
+        }
+      },
+      "3972c248-22af-47eb-be68-fc6cf802a13b": {
+        "elifesciences.org/api_v1/alm/value": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.924023",
+          "value": 13
+        },
+        "elifesciences.org/api_v1/alm/date_timestamp": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:29.924023",
+          "value": 1350345600
+        }
+      },
+      "eb59921f-e1cc-4c63-8bba-5bf4e2960966": {
+        "elifesciences.org/api_v1/alm/value": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.551060",
+          "value": 43
+        },
+        "elifesciences.org/api_v1/alm/date_timestamp": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.551060",
+          "value": 1350518400
+        }
+      },
+      "663a7dc4-8cd4-4029-8807-f9fa2040686c": {
+        "elifesciences.org/api_v1/alm/value": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.166377",
+          "value": 52
+        },
+        "elifesciences.org/api_v1/alm/date_timestamp": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.166377",
+          "value": 1350691200
+        }
+      },
+      "29272e63-f02d-4dad-80c6-a3bd586fbd59": {
+        "elifesciences.org/api_v1/alm/value": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.244531",
+          "value": 18
+        },
+        "elifesciences.org/api_v1/alm/date_timestamp": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:30.244531",
+          "value": 1350432000
+        }
+      },
+      "803ed718-05c2-49ea-8780-a502070ff002": {
+        "elifesciences.org/api_v1/alm/value": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.473731",
+          "value": 36
+        },
+        "elifesciences.org/api_v1/alm/date_timestamp": {
+          "username": "elifesciences.org",
+          "updated-at": "2012-10-29T21:07:31.473731",
+          "value": 1350777600
+        }
+      }
+    }
+  }
+}</code></pre>
+
+        
+      </div>
+
+      <div id="js-sidebar" class="sidebar-shell">
+        <div class="js-toggle-list sidebar-module expandable">
+          <ul>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/">Summary</a></h3>
+              <ul class="js-guides">
+                <li><a href="/v1/version/">Version</a></li>
+                <li><a href="/v1/glossary/">Glossary</a></li>
+              </ul>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/article/">Article</a></h3>
+              <ul class="js-guides">
+                <li><a href="/v1/article/usecases/">Use Cases</a></li>
+                <li><a href="/v1/article/schema/">Schema</a></li>
+              </ul>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/author/">Author</a></h3>
+              <ul class="js-guides">
+                <li><a href="/v1/author/usecases/">Use Cases</a></li>
+                <li><a href="/v1/author/schema/">Schema</a></li>
+              </ul>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/component/">Component</a></h3>
+              <ul class="js-guides">
+                <li><a href="/v1/component/usecases/">Use Cases</a></li>
+                <li><a href="/v1/component/schema/">Schema</a></li>
+              </ul>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/ref/">Ref</a></h3>
+              <ul class="js-guides">
+                <li><a href="/v1/ref/usecases/">Use Cases</a></li>
+                <li><a href="/v1/ref/schema/">Schema</a></li>
+              </ul>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/alm/">ALM</a></h3>
+              <ul class="js-guides">
+                <li><a href="/v1/alm/usecases/">Use Cases</a></li>
+                <li><a href="/v1/alm/schema/">Schema</a></li>
+              </ul>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/alm_source/">ALM Source</a></h3>
+              <ul class="js-guides">
+                <li><a href="/v1/alm_source/usecases/">Use Cases</a></li>
+                <li><a href="/v1/alm_source/schema/">Schema</a></li>
+              </ul>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/people/">People</a></h3>
+              <ul class="js-guides">
+                <li><a href="/v1/users/emails/">Emails</a></li>
+                <li><a href="/v1/users/followers/">Followers</a></li>
+                <li><a href="/v1/users/keys/">Keys</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div> <!-- /sidebar-module -->
+        <div class="sidebar-module">
+          <p>This website is a <a href="https://github.com/github/developer.github.com" target="_blank">public GitHub repository</a>. Please help us by forking the project and adding to it.</p>
+        </div>
+      </div><!-- /sidebar-shell -->
+
+      &nbsp;<br style="clear: both;">
+
+    </div><!-- wrapper -->
+
+    <footer id="pageFooter">
+      <div id="footer-content">
+    
+        <div class="colOne">
+          <a href="http://www.elifesciences.org" title="eLife" class="logoLink">
+            <img src="/images/footer-logo.png" alt="eLife">
+          </a>
+    
+          <address>
+            Sheraton House, Castle Park,<br>
+            Cambridge, CB3 0AX, UK
+          </address>
+        </div> <!-- colOne -->
+    
+        <div class="colTwo">
+          <ul class="sm">
+            <li class="first">
+              <a href="http://www.facebook.com/elifesciences" title="eLife on Facebook" target="_blank">
+                <img src="/images/footer-sm-facebook.png" alt="eLife on Facebook">
+              </a>
+            </li>
+            <li>
+              <a href="http://twitter.com/elife_sciences" title="eLife on Twitter" target="_blank">
+                <img src="/images/footer-sm-twitter.png" alt="eLife on Twitter">
+              </a>
+            </li>
+            <li>
+              <a href="http://www.linkedin.com/company/elife-sciences-publications-ltd" title="eLife on LinkedIn" target="_blank">
+                <img src="/images/footer-sm-linkedin.png" alt="eLife on LinkedIn">
+              </a>
+            </li>
+            <li class="last">
+              <a href="https://plus.google.com/102129675554093758550/posts" title="eLife on Google+" target="_blank">
+                <img src="/images/footer-sm-google.png" alt="eLife on Google+">
+              </a>
+            </li>
+          </ul>
+    
+          <!-- <span class="phoneLink">+44 (0)1223 370155</span> -->
+          <a href="mailto:staff@elifesciences.org" class="emailLink">staff@elifesciences.org</a>
+        </div> <!-- colTwo -->
+    
+        <div class="colThree">
+          <h5 class="twitter">
+            <a href="http://twitter.com/elife_sciences">Follow eLife on Twitter</a>
+          </h5>
+          <div class="tweet"></div>
+        </div> <!-- colThree -->
+    
+        <div class="colFour">
+    
+          <h5>Sign up for News and Updates on the Launch</h5>
+    
+          <form action="http://www.elifesciences.org/crm/civicrm/profile/create?reset=1&amp;gid=11" method="post" id="subscribeForm">
+            <input type="hidden" name="reset" value="1">
+            <input type="hidden" name="gid" value="11">
+    
+            <input type="text" name="first_name" id="first_name" class="first_name" placeholder="First Name">
+            <input type="text" name="last_name" id="last_name" class="last_name" placeholder="Last Name"><br>
+            <input type="text" name="email-Primary" id="email-Primary" class="email-Primary" placeholder="Email Address"><br>
+    
+            <input type="submit" name="submit" value=" Subscribe! ">
+          </form>
+    
+        </div> <!-- colFour -->
+
+      </div><!--#footer-content-->
+    </footer>
+    
+    <div id="subFooter">
+      <div class="left">
+        <p>&copy; 2012 <a href="http://www.elifesciences.org/" title="The new funder-researcher collaboration and top-tier open-access journal for the life and biomedical sciences">eLife Sciences Publications, Ltd</a><br>Subject to a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution license</a>, except where otherwise noted.</p>
+      </div>
+    
+      <div class="right">
+        <div class="menu-footer-navigation-container"><ul id="menu-footer-navigation" class="menu"><li id="menu-item-713" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5 current_page_item menu-item-713"><a href="http://www.elifesciences.org/">Home</a></li>
+    <li id="menu-item-714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-714"><a href="http://www.elifesciences.org/about/">About</a></li>
+    <li id="menu-item-715" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-715"><a href="http://www.elifesciences.org/the-journal/">The Journal</a></li>
+    <li id="menu-item-718" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-718"><a href="http://www.elifesciences.org/category/elife-news/">News</a></li>
+    <li id="menu-item-719" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-719"><a href="http://www.elifesciences.org/category/elife-labs/">eLife Labs</a></li>
+    <li id="menu-item-716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-716"><a href="http://www.elifesciences.org/contact/">Contact</a></li>
+    <li id="menu-item-717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-717"><a href="http://www.elifesciences.org/privacy-policy/">Privacy policy</a></li>
+    </ul></div>  </div>
+    </div>
+
+    <!-- Tweets -->
+    <script type="text/javascript" src="/js/jquery.tweet.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $(".tweet").tweet({
+            join_text: "auto",
+            username: "elife_sciences",
+            avatar_size: 0,
+            count: 1,
+            auto_join_text_default: "eLife said,",
+            auto_join_text_ed: "eLife said,",
+            auto_join_text_ing: "eLife said,",
+            auto_join_text_reply: "eLife said,",
+            auto_join_text_url: "eLife said,",
+            loading_text: "Loading @eLife tweets..."
+          });
+        });
+    </script>
+
+  <!-- eLife Brand Bar -->
+  <script type="text/javascript" src="http://www.elifesciences.org/elife-bar/eb.js"></script>
+  <!-- /eLife Brand Bar -->
+  
+  </body>
+</html>

@@ -9,11 +9,11 @@ title: Article Use Cases | eLife API
 
 ## Introduction
 
-Below are sample use cases for the article objects found in the fluidinfo eLife API.
+Below are sample use cases for the article objects found in the Fluidinfo eLife API.
 
 ## Given a DOI, get all article values
 
-Using the `*` wildcard for `tag` in a fluidinfo query will get all values for an article object. The article object is located by a query on `article/doi`. In the example below, the DOI `10.7554/eLife.00013` is used.
+Using the `*` wildcard for `tag` in a Fluidinfo query will get all values for an article object. The article object is located by a query on `article/doi`. In the example below, the DOI `10.7554/eLife.00013` is used.
 
 ### Request
 

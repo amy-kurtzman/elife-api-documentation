@@ -36,8 +36,8 @@ List
 | [author](#author)                                             | author/author                  | string  |       |
 | [city](#city)                                                 | author/city                    | string  | List* |
 | [corresponding](#corresponding)                               | author/corresponding           | boolean |       |
-| [country](#accepteddatetimestamp)                             | author/country                 | string  | List* |
-| [department](#accepteddatetimestamp)                          | author/department              | string  | List* |
+| [country](#country)                             | author/country                 | string  | List* |
+| [department](#department)                          | author/department              | string  | List* |
 | [equal_contrib](#equalcontrib)                                | author/equal_contrib           | boolean |       |
 | [given_names](#givennames)                                    | author/given_names             | string  |       |
 | [institution](#institution)                                   | author/institution             | string  | List* |

@@ -9,7 +9,7 @@ title: Author Use Cases | eLife API
 
 ## Introduction
 
-Below are sample use cases for the author objects found in the fluidinfo eLife API.
+Below are sample use cases for the author objects found in the Fluidinfo eLife API.
 
 ## Given a article DOI, get all the authors of that article
 

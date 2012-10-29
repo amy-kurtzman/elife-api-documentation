@@ -9,7 +9,7 @@ title: Component Use Cases | eLife API
 
 ## Introduction
 
-Below are sample use cases for the component objects found in the fluidinfo eLife API.
+Below are sample use cases for the component objects found in the Fluidinfo eLife API.
 
 ## Given a article DOI, get all the components in that article
 

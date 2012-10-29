@@ -5,6 +5,9 @@ title: eLife API Glossary
 
 # Glossary
 
+ALM
+: Article Level Metrics.
+
 DOI
 : Digital Object Identifier. See <http://www.doi.org/> for more information.
 
