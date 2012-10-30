@@ -17,12 +17,12 @@ API documentation is stored in `content/`, we are currently working on `v1` of t
 
 # Nanoc basics. 
 
-If you wish to iterate on the documentation locally you can comile your canges with  
-`nanoc compile`.
+If you wish to iterate on the documentation locally you can comile your changes with:  
+`nanoc compile`
 
-You can view your changes locally with  
-`nanoc view`.
+You can view your changes locally with:  
+`nanoc view`
 
-There is far more information on using nanoc at the [nanoc site][ndocs]
+There is far more information on using nanoc at the [nanoc site][ndocs]. 
 
 [ndocs]: http://nanoc.stoneship.org/docs/
