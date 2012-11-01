@@ -70,43 +70,43 @@
       <td><a href="#about">about</a></td>
       <td>fluiddb/about</td>
       <td>string</td>
-      <td> </td>
+      <td>&#160;</td>
     </tr>
     <tr>
       <td><a href="#articledoi">article_doi</a></td>
       <td>component/article_doi</td>
       <td>string</td>
-      <td> </td>
+      <td>&#160;</td>
     </tr>
     <tr>
       <td><a href="#content">content</a></td>
       <td>component/content</td>
       <td>string</td>
-      <td> </td>
+      <td>&#160;</td>
     </tr>
     <tr>
       <td><a href="#doi">doi</a></td>
       <td>component/doi</td>
       <td>string</td>
-      <td> </td>
+      <td>&#160;</td>
     </tr>
     <tr>
       <td><a href="#doiurl">doi_url</a></td>
       <td>component/doi_url</td>
       <td>string</td>
-      <td> </td>
+      <td>&#160;</td>
     </tr>
     <tr>
       <td><a href="#position">position</a></td>
       <td>component/position</td>
       <td>int</td>
-      <td> </td>
+      <td>&#160;</td>
     </tr>
     <tr>
       <td><a href="#type">type</a></td>
       <td>component/type</td>
       <td>string</td>
-      <td> </td>
+      <td>&#160;</td>
     </tr>
   </tbody>
 </table>
@@ -115,7 +115,7 @@
 
 <h4 id="detail">Detail</h4>
 
-<p>Fluidinfo about tag. A unique value for each object in fluidinfo. For eLife component objects, the about tag is the unique component DOI for the component in URL compatible format. Note: the first portion of a component DOI is the same as the article DOI, until the last ‘.’ dot and zerofill number at the end.</p>
+<p>Fluidinfo about tag. A unique value for each object in fluidinfo. For eLife component objects, the about tag is the unique component DOI for the component in URL compatible format. Note: the first portion of a component DOI is the same as the article DOI, until the last &#8216;.&#8217; dot and zerofill number at the end.</p>
 
 <h4 id="example">Example</h4>
 
@@ -193,7 +193,7 @@
 
 <h4 id="detail-6">Detail</h4>
 
-<p>Component type, extracted from the article XML. Common values include “abstract”, “fig”, “sub-article”, “table-wrap”.</p>
+<p>Component type, extracted from the article XML. Common values include &#8220;abstract&#8221;, &#8220;fig&#8221;, &#8220;sub-article&#8221;, &#8220;table-wrap&#8221;.</p>
 
 <h4 id="example-6">Example</h4>
 
@@ -209,60 +209,62 @@
         <div class="js-toggle-list sidebar-module expandable">
           <ul>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/">Summary</a></h3>
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/summary/">Overview</a></h3>
               <ul class="js-guides">
+                <li><a href="/summary/">Overview</a></li>
                 <li><a href="/v1/version/">Version</a></li>
                 <li><a href="/v1/glossary/">Glossary</a></li>
+                <li><a href="/v1/fluidinfo/">FluidInfo</a></li>
+                <li><a href="/v1/object-model/">Object Model</a></li>
               </ul>
             </li>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/article/">Article</a></h3>
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/schema/">REST API - Schema</a></h3>
               <ul class="js-guides">
-                <li><a href="/v1/article/usecases/">Use Cases</a></li>
-                <li><a href="/v1/article/schema/">Schema</a></li>
+                <li><a href="/v1/schema/">Schema Overview</a></li>
+                <li><a href="/v1/article/schema/">Article Schema</a></li>
+                <li><a href="/v1/author/schema/">Author Schema</a></li>
+                <li><a href="/v1/ref/schema/">Ref Schema</a></li>
+                <li><a href="/v1/component/schema/">Component Schema</a></li>                
               </ul>
             </li>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/author/">Author</a></h3>
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/usecases/">REST API - Examples</a></h3>
               <ul class="js-guides">
-                <li><a href="/v1/author/usecases/">Use Cases</a></li>
-                <li><a href="/v1/author/schema/">Schema</a></li>
+                <li><a href="/v1/usecases/">Examples Overview</a></li>
+                <li><a href="/v1/article/usecases/">Article Examples</a></li>
+                <li><a href="/v1/author/usecases/">Author Examples</a></li>
+                <li><a href="/v1/ref/usecases/">Ref Examples</a></li>
+                <li><a href="/v1/component/usecases/">Component Examples</a></li>
               </ul>
             </li>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/component/">Component</a></h3>
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/examples/">Example Apps</a></h3>
               <ul class="js-guides">
-                <li><a href="/v1/component/usecases/">Use Cases</a></li>
-                <li><a href="/v1/component/schema/">Schema</a></li>
+                <li><a href="/examples/">Examples</a></li>
               </ul>
             </li>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/ref/">Ref</a></h3>
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/rss/">RSS</a></h3>
               <ul class="js-guides">
-                <li><a href="/v1/ref/usecases/">Use Cases</a></li>
-                <li><a href="/v1/ref/schema/">Schema</a></li>
+                <li><a href="/rss/">RSS feeds</a></li>
+              </ul>
+            </li>          
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/oai-pmh/">OAI-PMH</a></h3>
+              <ul class="js-guides">
+                <li><a href="/oai-pmh/">OAI-PMH endpoint</a></li>
               </ul>
             </li>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/alm/">ALM</a></h3>
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/external-endpoints/">External Endpoints</a></h3>
               <ul class="js-guides">
-                <li><a href="/v1/alm/usecases/">Use Cases</a></li>
-                <li><a href="/v1/alm/schema/">Schema</a></li>
-              </ul>
-            </li>
-            <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/alm_source/">ALM Source</a></h3>
-              <ul class="js-guides">
-                <li><a href="/v1/alm_source/usecases/">Use Cases</a></li>
-                <li><a href="/v1/alm_source/schema/">Schema</a></li>
-              </ul>
-            </li>
-            <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/people/">People</a></h3>
-              <ul class="js-guides">
-                <li><a href="/v1/users/emails/">Emails</a></li>
-                <li><a href="/v1/users/followers/">Followers</a></li>
-                <li><a href="/v1/users/keys/">Keys</a></li>
+                <li><a href="/external-endpoints/">Overview</a></li>
+                <li><a href="/external-endpoints/pmc/">PMC</a></li>
+                <li><a href="/external-endpoints/mendeley/">Mendeley</a></li>
+                <li><a href="/external-endpoints/researcher-story/">Researcher Story</a></li>
+                <li><a href="/external-endpoints/scribd/">Scribd</a></li>
+                <li><a href="/external-endpoints/aws-s3/">AWS s3 image</a></li>
               </ul>
             </li>
           </ul>

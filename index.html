@@ -30,31 +30,50 @@
     
     <div id="content">
       <div class="left">
-        <h1 id="about">About</h1>
+        <h1 id="elife-api">eLife API.</h1>
 
-<p>We aim to make <a href="http://elifesciences.org/">eLife</a> content available through as many interfaces as possible. dev.elifesciences.org documents those endpoints. </p>
-
-<ol>
-  <li>Get information on the background to the API</li>
-  <li>Instructions on how to register for an API key</li>
-  <li>Get information in the API calls</li>
-  <li>See some example API calls.</li>
-</ol>
-
-<h1 id="history">History</h1>
-
-<h1 id="fluidinfo">Fluidinfo</h1>
-
-<h1 id="other-endpoints">Other endpoints</h1>
-
-<p>We will be making article content and metadata available via</p>
-
-<ul>
-  <li>RSS</li>
-  <li>OAI-PMH</li>
+<ul id="markdown-toc">
+  <li><a href="#background">Background.</a></li>
+  <li><a href="#quick-start-guide">Quick start guide.</a></li>
+  <li><a href="#developer-resources">Developer resources.</a></li>
+  <li><a href="#fluidinfo">FluidInfo.</a></li>
+  <li><a href="#rest-api-namespaces">Rest API namespaces.</a></li>
+  <li><a href="#jsonp">JSONP.</a></li>
+  <li><a href="#the-object-model-a-writable-api">The Object Model, a writable API.</a></li>
+  <li><a href="#roadmap-for-the-rest-api">Roadmap for the REST API.</a></li>
+  <li><a href="#rssoai">RSS/OAI.</a></li>
+  <li><a href="#external-endpoints">External Endpoints.</a></li>
 </ul>
 
-<h1 id="examples">Examples</h1>
+<h2 id="background">Background.</h2>
+
+<p>Our philosophy is to make [eLife][el] content proiscous, and to make it as easy as possible for the content to flow to as many locations as possible. With that in mind we have created a REST api to the content. In addition to the REST api access to content is also availalbe via [RSS], and OAI end point, and through a number of external endpoints that are not managed by eLife. Documentation on this site mainly covers the REST api, but we include inforamtion on the other endpoints, and on how to get to external endpoionts. </p>
+
+<h2 id="quick-start-guide">Quick start guide.</h2>
+
+<p>For the REST API, eLife content is hosted using [FluidInfo] in the fluidinfo namespace <code>elifescineces.org</code>. If you want to dive straigt in then then api url for eLife content is ``. You can get started by making calls to this endpoint. We have provided a set of <a href="/v1/usecases/">example queries</a>. For example the following query will return the DOI of items published in the last month:</p>
+
+<p><code>some cool query goes here.</code></p>
+
+<h2 id="developer-resources">Developer resources.</h2>
+
+<p>This documentation is <a href="github.com">hosted on github</a>. You clone the repo here. In addition we have made avaialbe <a href="parser.com">the code</a> that we use to parse our aritlce XML for population of the API. We have created a <a href="groups.com">mailing list/google group</a> for discussion around our API, however we are unable to respond quickly to this list. There is substantial <a href="fluidinfo.com">fluidinfo documentation</a> available.</p>
+
+<h2 id="fluidinfo">FluidInfo.</h2>
+
+<p><a href="fluidinfo.com">Fluidinfo</a> is an object data store that we have used for hosting eLife data for the purposes of providing a REST API. You can read the <a href="fluidinfo.com">fluidinfo documentation</a>, sign up for <a href="fluidinfoaccoutns.com">an acocunt</a>, though accounts are not ewquired to make read only calls to the API. We have provided a </p>
+
+<h2 id="rest-api-namespaces">Rest API namespaces.</h2>
+
+<h2 id="jsonp">JSONP.</h2>
+
+<h2 id="the-object-model-a-writable-api">The Object Model, a writable API.</h2>
+
+<h2 id="roadmap-for-the-rest-api">Roadmap for the REST API.</h2>
+
+<h2 id="rssoai">RSS/OAI.</h2>
+
+<h2 id="external-endpoints">External Endpoints.</h2>
 
         
       </div>
@@ -63,60 +82,62 @@
         <div class="js-toggle-list sidebar-module expandable">
           <ul>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/">Summary</a></h3>
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/summary/">Overview</a></h3>
               <ul class="js-guides">
+                <li><a href="/summary/">Overview</a></li>
                 <li><a href="/v1/version/">Version</a></li>
                 <li><a href="/v1/glossary/">Glossary</a></li>
+                <li><a href="/v1/fluidinfo/">FluidInfo</a></li>
+                <li><a href="/v1/object-model/">Object Model</a></li>
               </ul>
             </li>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/article/">Article</a></h3>
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/schema/">REST API - Schema</a></h3>
               <ul class="js-guides">
-                <li><a href="/v1/article/usecases/">Use Cases</a></li>
-                <li><a href="/v1/article/schema/">Schema</a></li>
+                <li><a href="/v1/schema/">Schema Overview</a></li>
+                <li><a href="/v1/article/schema/">Article Schema</a></li>
+                <li><a href="/v1/author/schema/">Author Schema</a></li>
+                <li><a href="/v1/ref/schema/">Ref Schema</a></li>
+                <li><a href="/v1/component/schema/">Component Schema</a></li>                
               </ul>
             </li>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/author/">Author</a></h3>
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/usecases/">REST API - Examples</a></h3>
               <ul class="js-guides">
-                <li><a href="/v1/author/usecases/">Use Cases</a></li>
-                <li><a href="/v1/author/schema/">Schema</a></li>
+                <li><a href="/v1/usecases/">Examples Overview</a></li>
+                <li><a href="/v1/article/usecases/">Article Examples</a></li>
+                <li><a href="/v1/author/usecases/">Author Examples</a></li>
+                <li><a href="/v1/ref/usecases/">Ref Examples</a></li>
+                <li><a href="/v1/component/usecases/">Component Examples</a></li>
               </ul>
             </li>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/component/">Component</a></h3>
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/examples/">Example Apps</a></h3>
               <ul class="js-guides">
-                <li><a href="/v1/component/usecases/">Use Cases</a></li>
-                <li><a href="/v1/component/schema/">Schema</a></li>
+                <li><a href="/examples/">Examples</a></li>
               </ul>
             </li>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/ref/">Ref</a></h3>
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/rss/">RSS</a></h3>
               <ul class="js-guides">
-                <li><a href="/v1/ref/usecases/">Use Cases</a></li>
-                <li><a href="/v1/ref/schema/">Schema</a></li>
+                <li><a href="/rss/">RSS feeds</a></li>
+              </ul>
+            </li>          
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/oai-pmh/">OAI-PMH</a></h3>
+              <ul class="js-guides">
+                <li><a href="/oai-pmh/">OAI-PMH endpoint</a></li>
               </ul>
             </li>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/alm/">ALM</a></h3>
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/external-endpoints/">External Endpoints</a></h3>
               <ul class="js-guides">
-                <li><a href="/v1/alm/usecases/">Use Cases</a></li>
-                <li><a href="/v1/alm/schema/">Schema</a></li>
-              </ul>
-            </li>
-            <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/alm_source/">ALM Source</a></h3>
-              <ul class="js-guides">
-                <li><a href="/v1/alm_source/usecases/">Use Cases</a></li>
-                <li><a href="/v1/alm_source/schema/">Schema</a></li>
-              </ul>
-            </li>
-            <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1/people/">People</a></h3>
-              <ul class="js-guides">
-                <li><a href="/v1/users/emails/">Emails</a></li>
-                <li><a href="/v1/users/followers/">Followers</a></li>
-                <li><a href="/v1/users/keys/">Keys</a></li>
+                <li><a href="/external-endpoints/">Overview</a></li>
+                <li><a href="/external-endpoints/pmc/">PMC</a></li>
+                <li><a href="/external-endpoints/mendeley/">Mendeley</a></li>
+                <li><a href="/external-endpoints/researcher-story/">Researcher Story</a></li>
+                <li><a href="/external-endpoints/scribd/">Scribd</a></li>
+                <li><a href="/external-endpoints/aws-s3/">AWS s3 image</a></li>
               </ul>
             </li>
           </ul>
