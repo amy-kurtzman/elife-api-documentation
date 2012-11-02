@@ -12,19 +12,7 @@ class: class="schema"
 
 A component is part of an article which is assigned its own unique component DOI.
 
-The [Schema](#schema) table contains the tags at a glance, including the following columns:
-
-Name
-: A short name for the tag in the `component` namespace.
-
-Tag
-: A partial tag path for the tag in Fluidinfo, omitting the eLife API parent namespace. To get a full Fludinfo tag path (except for the `fluiddb/about` tag path) for version 1 of the eLife API, prepend `elifesciences.org/api_v1/` to the tag. For example, the `component/article_doi` tag becomes `elifesciences.org/api_v1/component/article_doi` tag path in Fluidinfo.
-
-Type
-: The data type stored in the tag.
-
-List
-: Some tags that may include a lists of values. Those marked with an asterisk may sometimes contain only a single value, or a list. If no asterisk, it will always be a list.
+The [Schema](#schema) table contains the tags at a glance. The Schema Overview page includes more information about each column.
 
 ## Schema
 

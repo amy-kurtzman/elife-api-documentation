@@ -12,19 +12,8 @@ class: class="schema"
 
 This page contains detail about each tag found in the `article` namespace of the eLife API. An article object in Fluidinfo will have values for these tags, and most values derived from the article's XML. A particular article object will not necessarily have a value for every tag; if a tag's value is not present, it can be assumed to be null for that object.
 
-The [Schema](#schema) table contains the tags at a glance, including the following columns:
+The [Schema](#schema) table contains the tags at a glance. The Schema Overview page includes more information about each column.
 
-Name
-: A short name for the tag in the `article` namespace.
-
-Tag
-: A partial tag path for the tag in Fluidinfo, omitting the eLife API parent namespace. To get a full Fludinfo tag path (except for the `fluiddb/about` tag path) for version 1 of the eLife API, prepend `elifesciences.org/api_v1/` to the tag. For example, the `article/abstract` tag becomes `elifesciences.org/api_v1/article/abstract` tag path in Fluidinfo.
-
-Type
-: The data type stored in the tag.
-
-List
-: Some tags that may include a lists of values. Those marked with an asterisk may sometimes contain only a single value, or a list. If no asterisk, it will always be a list.
 
 ## Schema
 

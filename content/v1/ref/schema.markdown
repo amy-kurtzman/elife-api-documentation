@@ -12,19 +12,7 @@ class: class="schema"
 
 For each reference citied in an article, a new Fluidinfo object is created. Tag values in the `ref` namespace store individual reference details. As such, it is possible for more than one reference object to exist for the same paper, and these objects are attributed directly to the article in which they were cited.
 
-The [Schema](#schema) table contains the tags at a glance, including the following columns:
-
-Name
-: A short name for the tag in the `ref` namespace.
-
-Tag
-: A partial tag path for the tag in Fluidinfo, omitting the eLife API parent namespace. To get a full Fludinfo tag path (except for the `fluiddb/about` tag path) for version 1 of the eLife API, prepend `elifesciences.org/api_v1/` to the tag. For example, the `ref/article_doi` tag becomes `elifesciences.org/api_v1/ref/article_doi` tag path in Fluidinfo.
-
-Type
-: The data type stored in the tag.
-
-List
-: Some tags that may include a lists of values. Those marked with an asterisk may sometimes contain only a single value, or a list. If no asterisk, it will always be a list.
+The [Schema](#schema) table contains the tags at a glance. The Schema Overview page includes more information about each column.
 
 ## Schema
 
