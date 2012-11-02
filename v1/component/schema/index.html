@@ -41,18 +41,7 @@
 
 <p>A component is part of an article which is assigned its own unique component DOI.</p>
 
-<p>The <a href="#schema">Schema</a> table contains the tags at a glance, including the following columns:</p>
-
-<dl>
-  <dt>Name</dt>
-  <dd>A short name for the tag in the <code>component</code> namespace.</dd>
-  <dt>Tag</dt>
-  <dd>A partial tag path for the tag in Fluidinfo, omitting the eLife API parent namespace. To get a full Fludinfo tag path (except for the <code>fluiddb/about</code> tag path) for version 1 of the eLife API, prepend <code>elifesciences.org/api_v1/</code> to the tag. For example, the <code>component/article_doi</code> tag becomes <code>elifesciences.org/api_v1/component/article_doi</code> tag path in Fluidinfo.</dd>
-  <dt>Type</dt>
-  <dd>The data type stored in the tag.</dd>
-  <dt>List</dt>
-  <dd>Some tags that may include a lists of values. Those marked with an asterisk may sometimes contain only a single value, or a list. If no asterisk, it will always be a list.</dd>
-</dl>
+<p>The <a href="#schema">Schema</a> table contains the tags at a glance. The Schema Overview page includes more information about each column.</p>
 
 <h2 id="schema">Schema</h2>
 
@@ -70,43 +59,43 @@
       <td><a href="#about">about</a></td>
       <td>fluiddb/about</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#articledoi">article_doi</a></td>
       <td>component/article_doi</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#content">content</a></td>
       <td>component/content</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#doi">doi</a></td>
       <td>component/doi</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#doiurl">doi_url</a></td>
       <td>component/doi_url</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#position">position</a></td>
       <td>component/position</td>
       <td>int</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#type">type</a></td>
       <td>component/type</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
   </tbody>
 </table>
@@ -115,7 +104,7 @@
 
 <h4 id="detail">Detail</h4>
 
-<p>Fluidinfo about tag. A unique value for each object in fluidinfo. For eLife component objects, the about tag is the unique component DOI for the component in URL compatible format. Note: the first portion of a component DOI is the same as the article DOI, until the last &#8216;.&#8217; dot and zerofill number at the end.</p>
+<p>Fluidinfo about tag. A unique value for each object in fluidinfo. For eLife component objects, the about tag is the unique component DOI for the component in URL compatible format. Note: the first portion of a component DOI is the same as the article DOI, until the last ‘.’ dot and zerofill number at the end.</p>
 
 <h4 id="example">Example</h4>
 
@@ -193,7 +182,7 @@
 
 <h4 id="detail-6">Detail</h4>
 
-<p>Component type, extracted from the article XML. Common values include &#8220;abstract&#8221;, &#8220;fig&#8221;, &#8220;sub-article&#8221;, &#8220;table-wrap&#8221;.</p>
+<p>Component type, extracted from the article XML. Common values include “abstract”, “fig”, “sub-article”, “table-wrap”.</p>
 
 <h4 id="example-6">Example</h4>
 

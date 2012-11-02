@@ -41,18 +41,7 @@
 
 <p>For each author of an article, a new Fluidinfo object is created. Tag values in the <code>author</code> namespace store individual author details. As such, it is possible for more than one author object to exist for the same person, and these objects are attributed directly to the article they authored.</p>
 
-<p>The <a href="#schema">Schema</a> table contains the tags at a glance, including the following columns:</p>
-
-<dl>
-  <dt>Name</dt>
-  <dd>A short name for the tag in the <code>author</code> namespace.</dd>
-  <dt>Tag</dt>
-  <dd>A partial tag path for the tag in Fluidinfo, omitting the eLife API parent namespace. To get a full Fludinfo tag path (except for the <code>fluiddb/about</code> tag path) for version 1 of the eLife API, prepend <code>elifesciences.org/api_v1/</code> to the tag. For example, the <code>author/article_doi</code> tag becomes <code>elifesciences.org/api_v1/author/article_doi</code> tag path in Fluidinfo.</dd>
-  <dt>Type</dt>
-  <dd>The data type stored in the tag.</dd>
-  <dt>List</dt>
-  <dd>Some tags that may include a lists of values. Those marked with an asterisk may sometimes contain only a single value, or a list. If no asterisk, it will always be a list.</dd>
-</dl>
+<p>The <a href="#schema">Schema</a> table contains the tags at a glance. The Schema Overview page includes more information about each column.</p>
 
 <h2 id="schema">Schema</h2>
 
@@ -70,19 +59,19 @@
       <td><a href="#about">about</a></td>
       <td>fluiddb/about</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#articledoi">article_doi</a></td>
       <td>author/article_doi</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#author">author</a></td>
       <td>author/author</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#city">city</a></td>
@@ -94,7 +83,7 @@
       <td><a href="#corresponding">corresponding</a></td>
       <td>author/corresponding</td>
       <td>boolean</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#country">country</a></td>
@@ -112,13 +101,13 @@
       <td><a href="#equalcontrib">equal_contrib</a></td>
       <td>author/equal_contrib</td>
       <td>boolean</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#givennames">given_names</a></td>
       <td>author/given_names</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#institution">institution</a></td>
@@ -148,19 +137,19 @@
       <td><a href="#personid">person_id</a></td>
       <td>author/person_id</td>
       <td>int</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#position">position</a></td>
       <td>author/position</td>
       <td>int</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#surname">surname</a></td>
       <td>author/surname</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
   </tbody>
 </table>
@@ -314,7 +303,7 @@
 
 <h4 id="detail-11">Detail</h4>
 
-<p>Article footnotes for the particular author, not including footnotes regarding correspondence or &#8220;other&#8221; footnotes.</p>
+<p>Article footnotes for the particular author, not including footnotes regarding correspondence or “other” footnotes.</p>
 
 <h4 id="example-11">Example</h4>
 
@@ -331,7 +320,7 @@
 
 <h4 id="detail-12">Detail</h4>
 
-<p>Footnotes for the author of the type &#8220;other&#8221;, which tends to hold funding details disclosed for the particular author.</p>
+<p>Footnotes for the author of the type “other”, which tends to hold funding details disclosed for the particular author.</p>
 
 <h4 id="example-12">Example</h4>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title></title>
+    <title>REST API Schema | eLife API</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <meta name="robots" content="index,follow">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -30,7 +30,33 @@
     
     <div id="content">
       <div class="left">
-        
+        <h1 id="article-schema">Article Schema</h1>
+
+<ul id="markdown-toc">
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#schema-table-legend">Schema table legend</a></li>
+</ul>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Each schema page contains detail about each tag and namespace found in the eLife API. Generally, a Fluidinfo object that represents an article - for example - will have article namespace tags associated with it. Similarly, an author will have author namespace tags, etc.</p>
+
+<p>A particular Fluidinfo object will not necessarily have a value for every tag. If a tag value is missing from an object, it can be assumed the value is null.</p>
+
+<h2 id="schema-table-legend">Schema table legend</h2>
+
+<p>The table on each schema page list all the tags at a glance, and including the following columns:</p>
+
+<dl>
+  <dt>Name</dt>
+  <dd>A short name for the tag in the particular namespace.</dd>
+  <dt>Tag</dt>
+  <dd>A partial tag path for the tag in Fluidinfo, omitting the eLife API parent namespace. To get a full Fludinfo tag path (except for the <code>fluiddb/about</code> tag path) for version 1 of the eLife API, prepend <code>elifesciences.org/api_v1/</code> to the tag. For example, the <code>article/abstract</code> tag becomes <code>elifesciences.org/api_v1/article/abstract</code> tag path in Fluidinfo.</dd>
+  <dt>Type</dt>
+  <dd>The data type stored in the tag.</dd>
+  <dt>List</dt>
+  <dd>Some tags that may include a lists of values. Those marked with an asterisk may sometimes contain only a single value, or a list. If no asterisk, it will always be a list.</dd>
+</dl>
 
         
       </div>

@@ -41,18 +41,7 @@
 
 <p>For each reference citied in an article, a new Fluidinfo object is created. Tag values in the <code>ref</code> namespace store individual reference details. As such, it is possible for more than one reference object to exist for the same paper, and these objects are attributed directly to the article in which they were cited.</p>
 
-<p>The <a href="#schema">Schema</a> table contains the tags at a glance, including the following columns:</p>
-
-<dl>
-  <dt>Name</dt>
-  <dd>A short name for the tag in the <code>ref</code> namespace.</dd>
-  <dt>Tag</dt>
-  <dd>A partial tag path for the tag in Fluidinfo, omitting the eLife API parent namespace. To get a full Fludinfo tag path (except for the <code>fluiddb/about</code> tag path) for version 1 of the eLife API, prepend <code>elifesciences.org/api_v1/</code> to the tag. For example, the <code>ref/article_doi</code> tag becomes <code>elifesciences.org/api_v1/ref/article_doi</code> tag path in Fluidinfo.</dd>
-  <dt>Type</dt>
-  <dd>The data type stored in the tag.</dd>
-  <dt>List</dt>
-  <dd>Some tags that may include a lists of values. Those marked with an asterisk may sometimes contain only a single value, or a list. If no asterisk, it will always be a list.</dd>
-</dl>
+<p>The <a href="#schema">Schema</a> table contains the tags at a glance. The Schema Overview page includes more information about each column.</p>
 
 <h2 id="schema">Schema</h2>
 
@@ -70,19 +59,19 @@
       <td><a href="#about">about</a></td>
       <td>fluiddb/about</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#abstract">article_doi</a></td>
       <td>ref/article_doi</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#articletitle">article_title</a></td>
       <td>ref/article_title</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#authors">authors</a></td>
@@ -94,91 +83,91 @@
       <td><a href="#collab">collab</a></td>
       <td>ref/collab</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#doi">doi</a></td>
       <td>ref/doi</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#doiurl">doi_url</a></td>
       <td>ref/doi_url</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#etal">etal</a></td>
       <td>ref/etal</td>
       <td>boolean</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#fpage">fpage</a></td>
       <td>ref/fpage</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#lpage">lpage</a></td>
       <td>ref/lpage</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#pmid">pmid</a></td>
       <td>ref/pmid</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#position">position</a></td>
       <td>ref/position</td>
       <td>int</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#publicationtype">publication_type</a></td>
       <td>ref/publication_type</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#publisherloc">publisher_loc</a></td>
       <td>ref/publisher_loc</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#publishername">publisher_name</a></td>
       <td>ref/publisher_name</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#ref">ref</a></td>
       <td>ref/ref</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#source">source</a></td>
       <td>ref/source</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#volume">volume</a></td>
       <td>ref/volume</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
     <tr>
       <td><a href="#year">year</a></td>
       <td>ref/year</td>
       <td>string</td>
-      <td>&#160;</td>
+      <td> </td>
     </tr>
   </tbody>
 </table>
@@ -338,7 +327,7 @@
 
 <h4 id="detail-12">Detail</h4>
 
-<p>Type of publication. Common values include &#8220;journal&#8221;, &#8220;book&#8221;, &#8220;web&#8221;, &#8220;other&#8221;.</p>
+<p>Type of publication. Common values include “journal”, “book”, “web”, “other”.</p>
 
 <h4 id="example-12">Example</h4>
 
@@ -377,7 +366,7 @@
 
 <h4 id="detail-15">Detail</h4>
 
-<p>A full string including the raw text for the reference. Whitespace in the values will be limited, and this list is only meant to be informational. The value should be the same as the item in the article object&#8217;s <code>article/refs</code> tag.</p>
+<p>A full string including the raw text for the reference. Whitespace in the values will be limited, and this list is only meant to be informational. The value should be the same as the item in the article object’s <code>article/refs</code> tag.</p>
 
 <h4 id="example-15">Example</h4>
 

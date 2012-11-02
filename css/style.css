@@ -147,6 +147,13 @@ div.sidebar-module ol
 	margin: 0;
 }
 
+hr
+{
+	background-color: #CACACA;
+	height: 1px;
+	margin: 5px 0;
+}
+
 /* Code tag tweak, based on style in documentation.css */
 .left > code,
 .left ul li > code,
@@ -206,4 +213,11 @@ div.sidebar-module ol
 {
 	border-top: none;
 	padding: 0;
+}
+
+.exampleapps label
+{
+	width: 12em;
+	display: inline-block;
+	text-align: right;
 }
