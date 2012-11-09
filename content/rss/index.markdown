@@ -7,8 +7,6 @@ title: RSS feeds
 * TOC
 {:toc}
 
-## New articles.
+RSS feeds will be made avaialbe when our journal site launches later this year. You can [sign up][su] to get updates on our launch schedule. 
 
-## Figures.
-
-## More RSS feeds.
+[su]: http://www.elifesciences.org/crm/civicrm/profile/create?reset=1&gid=11
