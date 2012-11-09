@@ -25,11 +25,11 @@ For the REST API, eLife content is hosted using [FluidInfo] under the fluidinfo 
 
 ## Developer resources
 
-This documentation is [hosted on github][gdocs]. You clone the repo here. In addition we will make available [the code][parser] that we use to parse our article XML for population of the API. We have created a [mailing list/google group][ml] for discussion around our API, however we are unable to respond quickly to this list. There is substantial [fluidinfo documentation][fid] available. 
+This documentation is [hosted on github][gdocs]. You clone the repo here. In addition we will make available the code that we use to parse our article XML for population of the API. We have created a [mailing list/google group][ml] for discussion around our API, however we are unable to respond quickly to this list. There is substantial [fluidinfo documentation][fid] available. 
 
 [parser]: parser.com
-[gdocs]: github.com
-[ml]: groups.com
+[gdocs]: https://github.com/elifesciences/elife-api-documentation
+[ml]: https://groups.google.com/forum/?fromgroups#!forum/elife-api
 [fid]: fluidinfo.com 
 
 
