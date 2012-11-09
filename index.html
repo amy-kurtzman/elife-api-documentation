@@ -47,11 +47,11 @@
 
 <h2 id="background">Background</h2>
 
-<p>Our philosophy is to make [eLife][el] content promiscuous, and to make it as easy as possible for the content to flow to as many locations as possible. With that in mind we have created a REST API to the content. In addition to the REST API access to content is also available via [RSS], and OAI end point, and through a number of external endpoints that are not managed by eLife. Documentation on this site mainly covers the REST API, but we include information on the other endpoints, and on how to get to external endpoints. </p>
+<p>Our philosophy is to make <a href="http://elifesciences.org/">eLife</a> content promiscuous, and to make it as easy as possible for the content to flow to as many locations as possible. With that in mind we have created a REST API to the content. In addition to the REST API access to content is also available via [RSS], and OAI end point, and through a number of external endpoints that are not managed by eLife. Documentation on this site mainly covers the REST API, but we include information on the other endpoints, and on how to get to external endpoints. </p>
 
 <h2 id="quick-start-guide">Quick start guide</h2>
 
-<p>For the REST API, eLife content is hosted using [FluidInfo] under the fluidinfo namespace <code>elifescineces.org</code>. If you want to dive straight in, the base url for eLife content is <code>https://fluiddb.fluidinfo.com/</code>. You can get started by making calls to this endpoint. We have provided a set of <a href="/v1/usecases/">example queries</a>. For example the following query will return all articles in a particular subject area:</p>
+<p>For the REST API, eLife content is hosted using <a href="http://fluidinfo.com/">Fluidinfo</a> under the fluidinfo namespace <code>elifesciences.org</code>. If you want to dive straight in, the base URL for eLife content is <code>https://fluiddb.fluidinfo.com/</code>. You can get started by making calls to this endpoint. We have provided a set of <a href="/v1/usecases/">example queries</a>. For example the following query will return all articles in a particular subject area:</p>
 
 <p><code>GET /values?query=elifesciences.org/api_v1/article/subject_area contains "Cell biology"&amp;tag=elifesciences.org/api_v1/article/doi</code></p>
 
@@ -62,11 +62,11 @@
 
 <h2 id="developer-resources">Developer resources</h2>
 
-<p>This documentation is <a href="https://github.com/elifesciences/elife-api-documentation">hosted on github</a>. In addition we will make available the code that we use to parse our article XML for population of the API. We have created a <a href="https://groups.google.com/forum/?fromgroups#!forum/elife-api">mailing list/google group</a> for discussion around our API, however we are unable to respond quickly to this list. There is substantial <a href="fluidinfo.com">fluidinfo documentation</a> available. </p>
+<p>This documentation is <a href="https://github.com/elifesciences/elife-api-documentation">hosted on github</a>. In addition we will make available the code that we use to parse our article XML for population of the API. We have created a <a href="https://groups.google.com/forum/?fromgroups#!forum/elife-api">mailing list/google group</a> for discussion around our API, however we are unable to respond quickly to this list. There is substantial <a href="http://fluidinfo.com/developers/">fluidinfo documentation</a> available. </p>
 
 <h2 id="fluidinfo">FluidInfo</h2>
 
-<p><a href="fluidinfo.com">Fluidinfo</a> is an object data store that we have used for hosting eLife data for the purposes of providing a REST API. You can read the <a href="fluidinfo.com">fluidinfo documentation</a> and sign up for <a href="fluidinfoaccoutns.com">an account</a>, although accounts are not required to make read only calls to the API. We have added a bit more detail about fluidinfo, and the resources available <a href="/v1/fluidinfo/">here</a>.</p>
+<p><a href="http://fluidinfo.com/">Fluidinfo</a> is an object data store that we have used for hosting eLife data for the purposes of providing a REST API. You can read the <a href="http://fluidinfo.com/developers/">fluidinfo documentation</a> and sign up for <a href="https://fluidinfo.com/accounts/new/">an account</a>, although accounts are not required to make read only calls to the API. We have added a bit more detail about fluidinfo, and the resources available <a href="/v1/fluidinfo/">here</a>.</p>
 
 <h2 id="rest-api-namespaces">REST API namespaces</h2>
 
@@ -80,9 +80,9 @@
 
 <p>One of the powerful things about fluidinfo is that <em>other</em> people can start adding their own information onto objects that we create about eLife articles. We are in effect allowing you to tag, annotate or make comments at a very granular level on information about eLife authors and papers. We will also be <em>decorating</em> eLife articles with article level metrics, from a variety of sources, but if you have other data that you want to add, you can do that too. </p>
 
-<p>In the image below you can see a visual representation of an object that we have created in fluidinfo. This represents the data that we have populated about the article with the DOI dx.doi.org/10.7554/eLife.00242. We are using the doi of an article as the fluidinfo <em>about</em> tag, as it is the best unique primary descriptor of objects that we are creating. </p>
+<p>In the image below you can see a visual representation of an object that we have created in fluidinfo. This represents the data that we have populated about the article with the DOI dx.doi.org/10.7554/eLife.00242. We are using the DOI of an article as the fluidinfo <em>about</em> tag, as it is the best unique primary descriptor of objects that we are creating. </p>
 
-<p>You can see that we have added information onto the object as essentially key-value pairs. The beautiful thing about this approach is that you can go [sign up] for a fluidinfo key, and start adding your own metadata too. We hope to start aggregating useful information that appears this way, and exposing it on the original article pages, and to the authors. </p>
+<p>You can see that we have added information onto the object as essentially key-value pairs. The beautiful thing about this approach is that you can go <a href="https://fluidinfo.com/accounts/new/">sign up</a> for a fluidinfo key, and start adding your own metadata too. We hope to start aggregating useful information that appears this way, and exposing it on the original article pages, and to the authors. </p>
 
 <p><img src="/images/object.jpg" alt="example object" height="270" width="700" /></p>
 
@@ -106,9 +106,12 @@
         <div class="js-toggle-list sidebar-module expandable">
           <ul>
             <li class="js-topic">
-              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/summary/">Overview</a></h3>
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/">Home</a></h3>
+            </li>
+            <li class="js-topic">
+              <h3><a href="#" class="js-expand-btn collapsed">&nbsp;</a><a href="/v1">REST API - Overview</a></h3>
               <ul class="js-guides">
-                <li><a href="/summary/">Overview</a></li>
+                <li><a href="/v1/">Overview</a></li>
                 <li><a href="/v1/version/">Version</a></li>
                 <li><a href="/v1/glossary/">Glossary</a></li>
                 <li><a href="/v1/fluidinfo/">FluidInfo</a></li>
