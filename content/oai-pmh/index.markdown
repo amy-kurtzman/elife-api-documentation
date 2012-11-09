@@ -1,28 +1,13 @@
---- 
-title: eLife Developers Home
+---
+title: OAI endpoint
 ---
 
+# OAI
 
-# About
+* TOC
+{:toc}
 
-We aim to make [eLife][el] content available through as many interfaces as possible. dev.elifesciences.org documents those endpoints. 
+An [OAI-PMH][oai] endpoint be made avaialbe when our journal site launches later this year. You can [sign up][su] to get updates on our launch schedule. 
 
-1. Get information on the background to the API
-2. Instructions on how to register for an API key
-3. Get information in the API calls
-4. See some example API calls.
-
-[el]: http://elifesciences.org/
-
-# History
-
-# Fluidinfo 
-
-# Other endpoints
-
-We will be making article content and metadata available via
-
-- RSS
-- OAI-PMH
-
-# Examples 
+[oai]: http://www.openarchives.org/OAI/openarchivesprotocol.html
+[su]: http://www.elifesciences.org/crm/civicrm/profile/create?reset=1&gid=11
