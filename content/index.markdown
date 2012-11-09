@@ -64,7 +64,7 @@ In the image below you can see a visual representation of an object that we have
 
 You can see that we have added information onto the object as essentially key-value pairs. The beautiful thing about this approach is that you can go [sign up] for a fluidinfo key, and start adding your own metadata too. We hope to start aggregating usful information that appears this way, and exposing it on the original article pages, and to the authors. 
 
-![example object](/static/object.jpg "Example object")
+![example object](/images/object.jpg "Example object")
 
 
 ## Roadmap for the REST API

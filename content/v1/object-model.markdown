@@ -9,3 +9,5 @@ One of the powerful things about fluidinfo is that _other_ people can start addi
 In the image below you can see a visual representation of an object that we have created in fluidinfo. This represents the data that we have populated about the article with the DOI dx.doi.org/10.7554/eLife.00242. We are using the doi of an article as the fluidinfo _about_ tag, as it is the best unique primary descriptor of objects that we are creating. 
 
 You can see that we have added information onto the object as essentially key-value pairs. The beautiful thing about this approach is that you can go [sign up] for a fluidinfo key, and start adding your own metadata too. We hope to start aggregating usful information that appears this way, and exposing it on the original article pages, and to the authors. 
+
+![example object](/images/object.jpg "Example object")
