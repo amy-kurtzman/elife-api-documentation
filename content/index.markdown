@@ -16,7 +16,7 @@ Our philosophy is to make [eLife][el] content promiscuous, and to make it as eas
 
 ## Quick start guide 
 
-For the REST API, eLife content is hosted using [FluidInfo] in the fluidinfo namespace `elifescineces.org`. If you want to dive straight in then then API url for eLife content is ``. You can get started by making calls to this endpoint. We have provided a set of [example queries][eq]. For example the following query will return the DOI of items published in the last month:
+For the REST API, eLife content is hosted using [FluidInfo] under the fluidinfo namespace `elifescineces.org`. If you want to dive straight in, the base url for eLife content is `https://fluiddb.fluidinfo.com/`. You can get started by making calls to this endpoint. We have provided a set of [example queries][eq]. For example the following query will return the DOI of items published in the last month:
 
 `some cool query goes here.`
 
@@ -25,7 +25,7 @@ For the REST API, eLife content is hosted using [FluidInfo] in the fluidinfo nam
 
 ## Developer resources
 
-This documentation is [hosted on github][gdocs]. You clone the repo here. In addition we have made available [the code][parser] that we use to parse our article XML for population of the API. We have created a [mailing list/google group][ml] for discussion around our API, however we are unable to respond quickly to this list. There is substantial [fluidinfo documentation][fid] available.
+This documentation is [hosted on github][gdocs]. You clone the repo here. In addition we will make available [the code][parser] that we use to parse our article XML for population of the API. We have created a [mailing list/google group][ml] for discussion around our API, however we are unable to respond quickly to this list. There is substantial [fluidinfo documentation][fid] available. 
 
 [parser]: parser.com
 [gdocs]: github.com
@@ -50,6 +50,10 @@ This documentation is [hosted on github][gdocs]. You clone the repo here. In add
 
 
 ## Roadmap for the REST API
+
+We have posted the development roadmap on a [trello board][tb]
+
+[tb]: https://trello.com/board/elife-api-roadmap/50194e22705438553d59640c 
 
 
 ## RSS/OAI
