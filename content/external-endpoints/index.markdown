@@ -12,10 +12,10 @@ We have currently documented
 * [AWS][aws]
 * [PMC][pmc]
 * [scribd][scribd]
-* [Researcher Story][rs]
+* [Impact Story][rs]
 
 [men]: /external-endpoints/mendeley
 [aws]: /external-endpoints/aws-s3
 [pmc]: /external-endpoints/pmc
 [scribd]: /external-endpoints/scribd
-[rs]: /external-endpoints/researcher-story
+[rs]: /external-endpoints/impact-story
