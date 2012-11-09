@@ -53,14 +53,11 @@
 
 <p>For the REST API, eLife content is hosted using [FluidInfo] under the fluidinfo namespace <code>elifescineces.org</code>. If you want to dive straight in, the base url for eLife content is <code>https://fluiddb.fluidinfo.com/</code>. You can get started by making calls to this endpoint. We have provided a set of <a href="/v1/usecases/">example queries</a>. For example the following query will return all articles in a particular subject area:</p>
 
-<p><code>GET /values?query=elifesciences.org/api_v1/article/subject_area contains "Cell biology"&amp;tag=elifesciences.org/api_v1/article/doi
-</code></p>
+<p><code>GET /values?query=elifesciences.org/api_v1/article/subject_area contains "Cell biology"&amp;tag=elifesciences.org/api_v1/article/doi</code></p>
 
 <p>and the curl version of this operation is:</p>
 
-<p>&#8216;curl &#8220;https://fluiddb.fluidinfo.com/values?query=elifesciences.org%2Fapi_v1%2Farticle%2Fsubject_area+contains+%22Cell+biology%22&amp;tag=elifesciences.org%2Fapi_v1%2Farticle%2Fdoi&#8221;&#8217;</p>
-
-<p><code>some cool query goes here.</code></p>
+<p><code>curl "https://fluiddb.fluidinfo.com/values?query=elifesciences.org%2Fapi_v1%2Farticle%2Fsubject_area+contains+%22Cell+biology%22&amp;tag=elifesciences.org%2Fapi_v1%2Farticle%2Fdoi"</code></p>
 
 <h2 id="developer-resources">Developer resources</h2>
 
