@@ -13,10 +13,11 @@ title: eLife Developers Home
 
 Our philosophy is to make [eLife][el] content promiscuous, and to make it as easy as possible for the content to flow to as many locations as possible. With that in mind we have created a REST API to the content. In addition to the REST API access to content is also available via [RSS], and OAI end point, and through a number of external endpoints that are not managed by eLife. Documentation on this site mainly covers the REST API, but we include information on the other endpoints, and on how to get to external endpoints. 
 
+[el]: http://elifesciences.org/
 
 ## Quick start guide 
 
-For the REST API, eLife content is hosted using [FluidInfo] under the fluidinfo namespace `elifescineces.org`. If you want to dive straight in, the base url for eLife content is `https://fluiddb.fluidinfo.com/`. You can get started by making calls to this endpoint. We have provided a set of [example queries][eq]. For example the following query will return all articles in a particular subject area:
+For the REST API, eLife content is hosted using [Fluidinfo][fi] under the fluidinfo namespace `elifesciences.org`. If you want to dive straight in, the base URL for eLife content is `https://fluiddb.fluidinfo.com/`. You can get started by making calls to this endpoint. We have provided a set of [example queries][eq]. For example the following query will return all articles in a particular subject area:
 
 `GET /values?query=elifesciences.org/api_v1/article/subject_area contains "Cell biology"&tag=elifesciences.org/api_v1/article/doi`
 
@@ -34,15 +35,15 @@ This documentation is [hosted on github][gdocs]. In addition we will make availa
 [parser]: parser.com
 [gdocs]: https://github.com/elifesciences/elife-api-documentation
 [ml]: https://groups.google.com/forum/?fromgroups#!forum/elife-api
-[fid]: fluidinfo.com 
+[fid]: http://fluidinfo.com/developers/ 
 
 
 ## FluidInfo
 
 [Fluidinfo][fi] is an object data store that we have used for hosting eLife data for the purposes of providing a REST API. You can read the [fluidinfo documentation][fid] and sign up for [an account][fia], although accounts are not required to make read only calls to the API. We have added a bit more detail about fluidinfo, and the resources available [here][fol].
 
-[fi]: fluidinfo.com
-[fia]: fluidinfoaccoutns.com
+[fi]: http://fluidinfo.com/
+[fia]: https://fluidinfo.com/accounts/new/
 [fol]: /v1/fluidinfo/
 
 
@@ -64,9 +65,9 @@ Fluidinfo support for JSONP is documented [here][jsonp].
 
 One of the powerful things about fluidinfo is that _other_ people can start adding their own information onto objects that we create about eLife articles. We are in effect allowing you to tag, annotate or make comments at a very granular level on information about eLife authors and papers. We will also be _decorating_ eLife articles with article level metrics, from a variety of sources, but if you have other data that you want to add, you can do that too. 
 
-In the image below you can see a visual representation of an object that we have created in fluidinfo. This represents the data that we have populated about the article with the DOI dx.doi.org/10.7554/eLife.00242. We are using the doi of an article as the fluidinfo _about_ tag, as it is the best unique primary descriptor of objects that we are creating. 
+In the image below you can see a visual representation of an object that we have created in fluidinfo. This represents the data that we have populated about the article with the DOI dx.doi.org/10.7554/eLife.00242. We are using the DOI of an article as the fluidinfo _about_ tag, as it is the best unique primary descriptor of objects that we are creating. 
 
-You can see that we have added information onto the object as essentially key-value pairs. The beautiful thing about this approach is that you can go [sign up] for a fluidinfo key, and start adding your own metadata too. We hope to start aggregating useful information that appears this way, and exposing it on the original article pages, and to the authors. 
+You can see that we have added information onto the object as essentially key-value pairs. The beautiful thing about this approach is that you can go [sign up][fia] for a fluidinfo key, and start adding your own metadata too. We hope to start aggregating useful information that appears this way, and exposing it on the original article pages, and to the authors. 
 
 <img src="/images/object.jpg" alt="example object" height="270" width="700">
 

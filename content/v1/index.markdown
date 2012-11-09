@@ -1,16 +1,21 @@
 --- 
-title: eLife API version 1
+title: eLife REST API Overview
 ---
 
 
-# Cover page for the API
+# eLife REST API Overview
 
 * TOC
 {:toc}
 
-## Introduction
+## FluidInfo
 
-This is a cover page.
+[Fluidinfo][fi] is an object data store that we have used for hosting eLife data for the purposes of providing a REST API. You can read the [fluidinfo documentation][fid] and sign up for [an account][fia], although accounts are not required to make read only calls to the API. We have added a bit more detail about fluidinfo, and the resources available [here][fol].
+
+[fi]: http://fluidinfo.com/
+[fia]: https://fluidinfo.com/accounts/new/
+[fol]: /v1/fluidinfo/
+[fid]: http://fluidinfo.com/developers/ 
 
 ## Gotchas
 
