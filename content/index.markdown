@@ -16,7 +16,15 @@ Our philosophy is to make [eLife][el] content promiscuous, and to make it as eas
 
 ## Quick start guide 
 
-For the REST API, eLife content is hosted using [FluidInfo] under the fluidinfo namespace `elifescineces.org`. If you want to dive straight in, the base url for eLife content is `https://fluiddb.fluidinfo.com/`. You can get started by making calls to this endpoint. We have provided a set of [example queries][eq]. For example the following query will return the DOI of items published in the last month:
+For the REST API, eLife content is hosted using [FluidInfo] under the fluidinfo namespace `elifescineces.org`. If you want to dive straight in, the base url for eLife content is `https://fluiddb.fluidinfo.com/`. You can get started by making calls to this endpoint. We have provided a set of [example queries][eq]. For example the following query will return all articles in a particular subject area:
+
+`GET /values?query=elifesciences.org/api_v1/article/subject_area contains "Cell biology"&tag=elifesciences.org/api_v1/article/doi
+`
+
+and the curl version of this operation is:
+
+'curl "https://fluiddb.fluidinfo.com/values?query=elifesciences.org%2Fapi_v1%2Farticle%2Fsubject_area+contains+%22Cell+biology%22&tag=elifesciences.org%2Fapi_v1%2Farticle%2Fdoi"'
+
 
 `some cool query goes here.`
 
