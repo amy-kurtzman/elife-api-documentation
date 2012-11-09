@@ -80,6 +80,10 @@ We are aiming to launch the journal website shortly. This will provide RSS and O
 
 ## External endpoints
 
-We are making eLife content avaialbe from a number of non-eLife controlled endpoints, with the aim of making it as easy as possible for people to access the content. We will try to keep up to date documentation on these endpoints [here][eep]. If you have a resource that you think is releveant, and you would like us to add to the documentation, please drop us a line in the [group][ml], or send a pull request to the [documentation repo][gdocs]. 
+We are making eLife content avaialbe from a number of non-eLife controlled endpoints, with the aim of making it as easy as possible for people to access the content. We will update documentation on this site about these endpoints, however you can already browse some eLife content on [scribd][sd], [Mendeley][men] and [github xml][gha] and [github pdf][ghp] repos. If you have a resource that you think is releveant, and you would like us to add to the documentation, please drop us a line in the [group][ml], or send a pull request to the [documentation repo][gdocs]. 
 
-[eep]: /external-endpoints/
+[sd]: http://www.scribd.com/my_document_collections/3916165
+[men]: http://www.mendeley.com/profiles/elife-staff/
+[gha]: http://elifesciences.github.com/elife-articles/
+[ghp]: https://github.com/elifesciences/elife-pdfs
+
