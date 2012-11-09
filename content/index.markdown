@@ -43,7 +43,10 @@ This documentation is [hosted on github][gdocs]. In addition we will make availa
 
 ## Rest API namespaces
 
+As we are mapping from our XML into fluifinfo objects, to understand the API, all you need to do is to understand the namespaces we have chosen to describe our objects. We have [documented this extensivly][rest], but you can also use a tool provided by fluidinfo to [explore the namespace][explorer].
 
+[rest]: /v1/
+[explorer]: https://explorer.fluidinfo.com/fluidinfo/elifesciences.org
 
 ## JSONP
 
