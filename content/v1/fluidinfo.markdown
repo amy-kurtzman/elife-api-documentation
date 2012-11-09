@@ -9,7 +9,7 @@ title: Fluidinfo
 
 ## About fluidinfo
 
-Fluidinfo is a object based data store, backed onto AWS services. One creates universally writibale objects into the fluidinfo object store. Once created these objects can be tagged by anyone. Permissions lie at the tagging level, not the object level. This opens some interesting possabilities around the creation of a read and write web. 
+Fluidinfo is a object based data store, backed onto AWS services. One creates universally writeable objects into the fluidinfo object store. Once created these objects can be tagged by anyone. Permissions lie at the tagging level, not the object level. This opens some interesting possibilities around the creation of a read and write web. 
 
 Fluidinfo have created a large number of resources to help get started.
 
