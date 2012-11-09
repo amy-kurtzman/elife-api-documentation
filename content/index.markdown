@@ -25,7 +25,7 @@ For the REST API, eLife content is hosted using [FluidInfo] under the fluidinfo 
 
 ## Developer resources
 
-This documentation is [hosted on github][gdocs]. You clone the repo here. In addition we will make available the code that we use to parse our article XML for population of the API. We have created a [mailing list/google group][ml] for discussion around our API, however we are unable to respond quickly to this list. There is substantial [fluidinfo documentation][fid] available. 
+This documentation is [hosted on github][gdocs]. In addition we will make available the code that we use to parse our article XML for population of the API. We have created a [mailing list/google group][ml] for discussion around our API, however we are unable to respond quickly to this list. There is substantial [fluidinfo documentation][fid] available. 
 
 [parser]: parser.com
 [gdocs]: https://github.com/elifesciences/elife-api-documentation
@@ -35,12 +35,14 @@ This documentation is [hosted on github][gdocs]. You clone the repo here. In add
 
 ## FluidInfo
 
-[Fluidinfo][fi] is an object data store that we have used for hosting eLife data for the purposes of providing a REST API. You can read the [fluidinfo documentation][fid], sign up for [an accountt][fia], though accounts are not required to make read only calls to the API. We have provided a 
+[Fluidinfo][fi] is an object data store that we have used for hosting eLife data for the purposes of providing a REST API. You can read the [fluidinfo documentation][fid], sign up for [an account][fia], though accounts are not required to make read only calls to the API.
 
 [fi]: fluidinfo.com
 [fia]: fluidinfoaccoutns.com
 
-## Rest API namespaces.
+
+## Rest API namespaces
+
 
 
 ## JSONP
@@ -58,6 +60,11 @@ We have posted the development roadmap on a [trello board][tb]
 
 ## RSS/OAI
 
+We are aiming to launch the journal website shortly. This will provide RSS and OAI endpoints for our content, and this documentation will be updated at that point. 
+
 
 ## External Endpoints
 
+We are making eLife content avaialbe from a number of non-eLife controlled endpoints, with the aim of making it as easy as possible for people to access the content. We will try to keep up to date documentation on these endpoints [here][eep]. If you have a resource that you think is releveant, and you would like us to add to the documentation, please drop us a line in the [group][ml], or send a pull request to the [documentation repo][gdocs]. 
+
+[eep]: /external-endpoints/
