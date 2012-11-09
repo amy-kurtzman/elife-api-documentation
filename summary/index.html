@@ -37,7 +37,7 @@
   <li><a href="#quick-start-guide">Quick start guide</a></li>
   <li><a href="#developer-resources">Developer resources</a></li>
   <li><a href="#fluidinfo">FluidInfo</a></li>
-  <li><a href="#rest-api-namespaces">REST API namespaces</a></li>
+  <li><a href="#rest-api-namespaces">Rest API namespaces</a></li>
   <li><a href="#jsonp">JSONP</a></li>
   <li><a href="#the-object-model-a-writeable-api">The Object Model, a writeable API</a></li>
   <li><a href="#roadmap-for-the-rest-api">Roadmap for the REST API</a></li>
@@ -53,12 +53,14 @@
 
 <p>For the REST API, eLife content is hosted using [FluidInfo] under the fluidinfo namespace <code>elifescineces.org</code>. If you want to dive straight in, the base url for eLife content is <code>https://fluiddb.fluidinfo.com/</code>. You can get started by making calls to this endpoint. We have provided a set of <a href="/v1/usecases/">example queries</a>. For example the following query will return all articles in a particular subject area:</p>
 
-<p><code>GET /values?query=elifesciences.org/api_v1/article/subject_area contains "Cell biology"&amp;tag=elifesciences.org/api_v1/article/doi</code></p>
+<p><code>GET /values?query=elifesciences.org/api_v1/article/subject_area contains "Cell biology"&amp;tag=elifesciences.org/api_v1/article/doi
+</code></p>
 
 <p>and the curl version of this operation is:</p>
 
-<pre><code>curl "https://fluiddb.fluidinfo.com/values?query=elifesciences.org%2Fapi_v1%2Farticle%2Fsubject_area+contains+%22Cell+biology%22&amp;tag=elifesciences.org%2Fapi_v1%2Farticle%2Fdoi"
-</code></pre>
+<p>‘curl “https://fluiddb.fluidinfo.com/values?query=elifesciences.org%2Fapi_v1%2Farticle%2Fsubject_area+contains+%22Cell+biology%22&amp;tag=elifesciences.org%2Fapi_v1%2Farticle%2Fdoi”’</p>
+
+<p><code>some cool query goes here.</code></p>
 
 <h2 id="developer-resources">Developer resources</h2>
 
@@ -66,11 +68,11 @@
 
 <h2 id="fluidinfo">FluidInfo</h2>
 
-<p><a href="fluidinfo.com">Fluidinfo</a> is an object data store that we have used for hosting eLife data for the purposes of providing a REST API. You can read the <a href="fluidinfo.com">fluidinfo documentation</a> and sign up for <a href="fluidinfoaccoutns.com">an account</a>, although accounts are not required to make read only calls to the API. We have added a bit more detail about fluidinfo, and the resources available <a href="/v1/fluidinfo/">here</a>.</p>
+<p><a href="fluidinfo.com">Fluidinfo</a> is an object data store that we have used for hosting eLife data for the purposes of providing a REST API. You can read the <a href="fluidinfo.com">fluidinfo documentation</a>, sign up for <a href="fluidinfoaccoutns.com">an account</a>, though accounts are not required to make read only calls to the API. We have added a bit more detail about fluidinfo, and the resources availalbe <a href="/v1/fluidinfo/">here</a>.</p>
 
-<h2 id="rest-api-namespaces">REST API namespaces</h2>
+<h2 id="rest-api-namespaces">Rest API namespaces</h2>
 
-<p>As we are mapping from our XML into fluidinfo objects, to understand the API, all you need to do is to understand the namespaces we have chosen to describe our objects. We have <a href="/v1/">documented this extensively</a>, but you can also use a tool provided by fluidinfo to <a href="https://explorer.fluidinfo.com/fluidinfo/elifesciences.org">explore the namespace</a>.</p>
+<p>As we are mapping from our XML into fluifinfo objects, to understand the API, all you need to do is to understand the namespaces we have chosen to describe our objects. We have <a href="/v1/">documented this extensivly</a>, but you can also use a tool provided by fluidinfo to <a href="https://explorer.fluidinfo.com/fluidinfo/elifesciences.org">explore the namespace</a>.</p>
 
 <h2 id="jsonp">JSONP</h2>
 
@@ -78,17 +80,17 @@
 
 <h2 id="the-object-model-a-writeable-api">The Object Model, a writeable API</h2>
 
-<p>One of the powerful things about fluidinfo is that <em>other</em> people can start adding their own information onto objects that we create about eLife articles. We are in effect allowing you to tag, annotate or make comments at a very granular level on information about eLife authors and papers. We will also be <em>decorating</em> eLife articles with article level metrics, from a variety of sources, but if you have other data that you want to add, you can do that too. </p>
+<p>One of the powerful things about fluidinfo is that <em>other</em> people can start adding their own infomraiton onto objects that we create about eLife articles. We are in effect allowing you to tag, annotate or make comments at a very grannular level on information about eLife authors and papers. We will also be <em>decorating</em> eLife articles with article level metrics, from a variety of sources, but if you have other data that you want to add, you can do that too. </p>
 
 <p>In the image below you can see a visual representation of an object that we have created in fluidinfo. This represents the data that we have populated about the article with the DOI dx.doi.org/10.7554/eLife.00242. We are using the doi of an article as the fluidinfo <em>about</em> tag, as it is the best unique primary descriptor of objects that we are creating. </p>
 
-<p>You can see that we have added information onto the object as essentially key-value pairs. The beautiful thing about this approach is that you can go [sign up] for a fluidinfo key, and start adding your own metadata too. We hope to start aggregating useful information that appears this way, and exposing it on the original article pages, and to the authors. </p>
+<p>You can see that we have added information onto the object as essentially key-value pairs. The beautiful thing about this approach is that you can go [sign up] for a fluidinfo key, and start adding your own metadata too. We hope to start aggregating usful information that appears this way, and exposing it on the original article pages, and to the authors. </p>
 
 <p><img src="/images/object.jpg" alt="example object" height="270" width="700" /></p>
 
 <h2 id="roadmap-for-the-rest-api">Roadmap for the REST API</h2>
 
-<p>We have posted the development roadmap on a <a href="https://trello.com/board/elife-api-roadmap/50194e22705438553d59640c">trello board</a>. It should be treated with appropriate levels of caution and scepticism. </p>
+<p>We have posted the development roadmap on a <a href="https://trello.com/board/elife-api-roadmap/50194e22705438553d59640c">trello board</a>. It should be treated with appropriate levels of caution, and skepticisim. </p>
 
 <h2 id="rssoai">RSS/OAI</h2>
 
@@ -96,7 +98,7 @@
 
 <h2 id="external-endpoints">External endpoints</h2>
 
-<p>We are making eLife content available from a number of non-eLife controlled endpoints, with the aim of making it as easy as possible for people to access the content. We will update documentation on this site about these endpoints, however you can already browse some eLife content on <a href="http://www.scribd.com/my_document_collections/3916165">scribd</a>, <a href="http://www.mendeley.com/profiles/elife-staff/">Mendeley</a> and <a href="http://elifesciences.github.com/elife-articles/">github xml</a> and <a href="https://github.com/elifesciences/elife-pdfs">github pdf</a> repos. If you have a resource that you think is relevant, and you would like us to add to the documentation, please drop us a line in the <a href="https://groups.google.com/forum/?fromgroups#!forum/elife-api">group</a>, or send a pull request to the <a href="https://github.com/elifesciences/elife-api-documentation">documentation repo</a>. </p>
+<p>We are making eLife content avaialbe from a number of non-eLife controlled endpoints, with the aim of making it as easy as possible for people to access the content. We will update documentation on this site about these endpoints, however you can already browse some eLife content on <a href="http://www.scribd.com/my_document_collections/3916165">scribd</a>, <a href="http://www.mendeley.com/profiles/elife-staff/">Mendeley</a> and <a href="http://elifesciences.github.com/elife-articles/">github xml</a> and <a href="https://github.com/elifesciences/elife-pdfs">github pdf</a> repos. If you have a resource that you think is releveant, and you would like us to add to the documentation, please drop us a line in the <a href="https://groups.google.com/forum/?fromgroups#!forum/elife-api">group</a>, or send a pull request to the <a href="https://github.com/elifesciences/elife-api-documentation">documentation repo</a>. </p>
 
 
         
