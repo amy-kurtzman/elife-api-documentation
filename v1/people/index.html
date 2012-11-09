@@ -56,25 +56,25 @@ information</a> with your request).</p>
 <pre class="headers"><code>Status: 200 OK</code></pre>
 
 <pre class="highlight"><code class="language-javascript">{
-  "location": "San Francisco",
-  "created_at": "2008-01-14T04:33:35Z",
-  "name": "monalisa octocat",
-  "blog": "https://github.com/blog",
   "hireable": false,
   "public_repos": 2,
-  "company": "GitHub",
-  "following": 0,
-  "email": "octocat@github.com",
-  "bio": "There once was...",
-  "public_gists": 1,
-  "id": 1,
-  "url": "https://api.github.com/users/octocat",
+  "created_at": "2008-01-14T04:33:35Z",
   "type": "User",
-  "gravatar_id": "somehexcode",
+  "id": 1,
   "followers": 20,
-  "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+  "email": "octocat@github.com",
+  "login": "octocat",
+  "location": "San Francisco",
+  "bio": "There once was...",
+  "following": 0,
+  "gravatar_id": "somehexcode",
+  "company": "GitHub",
   "html_url": "https://github.com/octocat",
-  "login": "octocat"
+  "url": "https://api.github.com/users/octocat",
+  "public_gists": 1,
+  "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+  "name": "monalisa octocat",
+  "blog": "https://github.com/blog"
 }</code></pre>
 
 <h2 id="get-elife-person">Get elife person</h2>
@@ -87,32 +87,32 @@ information</a> with your request).</p>
 <pre class="headers"><code>Status: 200 OK</code></pre>
 
 <pre class="highlight"><code class="language-javascript">{
-  "elife_profile_id": "uid of elife person",
-  "ORCID": 2342,
-  "current_editorial_role": "current editorial role of the researcher",
-  "current_affiliation": "current value held for author affiliation",
-  "last_updated": "last date this person was updated",
-  "profile_subjects": "subjects listed against a persons profile in EJP",
-  "middle_nm": "Badielle",
-  "is_named_reviewer": "whehter person has signed a review, defaults the FALSE",
-  "id": 1,
-  "first_nm": "Jim",
-  "profile_text": "description of the researcher",
-  "co_authors": "elife_profile_id records of other pepople who have authord with this person, and papers they have coauthored",
-  "url": "https://api.github.com/users/octocat",
   "editorial_tenure_history": "editorial roles held in the past",
-  "past_affilitations": "record of previous affiliations for a person",
-  "named_reviewer_on": "dois of papers that this person has signed a review for",
-  "gravatar_id": "somehexcode",
+  "last_updated": "last date this person was updated",
+  "ORCID": 2342,
   "is_author": true,
+  "id": 1,
   "funding_sources": "names of institutions funding this person",
-  "handling_editor_on": "dois of papers that this person was the handling editor for",
-  "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+  "first_nm": "Jim",
   "profile_image": "binary blob containing encoded image",
-  "published_subjects": "subjects held against a persons publications in EJP",
-  "authored_papers": "doi records of papers authored by this person",
+  "handling_editor_on": "dois of papers that this person was the handling editor for",
+  "past_affilitations": "record of previous affiliations for a person",
+  "is_named_reviewer": "whehter person has signed a review, defaults the FALSE",
+  "current_affiliation": "current value held for author affiliation",
+  "named_reviewer_on": "dois of papers that this person has signed a review for",
   "is_alive": true,
-  "login": "octocat"
+  "login": "octocat",
+  "current_editorial_role": "current editorial role of the researcher",
+  "gravatar_id": "somehexcode",
+  "profile_subjects": "subjects listed against a persons profile in EJP",
+  "published_subjects": "subjects held against a persons publications in EJP",
+  "url": "https://api.github.com/users/octocat",
+  "middle_nm": "Badielle",
+  "co_authors": "elife_profile_id records of other pepople who have authord with this person, and papers they have coauthored",
+  "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+  "elife_profile_id": "uid of elife person",
+  "profile_text": "description of the researcher",
+  "authored_papers": "doi records of papers authored by this person"
 }</code></pre>
 
 <h2 id="get-the-authenticated-user">Get the authenticated user</h2>
@@ -126,35 +126,35 @@ information</a> with your request).</p>
 
 <pre class="highlight"><code class="language-javascript">{
   "private_gists": 81,
-  "plan": {
-    "private_repos": 20,
-    "name": "Medium",
-    "space": 400,
-    "collaborators": 10
-  },
+  "type": "User",
   "created_at": "2008-01-14T04:33:35Z",
-  "location": "San Francisco",
   "public_repos": 2,
   "hireable": false,
-  "blog": "https://github.com/blog",
-  "name": "monalisa octocat",
-  "following": 0,
-  "company": "GitHub",
-  "id": 1,
-  "public_gists": 1,
-  "bio": "There once was...",
-  "email": "octocat@github.com",
-  "url": "https://api.github.com/users/octocat",
-  "total_private_repos": 100,
-  "collaborators": 8,
-  "gravatar_id": "somehexcode",
-  "type": "User",
-  "disk_usage": 10000,
-  "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-  "followers": 20,
   "owned_private_repos": 100,
+  "id": 1,
+  "followers": 20,
+  "disk_usage": 10000,
+  "email": "octocat@github.com",
+  "plan": {
+    "space": 400,
+    "private_repos": 20,
+    "collaborators": 10,
+    "name": "Medium"
+  },
+  "total_private_repos": 100,
   "login": "octocat",
-  "html_url": "https://github.com/octocat"
+  "gravatar_id": "somehexcode",
+  "following": 0,
+  "bio": "There once was...",
+  "location": "San Francisco",
+  "url": "https://api.github.com/users/octocat",
+  "html_url": "https://github.com/octocat",
+  "company": "GitHub",
+  "collaborators": 8,
+  "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+  "public_gists": 1,
+  "blog": "https://github.com/blog",
+  "name": "monalisa octocat"
 }</code></pre>
 
 <h2 id="get-the-null-response">Get the null response</h2>
@@ -177,26 +177,26 @@ information</a> with your request).</p>
           "username": "ianmulvany"
         }
       },
-      "fd2ce06c-f6f0-4b0d-9c24-ff01160f5443": {
-        "ianmulvany/elifepeople/elife_profile_id": {
-          "value": "1001",
-          "updated-at": "2012-09-20T10:29:45.645736",
-          "username": "ianmulvany"
-        }
-      },
       "3300de84-bb5e-4523-b722-a28e8062eeff": {
         "ianmulvany/elifepeople/elife_profile_id": {
           "value": "1464",
           "updated-at": "2012-09-20T16:48:47.003319",
           "username": "ianmulvany"
         }
+      },
+      "fd2ce06c-f6f0-4b0d-9c24-ff01160f5443": {
+        "ianmulvany/elifepeople/elife_profile_id": {
+          "value": "1001",
+          "updated-at": "2012-09-20T10:29:45.645736",
+          "username": "ianmulvany"
+        }
       }
     }
   },
-  "url": "https://api.github.com/users/octocat",
+  "login": "octocat",
   "gravatar_id": "somehexcode",
-  "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-  "login": "octocat"
+  "url": "https://api.github.com/users/octocat",
+  "avatar_url": "https://github.com/images/error/octocat_happy.gif"
 }</code></pre>
 
 <p>FLUIDINDO_NULL</p>
@@ -226,13 +226,13 @@ information</a> with your request).</p>
 </dl>
 
 <pre class="highlight"><code class="language-javascript">{
-  "location": "San Francisco",
   "hireable": true,
-  "name": "monalisa octocat",
-  "blog": "https://github.com/blog",
-  "company": "GitHub",
   "email": "octocat@github.com",
-  "bio": "There once..."
+  "bio": "There once...",
+  "location": "San Francisco",
+  "company": "GitHub",
+  "name": "monalisa octocat",
+  "blog": "https://github.com/blog"
 }</code></pre>
 
 <h3 id="response-4">Response</h3>
@@ -241,35 +241,35 @@ information</a> with your request).</p>
 
 <pre class="highlight"><code class="language-javascript">{
   "private_gists": 81,
-  "plan": {
-    "private_repos": 20,
-    "name": "Medium",
-    "space": 400,
-    "collaborators": 10
-  },
+  "type": "User",
   "created_at": "2008-01-14T04:33:35Z",
-  "location": "San Francisco",
   "public_repos": 2,
   "hireable": false,
-  "blog": "https://github.com/blog",
-  "name": "monalisa octocat",
-  "following": 0,
-  "company": "GitHub",
-  "id": 1,
-  "public_gists": 1,
-  "bio": "There once was...",
-  "email": "octocat@github.com",
-  "url": "https://api.github.com/users/octocat",
-  "total_private_repos": 100,
-  "collaborators": 8,
-  "gravatar_id": "somehexcode",
-  "type": "User",
-  "disk_usage": 10000,
-  "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-  "followers": 20,
   "owned_private_repos": 100,
+  "id": 1,
+  "followers": 20,
+  "disk_usage": 10000,
+  "email": "octocat@github.com",
+  "plan": {
+    "space": 400,
+    "private_repos": 20,
+    "collaborators": 10,
+    "name": "Medium"
+  },
+  "total_private_repos": 100,
   "login": "octocat",
-  "html_url": "https://github.com/octocat"
+  "gravatar_id": "somehexcode",
+  "following": 0,
+  "bio": "There once was...",
+  "location": "San Francisco",
+  "url": "https://api.github.com/users/octocat",
+  "html_url": "https://github.com/octocat",
+  "company": "GitHub",
+  "collaborators": 8,
+  "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+  "public_gists": 1,
+  "blog": "https://github.com/blog",
+  "name": "monalisa octocat"
 }</code></pre>
 
         
