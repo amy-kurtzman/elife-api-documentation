@@ -35,10 +35,11 @@ This documentation is [hosted on github][gdocs]. In addition we will make availa
 
 ## FluidInfo
 
-[Fluidinfo][fi] is an object data store that we have used for hosting eLife data for the purposes of providing a REST API. You can read the [fluidinfo documentation][fid], sign up for [an account][fia], though accounts are not required to make read only calls to the API.
+[Fluidinfo][fi] is an object data store that we have used for hosting eLife data for the purposes of providing a REST API. You can read the [fluidinfo documentation][fid], sign up for [an account][fia], though accounts are not required to make read only calls to the API. We have added a bit more detail about fluidinfo, and the resources availalbe [here][fol].
 
 [fi]: fluidinfo.com
 [fia]: fluidinfoaccoutns.com
+[fol]: /v1/fluidinfo/
 
 
 ## Rest API namespaces
@@ -56,17 +57,17 @@ As we are mapping from our XML into fluifinfo objects, to understand the API, al
 
 ## Roadmap for the REST API
 
-We have posted the development roadmap on a [trello board][tb]
+We have posted the development roadmap on a [trello board][tb]. It should be treated with appropriate levels of caution, and skepticisim. 
 
 [tb]: https://trello.com/board/elife-api-roadmap/50194e22705438553d59640c 
 
 
 ## RSS/OAI
 
-We are aiming to launch the journal website shortly. This will provide RSS and OAI endpoints for our content, and this documentation will be updated at that point. 
+We are aiming to launch the journal website shortly. This will provide RSS and OAI-PMH endpoints for our content, and this documentation will be updated at that point. 
 
 
-## External Endpoints
+## External endpoints
 
 We are making eLife content avaialbe from a number of non-eLife controlled endpoints, with the aim of making it as easy as possible for people to access the content. We will try to keep up to date documentation on these endpoints [here][eep]. If you have a resource that you think is releveant, and you would like us to add to the documentation, please drop us a line in the [group][ml], or send a pull request to the [documentation repo][gdocs]. 
 
