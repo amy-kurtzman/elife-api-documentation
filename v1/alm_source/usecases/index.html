@@ -60,30 +60,30 @@ Content-type: application/json</code></pre>
   "results": {
     "id": {
       "1e8e09bb-1c93-4f1e-89b1-83d067383511": {
-        "elifesciences.org/api_v1/alm_source/url": {
+        "elifesciences.org/api_v1/alm_source/source": {
           "username": "elifesciences.org",
-          "updated-at": "2012-10-29T20:22:18.534296",
-          "value": "http://www.elifesciences.org/"
+          "value": "fake",
+          "updated-at": "2012-10-29T20:22:18.534296"
         },
         "elifesciences.org/api_v1/alm_source/trusted": {
           "username": "elifesciences.org",
-          "updated-at": "2012-10-29T20:22:18.534296",
-          "value": false
+          "value": false,
+          "updated-at": "2012-10-29T20:22:18.534296"
         },
         "elifesciences.org/api_v1/alm_source/name": {
           "username": "elifesciences.org",
-          "updated-at": "2012-10-29T20:22:18.534296",
-          "value": "fake"
-        },
-        "elifesciences.org/api_v1/alm_source/source": {
-          "username": "elifesciences.org",
-          "updated-at": "2012-10-29T20:22:18.534296",
-          "value": "fake"
+          "value": "fake",
+          "updated-at": "2012-10-29T20:22:18.534296"
         },
         "fluiddb/about": {
           "username": "fluiddb",
-          "updated-at": "2012-10-29T16:19:48.137420",
-          "value": "elife_alm_source_fake"
+          "value": "elife_alm_source_fake",
+          "updated-at": "2012-10-29T16:19:48.137420"
+        },
+        "elifesciences.org/api_v1/alm_source/url": {
+          "username": "elifesciences.org",
+          "value": "http://www.elifesciences.org/",
+          "updated-at": "2012-10-29T20:22:18.534296"
         }
       }
     }
@@ -92,7 +92,7 @@ Content-type: application/json</code></pre>
 
 <h2 id="get-all-alm-sources">Get all ALM sources</h2>
 
-<p>To find all ALM sources in the eLife API, a “has” query will find all objects where the <code>alm_source/source</code> tag is present. Specifying a single tag in the query will return only one tag’s values.</p>
+<p>To find all ALM sources in the eLife API, a &#8220;has&#8221; query will find all objects where the <code>alm_source/source</code> tag is present. Specifying a single tag in the query will return only one tag&#8217;s values.</p>
 
 <h3 id="request-1">Request</h3>
 
@@ -110,8 +110,8 @@ Content-type: application/json</code></pre>
       "1e8e09bb-1c93-4f1e-89b1-83d067383511": {
         "elifesciences.org/api_v1/alm_source/source": {
           "username": "elifesciences.org",
-          "updated-at": "2012-10-29T20:22:18.534296",
-          "value": "fake"
+          "value": "fake",
+          "updated-at": "2012-10-29T20:22:18.534296"
         }
       }
     }
@@ -289,6 +289,18 @@ Content-type: application/json</code></pre>
           });
         });
     </script>
+
+  <!-- analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30290146-3', 'elifesciences.org');
+  ga('send', 'pageview');
+
+</script>
 
   <!-- eLife Brand Bar -->
   <script type="text/javascript" src="http://www.elifesciences.org/elife-bar/eb.js"></script>
