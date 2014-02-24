@@ -69,7 +69,7 @@
 <pre><code>curl "https://fluiddb.fluidinfo.com/values?query=elifesciences.org%2Fapi_v1%2Farticle%2Fsubject_area+contains+%22Cell+biology%22&amp;tag=elifesciences.org%2Fapi_v1%2Farticle%2Fdoi"
 </code></pre>
 
-<p>You can get more information about our REST api - including it&#8217;s support for JASONP - on the [REST API overvieww][rao] page.</p>
+<p>You can get more information about our REST api - including it’s support for JASONP - on the [REST API overvieww][rao] page.</p>
 
 <h2 id="rss">RSS</h2>
 
@@ -88,7 +88,7 @@
 
 <h3 id="content-negotiation-for-figures">Content negotiation for figures</h3>
 
-<p>Every figure published in an eLife article has it&#8217;s own DOI. When you resolve that DOI you get taken to a landing page specific to that figure. For example when you resolve <a href="http://dx.doi.org/10.7554/eLife.00631.016">http://dx.doi.org/10.7554/eLife.00631.016</a> you get taken to <a href="http://elife.elifesciences.org/content/2/e00631/F10">http://elife.elifesciences.org/content/2/e00631/F10</a>. If you do a HTTP request against this page you will get back the full HTML for that page. Wouldn&#8217;t it be awesome if you could just get back the image? Well now you can with</p>
+<p>Every figure published in an eLife article has it’s own DOI. When you resolve that DOI you get taken to a landing page specific to that figure. For example when you resolve <a href="http://dx.doi.org/10.7554/eLife.00631.016">http://dx.doi.org/10.7554/eLife.00631.016</a> you get taken to <a href="http://elife.elifesciences.org/content/2/e00631/F10">http://elife.elifesciences.org/content/2/e00631/F10</a>. If you do a HTTP request against this page you will get back the full HTML for that page. Wouldn’t it be awesome if you could just get back the image? Well now you can with</p>
 
 <pre><code>curl --header "Accept:image/jpeg" http://elife.elifesciences.org/content/2/e00631/F10	 
 </code></pre>
@@ -226,7 +226,7 @@
     
           <h5>Sign up for News and Updates on the Launch</h5>
     
-          <form action="http://www.elifesciences.org/crm/civicrm/profile/create?reset=1&amp;gid=11" method="post" id="subscribeForm">
+          <form action="http://crm.elifesciences.org/crm/civicrm/profile/create?reset=1&amp;gid=11" method="post" id="subscribeForm">
             <input type="hidden" name="reset" value="1">
             <input type="hidden" name="gid" value="11">
     

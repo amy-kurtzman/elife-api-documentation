@@ -38,18 +38,26 @@
 
 <h2 id="content-negotiation">Content negotiation</h2>
 
-<p>We now support content negotiation. We currently support content negotiation to return markdown versions of our articles, and to return images from articles. Support for XML will be added in the future. </p>
+<p>With the very good folks at HighWire have added experimental support for content negotiation on our Drupal hosted journal. We currently support content negotiation to return markdown versions of our articles, and to return images from articles. Support for XML will be added in the future. </p>
+
+<h3 id="ok-so-what-is-content-negotiation-and-why-should-i-care">OK, so, what is content negotiation, and why should I care?</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Content_negotiation">Content negotiation</a> at it’s heart is a way to ask a web server to send you back a specific version of a resource or document. If you are writing tools or applications on top of a corpus of content, being able to ask for specific formats for a document can be really handy. Ideally we should provide support for the XML versions of our articles, and at some point there might be a possibility to provide a RDF representation of the article via content negotiation,  but for now we have support for returning a markdown version of the article, and the raw figures from the article. </p>
 
 <h3 id="content-negotiation-for-markdown">Content negotiation for Markdown</h3>
 
-<p><a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> is a convention for wiring plain text documents that can be easily converted to HTML. Most of this documentation is written in Markdown. </p>
+<p><a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> is a convention for wiring plain text documents that can be easily converted to HTML. It’s far more normal to think of using markdown in the process of writing, and not as an output format in and of itself. There is currently a lot of interest in improving the tools that are used for writing academic papers. Some people think that markdown might form a part of that future. PLOS will be holding a workshop in San Francisco on the 6th of June on <a href="http://blogs.plos.org/mfenner/2013/05/08/announcing-markdown-for-science-workshop-on-june-8th/">Scholarly Markdown</a>. </p>
+
+<p>We have turned on markdown as a format for our articles that you can request by setting your header to <code>text/plain</code>. We are not exactly sure how this might be useful, but we think it’s pretty cool anyway, and we hope it can be of benefit to those looking at markdown as a potential tool for the future of scholarly communication. </p>
+
+<p>Here is an example call: </p>
 
 <pre><code>curl --header "Accept:text/plain" http://elife.elifesciences.org/content/2/e00334
 </code></pre>
 
 <h3 id="content-negotiation-for-figures">Content negotiation for figures</h3>
 
-<p>Every figure published in an eLife article has it&#8217;s own DOI. When you resolve that DOI you get taken to a landing page specific to that figure. For example when you resolve <a href="http://dx.doi.org/10.7554/eLife.00631.016">http://dx.doi.org/10.7554/eLife.00631.016</a> you get taken to <a href="http://elife.elifesciences.org/content/2/e00631/F10">http://elife.elifesciences.org/content/2/e00631/F10</a>. If you do a HTTP request against this page you will get back the full HTML for that page. Wouldn&#8217;t it be awesome if you could just get back the image? Well now you can with</p>
+<p>Every figure published in an eLife article has it’s own DOI. When you resolve that DOI you get taken to a landing page specific to that figure. For example when you resolve <a href="http://dx.doi.org/10.7554/eLife.00631.016">http://dx.doi.org/10.7554/eLife.00631.016</a> you get taken to <a href="http://elife.elifesciences.org/content/2/e00631/F10">http://elife.elifesciences.org/content/2/e00631/F10</a>. If you do a HTTP request against this page you will get back the full HTML for that page. Wouldn’t it be awesome if you could just get back the image? Well now you can with</p>
 
 <pre><code>curl --header "Accept:image/jpeg" http://elife.elifesciences.org/content/2/e00631/F10	 
 </code></pre>
@@ -173,7 +181,7 @@
     
           <h5>Sign up for News and Updates on the Launch</h5>
     
-          <form action="http://www.elifesciences.org/crm/civicrm/profile/create?reset=1&amp;gid=11" method="post" id="subscribeForm">
+          <form action="http://crm.elifesciences.org/crm/civicrm/profile/create?reset=1&amp;gid=11" method="post" id="subscribeForm">
             <input type="hidden" name="reset" value="1">
             <input type="hidden" name="gid" value="11">
     
